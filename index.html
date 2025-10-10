@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/login.css">
 
+    <script defer src="js/login.js"></script>
+
 </head>
 <body>
     
@@ -25,29 +27,29 @@
 
         <section class="right-login">
 
-            <section class="card-login">
+            <form class="card-login">
 
                 <h2>LOGIN</h2>
             
                 <section class="textfield">
 
-                    <label for="usuario">Usuário</label>
-                    <input type="text" name="usuario" placeholder="Usuário">
+                    <label for="user">Usuário</label>
+                    <input type="text" name="user" placeholder="Usuário" class="user-input">
 
 
                 </section>
 
                 <section class="textfield">
 
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" placeholder="Senha">
+                    <label for="password">Senha</label>
+                    <input type="password" name="password" placeholder="Senha" class="password-input">
                     
 
                 </section>
 
-                <button class="btn-login">Login</button>
+                <button type="submit" class="btn-login" disabled>Login</button>
 
-            </section>
+            </form>
 
         </section>
 
