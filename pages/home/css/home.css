@@ -13,7 +13,7 @@
 }
 
 #cta .title {
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: #f0ffffde;
 }
 
@@ -56,18 +56,16 @@
 }
 
 #banner img {
-    height: 100%;
-    width: fit-content;
+    height: 85%;
+    width: 80%;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1280px) {
     #home {
         min-height: 100%;
         padding-top: 0;
-    }
-
-    #banner, #banner img, #home {
-        display: none;
+        flex-direction: column-reverse;
+        align-items: center;
     }
 
     #cta {
@@ -81,24 +79,49 @@
     }
 
     #cta .description {
-    font-size: 0.6rem;
+    font-size: 1rem;
 }
 
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 640px) {
 
     #cta .title {
         font-size: 1rem;
     }
 
+    #banner, #banner img{
+        display: none;
+    }
 
     #phone-button button {
         display: none;
     }
 
     #cta .description {
-    font-size: 0.4rem;
+    font-size: 1rem;
     }
 
 }
+
+@media screen and (max-width: 320px) {
+
+    #cta .title {
+        font-size: 1rem;
+    }
+
+    #banner, #banner img{
+        display: none;
+    }
+
+    #phone-button button {
+        display: none;
+    }
+
+    #cta .description {
+    font-size: 0.8rem;
+    }
+
+}
+
+

@@ -57,3 +57,15 @@ section {
     box-shadow: 0 0 12px 8px rgba(0, 0, 0, 0.1);
 }
 
+.section-title {
+    color: #77FFC0;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.section-subtitle {
+    color: #f0ffffde;
+    font-size: 2.1875rem;
+    margin-bottom: 40px;
+}
+
