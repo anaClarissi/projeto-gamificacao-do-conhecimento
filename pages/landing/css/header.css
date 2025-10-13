@@ -42,6 +42,12 @@ header {
     border-bottom: 3px solid var(--color-primary-9);
 }
 
+#nav-bar .btn-default {
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+}
+
 #mobile-btn {
     display: none;
 }
