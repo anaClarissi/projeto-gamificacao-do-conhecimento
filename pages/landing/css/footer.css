@@ -1,0 +1,30 @@
+footer {
+    background-color: var(--color-primary-12);
+}
+
+footer img {
+    margin-top: -1px;
+}
+
+#footer-items {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 8% 24px 8%;
+    align-items: center;
+}
+
+#copyright {
+    color: var(--color-primary-13);
+    font-weight: 500;   
+}
+
+#footer-items .social-media-buttons {
+    color: var(--color-purple-1);
+}
+
+@media screen and (max-width: 600px) {
+    #footer-items {
+        flex-direction: column;
+        gap: 20px;
+    }    
+}

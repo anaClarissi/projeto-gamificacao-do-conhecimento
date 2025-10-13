@@ -14,15 +14,15 @@
 
 #cta .title {
     font-size: 3.5rem;
-    color: #f0ffffde;
+    color: var(--color-primary-7);
 }
 
 #cta .title span {
-    color: #77FFC0;
+    color: var(--color-primary-2);
 }
 
 #cta .description {
-    color: #f0ffffde;
+    color: var(--color-primary-7);
     font-size: 1.2rem;
 }
 
@@ -33,14 +33,14 @@
 
 #cta-buttons a {
     text-decoration: none;
-    color: #2b134b;
+    color: var(--color-primary-5);
 }
 
 #phone-button {
     display: flex;
     gap: 8px;
     align-items: center;
-    background-color: #63508f;
+    background-color: var(--color-primary-4);
     padding: 8px 14px;
     font-weight: 500;
     box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.1);
@@ -87,7 +87,7 @@
 @media screen and (max-width: 640px) {
 
     #cta .title {
-        font-size: 1rem;
+        font-size: 2rem;
     }
 
     #banner, #banner img{

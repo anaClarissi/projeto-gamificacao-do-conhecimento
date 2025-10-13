@@ -25,7 +25,7 @@ const handleSubmit = (event) => {
 
     localStorage.setItem("password", senhaInput.value);
 
-    window.location = "pages/home/home.html";
+    window.location = "pages/landing/home.html";
 
 }
 
