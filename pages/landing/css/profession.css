@@ -72,12 +72,16 @@
         font-size: 2.5rem;
     }
 
+    #professions-content {
+    width: 100%;
+    }
+
     #profession-img {
         display: none;
     }
 
     #career-content {
-        width: 80%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -93,6 +97,10 @@
     #profession .section-subtitle {
         text-align: center;
         font-size: 2rem;
+    }
+
+    #professions-content {
+    width: 100%;
     }
 
     #career-content {
