@@ -1,0 +1,125 @@
+@import url('../../../../css/reset.css');
+
+main {
+    background-color: var(--color-primary-1);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.app {
+    background-color: var(--color-primary-15);
+    width: 50vw;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 100px 0 100px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.app h1 {
+    color: var(--color-primary-7);
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--color-primary-7);
+    padding-bottom: 30px;
+    width: 80%;
+}
+
+.app h1 span {
+    color: var(--color-primary-2);
+}
+
+.quiz {
+    display: flex;
+    height: 90%;
+    padding: 20px 0;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.quiz h2 {
+    font-size: 1rem;
+    color: var(--color-primary-7);
+    font-weight: 600;
+}
+
+#btn-answers {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    justify-content: space-between;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-primary-14);
+    color: var(--color-primary-7);
+    font-weight: 500;
+    width: 100%;
+    height: 15%;
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.btn:hover:not([disabled]) {
+    background-color: var(--color-primary-1);
+    color: #fff;
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+.btn-default {
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-primary-12);
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color .3s ease;
+}
+
+.btn-default:hover {
+    background-color: #47ffa9;
+}
+
+.btn-default:disabled {
+    background-color: var(--color-primary-17);
+    color: var(--color-primary-18);
+    cursor: auto;
+    box-shadow: none;
+}
+
+.correct {
+    background-color: #9aeabc;
+    color: var(--color-primary-11);
+}
+
+.incorrect {
+    background-color: #ff9393;
+    color: var(--color-primary-11);
+}
+
+@media screen and (max-width: 1170px) {
+    .app {
+        width: 70vw;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .app {
+        width: 90vw;
+    }
+}

@@ -1,33 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+@import url('../../../css/reset.css');
 @import url('header.css');
 @import url('home.css');
 @import url('path.css');
 @import url('profession.css');
+@import url('quizzes.css');
 @import url('footer.css');
 
-:root {
-    --color-primary-1: #201B2C;
-    --color-primary-2: #77FFC0;
-    --color-primary-3: #46FFA8;
-    --color-primary-4: #63508F;
-    --color-primary-5: #2b134b;
-    --color-primary-6: #5C4A84;
-    --color-primary-7: #f0ffffde;
-    --color-primary-8: #d7e6e6de;
-    --color-primary-9: #080214;
-    --color-primary-10: #dddddd;
-    --color-primary-11: #434343;
-    --color-primary-12: #00FF88;
-    --color-primary-13: #1d1d1d;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 
 body {
     background-color: var(--color-primary-1);
