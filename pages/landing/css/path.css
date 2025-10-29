@@ -28,6 +28,16 @@
     transition: color .3s ease;
 }
 
+.swiper-pagination-bullet {
+  background-color: var(--color-primary-18); 
+  opacity: 0.5; 
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--color-primary-6);
+  opacity: 1;
+}
+
 #area-of-activity {
     /*width: 100%;
     display: flex;
