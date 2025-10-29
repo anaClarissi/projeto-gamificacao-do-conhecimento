@@ -8,6 +8,9 @@
 @import url('quizzes.css');
 @import url('footer.css');
 
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: var(--color-primary-1);

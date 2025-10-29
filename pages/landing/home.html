@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Educação 4.0</title>
 
+    <!--Link Swiper CSS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+    <!--Link JQuerry-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!--Link Icons-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <!--Link Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_circle_right" />
+
+    <!--Link CSS-->
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -193,206 +202,152 @@
             <h2 class="section-title">Técnico em informática</h2>
             <h3 class="section-subtitle">Áreas de Atuação</h3>
 
-           <div id="area-of-activity">
+            <div class="swiper" id="area-of-activity">
 
-                <div class="area">
+                <div class="swiper-wrapper">
+                    
+                    <div class="swiper-slide area">
 
-                    <div class="area-heart">
+                            <div class="area-heart">
 
-                        <i class="fa-solid fa-heart"></i>
+                                <i class="fa-solid fa-heart"></i>
 
+                            </div>
+
+                            <img src="images/path/suporte-tecnico.svg" alt="Suporte Técnico e Manutanção" class="area-image">
+
+                            <h3 class="area-title">
+                                Suporte Técnico
+                            </h3>
+
+                            <span class="area-description">
+                                Profissional que realiza diagnósticos, reparos e configurações em sistemas e equipamentos de informática.
+                            </span>
+
+                            <div class="area-difficulty">
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <div class="area-enter">
+
+                                <h4>mais facil</h4>
+
+                                <button class="btn-default">
+
+                                    <span class="material-symbols-outlined">arrow_circle_right</span>
+
+                                </button>
+
+                            </div>
                     </div>
 
-                    <img src="images/path/suporte-tecnico.svg" alt="Suporte Técnico e Manutanção" class="area-image">
-
-                    <h3 class="area-title">
-                        Suporte Técnico
-                    </h3>
-
-                    <span class="area-description">
-                        Profissional que realiza diagnósticos, reparos e configurações em sistemas e equipamentos de informática.
-                    </span>
-
-                    <div class="area-difficulty">
-
-                        <i class="fa-solid fa-star"></i>
-
+                    <div class="swiper-slide area">
+                            <div class="area-heart">
+                                <i class="fa-solid fa-heart"></i>
+                            </div>
+                            <img src="images/path/Security On-bro.svg" alt="Segurança da Informação" class="area-image">
+                            <h3 class="area-title">
+                                Segurança da Informação
+                            </h3>
+                            <span class="area-description">
+                                Especialista que protege dados e sistemas contra acessos não autorizados, falhas e ataques virtuais.
+                            </span>
+                            <div class="area-difficulty">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <div class="area-enter">
+                                <h4>facil</h4>
+                                <button class="btn-default">
+                                    <span class="material-symbols-outlined">arrow_circle_right</span>
+                                </button>
+                            </div>
                     </div>
 
-                    <div class="area-enter">
-
-                        <h4>mais facil</h4>
-
-                        <button class="btn-default">
-
-                            <i class="fa-solid fa-right-to-bracket"></i>
-
-                        </button>
-
+                    <div class="swiper-slide area">
+                        <div class="area-heart">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <img src="images/path/front-end.svg" alt="Front-end" class="area-image">
+                        <h3 class="area-title">
+                            Front-end
+                        </h3>
+                        <span class="area-description">
+                            Desenvolvedor que cria a parte visual dos sites e sistemas, cuidando do design, interação e experiência do usuário.
+                        </span>
+                        <div class="area-difficulty">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="area-enter">
+                            <h4>moderado</h4>
+                            <button class="btn-default">
+                                <span class="material-symbols-outlined">arrow_circle_right</span>
+                            </button>
+                        </div>
                     </div>
 
+                    <div class="swiper-slide area">
+                        <div class="area-heart">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <img src="images/path/back-end.svg" alt="Back-end" class="area-image">
+                        <h3 class="area-title">
+                            Back-end
+                        </h3>
+                        <span class="area-description">
+                            Programador responsável pela lógica, banco de dados e funcionamento interno de aplicações e servidores.
+                        </span>
+                        <div class="area-difficulty">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="area-enter">
+                            <h4>dificil</h4>
+                            <button class="btn-default">
+                                <span class="material-symbols-outlined">arrow_circle_right</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="swiper-slide area">
+                        <div class="area-heart">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <img src="images/path/full-stack.svg" alt="Full-stack" class="area-image">
+                        <h3 class="area-title">
+                            Full-stack
+                        </h3>
+                        <span class="area-description">
+                            Um desenvolvedor que atua no desenvolvimento de sistemas tanto no front-end quanto no back-end.
+                        </span>
+                        <div class="area-difficulty">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <div class="area-enter">
+                            <h4>muito dificil</h4>
+                            <button class="btn-default">
+                                <span class="material-symbols-outlined">arrow_circle_right</span>
+                            </button>
+                        </div>
+                    </div>
+                    
                 </div>
 
-                <div class="area">
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-scrollbar"></div>
 
-                    <div class="area-heart">
+            </div>
 
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="images/path/Security On-bro.svg" alt="Segurança da Informação" class="area-image">
-
-                    <h3 class="area-title">
-                        Segurança da Informação
-                    </h3>
-
-                    <span class="area-description">
-                        Especialista que protege dados e sistemas contra acessos não autorizados, falhas e ataques virtuais.
-                    </span>
-
-                    <div class="area-difficulty">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-
-                    </div>
-
-                    <div class="area-enter">
-
-                        <h4>facil</h4>
-
-                        <button class="btn-default">
-
-                            <i class="fa-solid fa-right-to-bracket"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-                <div class="area">
-
-                    <div class="area-heart">
-
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="images/path/front-end.svg" alt="Front-end" class="area-image">
-
-                    <h3 class="area-title">
-                        Front-end
-                    </h3>
-
-                    <span class="area-description">
-                        Desenvolvedor que cria a parte visual dos sites e sistemas, cuidando do design, interação e experiência do usuário.
-                    </span>
-
-                    <div class="area-difficulty">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-
-                    </div>
-
-                    <div class="area-enter">
-
-                        <h4>moderado</h4>
-
-                        <button class="btn-default">
-
-                            <i class="fa-solid fa-right-to-bracket"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-                <div class="area">
-
-                    <div class="area-heart">
-
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="images/path/back-end.svg" alt="Back-end" class="area-image">
-
-                    <h3 class="area-title">
-                        Back-end
-                    </h3>
-
-                    <span class="area-description">
-                        Programador responsável pela lógica, banco de dados e funcionamento interno de aplicações e servidores.
-                    </span>
-
-                    <div class="area-difficulty">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-
-                    </div>
-
-                    <div class="area-enter">
-
-                        <h4>dificil</h4>
-
-                        <button class="btn-default">
-
-                            <i class="fa-solid fa-right-to-bracket"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-                <div class="area">
-
-                    <div class="area-heart">
-
-                        <i class="fa-solid fa-heart"></i>
-                    </div>
-
-                    <img src="images/path/full-stack.svg" alt="Full-stack" class="area-image">
-
-                    <h3 class="area-title">
-                        Full-stack
-                    </h3>
-
-                    <span class="area-description">
-                        Um desenvolvedor que atua no desenvolvimento de sistemas tanto no front-end quanto no back-end. 
-                    </span>
-
-                    <div class="area-difficulty">
-
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-
-                    </div>
-
-                    <div class="area-enter">
-
-                        <h4>muito dificil</h4>
-
-                        <button class="btn-default">
-
-                            <i class="fa-solid fa-right-to-bracket"></i>
-
-                        </button>
-
-                    </div>
-
-                </div>
-
-           </div>
-             
         </section>
 
         <section id="profession">
@@ -568,11 +523,11 @@
 
                     <div class="quiz-level" id="quiz-easy">
 
-                        <a href="../quiz/easy/level-1/index.html"><button class="btn-default" id="btn-easy-level1">Nivel 1</button></a>
+                        <a href="../quiz/easy/level-1/index.html"><button class="btn-default btn-level" id="easy-1">Nivel 1</button></a>
 
-                        <a href="../quiz/easy/level-2/index.html"><button class="btn-default" id="btn-easy-level2">Nivel 2</button></a>
+                        <a href="../quiz/easy/level-2/index.html"><button class="btn-default btn-level" id="easy-2">Nivel 2</button></a>
 
-                        <a href="../quiz/easy/level-3/index.html"><button class="btn-default" id="btn-easy-level3">Nivel 3</button></a>
+                        <a href="../quiz/easy/level-3/index.html"><button class="btn-default btn-level" id="easy-3">Nivel 3</button></a>
 
                     </div>
 
@@ -603,11 +558,11 @@
 
                     <div class="quiz-level" id="quiz-intermediary">
 
-                        <a href="../quiz/intermediary/level-1/index.html"><button class="btn-default" id="btn-intermediary-level1">Nivel 1</button></a>
+                        <a href="../quiz/intermediary/level-1/index.html"><button class="btn-default btn-level" id="intermediary-1">Nivel 1</button></a>
 
-                        <a href="../quiz/intermediary/level-2/index.html"><button class="btn-default" id="btn-intermediary-level2">Nivel 2</button></a>
+                        <a href="../quiz/intermediary/level-2/index.html"><button class="btn-default btn-level" id="intermediary-2">Nivel 2</button></a>
 
-                        <a href="../quiz/intermediary/level-3/index.html"><button class="btn-default" id="btn-intermediary-level3">Nivel 3</button></a>
+                        <a href="../quiz/intermediary/level-3/index.html"><button class="btn-default btn-level" id="intermediary-3">Nivel 3</button></a>
 
                     </div>
 
@@ -638,11 +593,11 @@
 
                     <div class="quiz-level" id="quiz-hard">
 
-                        <a href="../quiz/hard/level-1/index.html"><button class="btn-default" id="btn-hard-level1">Nivel 1</button></a>
+                        <a href="../quiz/hard/level-1/index.html"><button class="btn-default btn-level" id="hard-1">Nivel 1</button></a>
 
-                        <a href="../quiz/hard/level-2/index.html"><button class="btn-default" id="btn-hard-level2">Nivel 2</button></a>
+                        <a href="../quiz/hard/level-2/index.html"><button class="btn-default btn-level" id="hard-2">Nivel 2</button></a>
 
-                        <a href="../quiz/hard/level-3/index.html"><button class="btn-default" id="btn-hard-level3">Nivel 3</button></a>
+                        <a href="../quiz/hard/level-3/index.html"><button class="btn-default btn-level" id="hard-3">Nivel 3</button></a>
 
                     </div>
 
@@ -706,6 +661,10 @@
         </div>
 
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    <script src="js/swiper.js"></script>
 
     <script src="js/usuario.js"></script>
 
