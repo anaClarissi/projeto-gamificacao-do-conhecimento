@@ -35,12 +35,14 @@
 .quiz-description {
     color: var(--color-primary-11);
     text-align: center;
+    transition: opacity .3s ease;
 }
 
 .quiz-enter {
     display: flex;
     align-items: center;
     gap: 20px;
+    transition: opacity .3s ease;
 }
 
 .quiz-level {
