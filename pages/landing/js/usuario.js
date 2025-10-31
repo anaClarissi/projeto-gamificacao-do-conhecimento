@@ -2,10 +2,12 @@ const nomeAluno = document.querySelector(".user-name");
 
 nomeAluno.innerHTML = localStorage.getItem("user");
 
-const buttonUser = document.querySelector("button.user");
+$(document).ready(() => {
 
-buttonUser.addEventListener("click", () => {
+    $(".user").on("click", () => {
 
-    window.location = "pages/landing/home.html";
+        $('#user-menu').toggleClass('active');
+
+    })
 
 });

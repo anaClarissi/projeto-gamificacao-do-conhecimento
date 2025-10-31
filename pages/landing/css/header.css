@@ -48,17 +48,72 @@ header {
     font-size: 1.2rem;
 }
 
+#mobile-menu{
+    display: none;
+}
+
 #mobile-btn {
     display: none;
 }
 
-#mobile-menu {
+#user-menu {
     display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute; 
+    top: 100%; 
+    right: 0;
+    background-color: var(--color-primary-1); 
+    padding: 20px;
+    max-width: 50%;
+    min-width: 250px;
+    min-height: 300px;
+    border-radius: 20px;
+    border: 1px solid var(--color-primary-4);
+    z-index: 2;
+    transform: translate(-45%);
+}
+
+#user-nav-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 200px;
+    max-height: 300px;
+}
+
+#user-nav-list .user-item {
+    list-style: none;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px
+}
+
+.user-item:hover {
+    background-color: var(--color-primary-4);
+    transition: background-color .3s ease;
+}
+
+
+#user-nav-list a {
+    color: var(--color-primary-7);  
+    font-weight: 600;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#user-menu.active {
+    display: flex !important;
 }
 
 @media screen and (max-width: 1170px) {
 
-    #nav-list, #nav-bar .btn-default {
+    #nav-logo{
+        display: none;
+    }
+
+    #nav-list{
         display: none;
     }
 
@@ -71,10 +126,21 @@ header {
         color: var(--color-primary-7);
     }
 
+    #user-menu {
+        position: absolute; 
+        top: 100%; 
+        left: 0;
+        max-width: 250px;
+        min-width: 150px;
+        min-height: 300px;
+        transform: translate(15%);
+    }
+
     #mobile-menu.active {
         display: flex !important;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         position: absolute; 
         top: 100%; 
         right: 0;
@@ -91,19 +157,35 @@ header {
     #mobile-nav-list {
         display: flex;
         flex-direction: column;
-        gap: 12px;
-        margin: 12px 0;
+        justify-content: space-between;
+        min-height: 200px;
+        max-height: 300px;
     }
 
     #mobile-nav-list .nav-item {
         list-style: none;
         text-align: center;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .nav-item:hover {
+        background-color: var(--color-primary-4);
+        transition: background-color .3s ease;
     }
 
     #mobile-nav-list a {
         color: var(--color-primary-7);  
         font-weight: 600;
         padding: 10px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    #nav-logo {
+        display: none;
     }
 
 }
