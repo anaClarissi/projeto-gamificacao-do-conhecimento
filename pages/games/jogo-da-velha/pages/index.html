@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script defer src="../js/jogo.js"></script>
+
+</head>
+<body>
+    
+   <div id="container">
+
+        <div id="jogador">
+
+            <label for="jogador_atual">Jogador Atual: </label>
+            <span name="jogador_atual" value="x" id="jogador_atual">X</span>
+
+        </div>
+
+       <div id="jogo">
+           <table>
+                <tr>
+                    <td class="borda-bottom"><button class="btn" value="1"></button></td>
+                    <td class="borda-lados"><button class="btn" value="2"></button></td>
+                    <td class="borda-bottom"><button class="btn" value="3"></button></td>
+                </tr>
+                <tr>
+                    <td class="borda-bottom"><button class="btn" value="4"></button></td>
+                    <td class="borda-total"><button class="btn" value="5"></button></td>
+                    <td class="borda-bottom"><button class="btn" value="6"></button></td>
+                </tr>
+                <tr>
+                    <td><button class="btn" value="7"></button></td>
+                    <td class="borda-lados"><button class="btn" value="8"></button></td>
+                    <td><button class="btn" value="9"></button></td>
+                </tr>
+           </table>
+       </div>
+       
+   </div>
+</body>
+</html>

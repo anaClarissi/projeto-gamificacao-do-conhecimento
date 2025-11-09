@@ -1,4 +1,4 @@
-#path {
+#games {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -6,77 +6,87 @@
     min-height: 100vh;
 }
 
-.swiper {
-  width: 100%; 
-  height: auto; 
-  min-height: 550px;
-  overflow: hidden;
-}
-.swiper-slide {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  transition: transform .3s ease;
-}
-
-#area-of-activity {
-    /*width: 100%;
+#area-of-game {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    gap: 24px;*/
+    justify-content: space-around;
     margin-top: 32px;
-    min-height: 500px;
+
 }
 
-.area {
+.game {
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
     gap: 28px;
+    width: 25%;
     padding: 20px;
     background-color: var(--color-primary-10);
     box-shadow: 0 0 12px 4px rgba(0,0,0,0.1);
     position: relative;
     overflow: hidden;
-    width: auto;
-    height: auto;
-    box-sizing: border-box;
 }
 
-.area img {
+.game img {
     width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 20px;
 }
 
-.area-description {
+.game-description {
     color: var(--color-primary-11);
     text-align: center;
+    transition: opacity .3s ease;
 }
 
-.area-enter {
+.game a {
+    text-decoration: none;
+}
+
+.game-enter {
     display: flex;
     align-items: center;
     gap: 20px;
+    transition: opacity .3s ease;
+}
+
+.game-level {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 70%;
+    gap: 20px;
+}
+
+.game-level a {
+    text-decoration: none;
+    width: 100%;
+}
+
+.game-level a button {
+    width: 100%;
 }
 
 @media screen and (max-width: 1170px) {
-    #area-of-activity {
+    #area-of-game {
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around;
+        gap: 24px;
     }
 
-    .area {
+    .game {
         width: calc(50% - 12px);
     }
 }
 
 @media screen and (max-width: 600px) {
-
-    .area {
+    .game {
         width: 100%;
     }
 
-    #path .section-subtitle {
+    #game .section-subtitle {
         text-align: center;
     }
 }

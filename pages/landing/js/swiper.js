@@ -89,4 +89,34 @@ const swiperProfession = new Swiper('#careers', {
 
 });
 
+const swiperGames = new Swiper('#area-of-game', {
+
+  slidesPerView: 3,
+  spaceBetween: 30,
+  slidesPerGroup: 1,
+  loop: true,
+  loopFillGroupWithBlank: true,
+  grabCursor: true,
+
+  pagination: {
+    el: '#area-of-game .swiper-pagination',
+    clickable: true,
+  },
+
+  navigation: {
+    nextEl: '#area-of-game .swiper-button-next',
+    prevEl: '#area-of-game .swiper-button-prev',
+  },
+
+  scrollbar: {
+    el: '#area-of-game .swiper-scrollbar',
+  },
+
+  breakpoints: {
+    0: { slidesPerView: 1 },     // Mobile
+    768: { slidesPerView: 2 },   // Tablet
+    1024: { slidesPerView: 3 }   // Desktop
+  }
+
+});
 

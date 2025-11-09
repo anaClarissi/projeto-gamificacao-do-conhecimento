@@ -1,0 +1,67 @@
+:root {
+    --cor-fundo: #191919;
+    --cor-tabuleiro: #555;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container {
+    background-color: var(--cor-fundo);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+#jogador {
+    position: absolute;
+    top: 50px;
+}
+
+#jogador label {
+    color: #d3d3d3;
+    font-size: 2em;
+}
+
+#jogador span{
+    color: #d3d3d3;
+    font-size: 2em;
+}
+
+#jogo table {
+    border-collapse: collapse;
+}
+
+#jogo button {
+    width: 8vw;
+    min-width: 150px;
+    height: 8vw;
+    min-height: 150px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    color: #d3d3d3;
+    font-size: 2em;
+}
+
+.borda-total {
+    border: 0.4vw solid var(--cor-tabuleiro);
+}
+
+.borda-bottom {
+    border-bottom: 0.4vw solid var(--cor-tabuleiro);
+}
+
+.borda-lados {
+    border-left: 0.4vw solid var(--cor-tabuleiro);
+    border-right: 0.4vw solid var(--cor-tabuleiro);
+}
+

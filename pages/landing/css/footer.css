@@ -19,7 +19,8 @@ footer img {
 }
 
 #footer-items .social-media-buttons {
-    color: var(--color-purple-1);
+    color: var(--color-primary-13);
+    background-color: var(--color-primary-12);
 }
 
 @media screen and (max-width: 600px) {

@@ -1,12 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
+/*
 :root {
     --color-primary-1: #201B2C;
-    --color-primary-2: #77FFC0;
-    --color-primary-3: #46FFA8;
     --color-primary-4: #63508F;
     --color-primary-5: #2b134b;
     --color-primary-6: #5C4A84;
+    --color-primary-9: #080214;
+    --color-primary-14: #514869;
+    --color-primary-15: #2f2841;
+    --color-primary-17: #665d7c;
+}
+*/
+
+:root {
+    --color-primary-1: #191919;
+    --color-primary-2: #77FFC0;
+    --color-primary-3: #46FFA8;
+    --color-primary-4: #3A4D45;
+    --color-primary-5: #1E1E1E;
+    --color-primary-6: #1F3B32;
     --color-primary-7: #f0ffffde;
     --color-primary-8: #d7e6e6de;
     --color-primary-9: #080214;
@@ -14,10 +27,10 @@
     --color-primary-11: #434343;
     --color-primary-12: #00FF88;
     --color-primary-13: #1d1d1d;
-    --color-primary-14: #514869;
-    --color-primary-15: #2f2841;
+    --color-primary-14: #2D3B37;
+    --color-primary-15: #232B28;
     --color-primary-16: #00ff8052;
-    --color-primary-17: #665d7c;
+    --color-primary-17: #3A3F3C;
     --color-primary-18: #aaa;
 }
 
