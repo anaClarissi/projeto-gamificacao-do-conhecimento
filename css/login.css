@@ -37,7 +37,7 @@
     align-items: center;
     flex-direction: column;
     padding: 30px 35px;
-    background-color: var(--color-primary-13);
+    background-color: var(--color-primary-5);
     border-radius: 20px;
     box-shadow: 0 5px 10px #00000027;
 }
