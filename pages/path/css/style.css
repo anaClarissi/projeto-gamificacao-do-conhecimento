@@ -1,0 +1,173 @@
+@import url('../../landing/css/style.css');
+
+.module-header {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    height: 200px;
+    gap: 50px;
+    background-color: var(--color-primary-5);
+}
+
+.module-image {
+    width: 200px;
+}
+
+.section-title {
+    margin-top: 40px;
+}
+
+.desciption {
+    color: var(--color-primary-7);
+}
+
+.modules {
+    background-color: var(--color-primary-5);
+    border: 2px solid var(--color-primary-15);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 30px;
+    max-width: 1200px;
+    min-width: 600px;
+    gap: 20px;
+}
+
+.modules .module-type {
+    padding: 30px;
+    border-bottom: 1px solid var(--color-primary-7);
+}
+
+.modules .module-type a {
+    color: var(--color-primary-7);
+}
+
+.modules .module-type a:hover {
+    color: var(--color-primary-2);
+    transition: color .3s ease;
+}
+
+.final-test {
+    background-color: var(--color-primary-5);
+    border: 2px solid var(--color-primary-15);
+    border-radius: 20px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    max-width: 1200px;
+    min-width: 600px;
+}
+
+.final-test .final-quiz {
+    padding: 30px;
+    border-bottom: 1px solid var(--color-primary-7);
+}
+
+.final-test .final-quiz a {
+    color: var(--color-primary-7);
+}
+
+.final-test .final-quiz a:hover {
+    color: var(--color-primary-2);
+    transition: color .3s ease;
+}
+
+.html-tags {
+    background-color: var(--color-primary-18);
+    border-radius: 5px;
+    color: var(--color-primary-5);
+}
+
+.area-tags {
+    background-color: var(--color-primary-21);
+    border-radius: 10px;
+    padding: 0 8px 8px;
+    color: var(--color-primary-11);
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.area-tags .pequeno {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+}
+
+.area-tags .codigo {
+    margin-left: 30px;
+}
+
+.area-tags .codigo .teste {
+    margin-left: 40px;
+}
+
+.seletor {
+    color: var(--color-primary-19);
+}
+
+.propiedade {
+    color: var(--color-primary-22);
+    margin-left: 40px;
+}
+
+.valor {
+    color: var(--color-primary-20);
+}
+
+.comentario {
+    color: var(--color-primary-18);
+    font-style: italic;
+}
+
+.exercise-box {
+    background: var(--color-primary-10);
+    padding: 18px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+
+textarea {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    background-color: var(--color-primary-21);
+    border-radius: 10px;
+    border: none;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 14px;
+    border: none;
+    color: var(--color-primary-1);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 12px;
+    font-size: 15px;
+}
+
+.correct {
+    color: var(--color-primary-22);
+    font-weight: bold;
+}
+
+.wrong {
+    color: var(--color-primary-19);
+    font-weight: bold;
+}
+
+code {
+    background: var(--color-primary-1);
+    color: var(--color-primary-22);
+    padding: 4px 6px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-top: 6px;
+}

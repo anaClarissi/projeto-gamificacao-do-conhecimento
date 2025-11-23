@@ -37,9 +37,9 @@
     align-items: center;
     flex-direction: column;
     padding: 30px 35px;
-    background-color: var(--color-primary-15);
+    background-color: var(--color-primary-13);
     border-radius: 20px;
-    box-shadow: 0 10px 40px #00000056;
+    box-shadow: 0 5px 10px #00000027;
 }
 
 .card-login h2 {

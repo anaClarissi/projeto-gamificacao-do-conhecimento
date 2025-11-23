@@ -1,0 +1,145 @@
+@import url('style.css');
+
+.module-container {
+    padding: 28px; 
+    max-width: 980px; 
+    margin: auto; 
+    background: transparent; 
+}
+
+.module-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: transparent;
+    padding-right: 100px;
+}
+
+.module-header h1 {
+    margin-right: 150px; 
+    font-size: 28px;
+}
+
+.module-description { 
+    margin: 0 0 18px; 
+    color: var(--color-primary-7); 
+}
+
+.module-arrows {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+
+.area-arrows {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area-arrows:hover {
+    background-color: var(--color-primary-5);
+    transition: background-color .3s ease;
+}
+
+.arrows {
+    width: 35px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.module-section { 
+    background: var(--color-primary-10); 
+    color: var(--color-primary-11);
+    padding: 18px; 
+    margin-bottom: 16px; 
+    border-radius: 8px; 
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06); 
+}
+
+.module-section h2 { 
+    margin-top: 0; 
+    color: var(--color-primary-1); 
+}
+
+.module-section ul { 
+    margin-left: 18px; 
+}
+
+.quiz-section { 
+    margin-top: 8px; 
+}
+
+.quiz-item {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.quiz-item label, .quiz-item .option {
+    display: block;
+    margin: 6px 0;
+    cursor: pointer;
+}
+
+.quiz-item p {
+    margin-bottom: 8px;
+}
+
+.quiz-item .feedback {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.finish-quiz, .reset-quiz {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.quiz-result {
+    margin-top: 18px;
+}
+
+.question { 
+    padding: 12px; 
+    border-radius: 6px; 
+    margin-bottom: 10px; 
+    background: var(--color-primary-10); 
+    border: 1px solid var(--color-primary-10); 
+}
+
+.question p { 
+    margin: 0 0 8px; 
+    font-weight: 600; 
+}
+
+.options label { 
+    display: block; 
+    margin-bottom: 6px; 
+    cursor: pointer; 
+}
+
+.quiz-controls { 
+    margin-top: 12px; 
+    display:flex; 
+    gap:8px; 
+    align-items:center; 
+}
+
+.secondary { 
+    background:#6c757d; 
+}
+
+.score { 
+    font-weight:700; 
+    margin-left:12px; 
+}
+
+.explain { 
+    font-size:13px; 
+    margin-top:6px; 
+    color:#222; 
+}

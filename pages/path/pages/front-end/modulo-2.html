@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 2 — Hardware e Manutenção de Computadores</title>
+    
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+
+    <!-- Google Fonts Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- CSS do módulo -->
+    <link rel="stylesheet" href="../../css/modulo.css">
+
+</head>
+
+<body>
+
+    <header>
+        
+        <nav id="nav-bar">
+
+            <span id="nav-logo">
+
+                <img src="" alt="" >
+                
+                Informática Manhã
+
+            </span>
+
+            <ul id="nav-list">
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#home">Início</a>
+
+                </li>
+
+                <li class="nav-item active">
+                    
+                    <a href="../../../landing/home.html#path">Trilhas</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#profession">Profissões</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#quizzes">Quizzes</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#games">Jogos</a>
+
+                </li>
+
+            </ul>
+
+            <button class="btn-default user">
+
+                <i class="fa-solid fa-user"></i>
+                <span class="user-name">Area do Aluno</span>
+
+            </button>
+
+            <button id="mobile-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </nav>
+
+        <div id="user-menu">
+
+            <ul id="user-nav-list">
+
+                <li class="user-item">
+                    
+                    <a href="">Conquistas</a>
+
+                </li>
+
+                <li class="user-item">
+                    
+                    <a href="">Pontos</a>
+
+                </li>
+
+                <li class="user-item">
+                    
+                    <a href="">Minha Conta</a>
+
+                </li>
+
+                <li class="user-item">
+                    
+                    <a href="">Sair</a>
+
+                </li>
+
+            </ul>
+
+            
+
+        </div>
+
+        <div id="mobile-menu">
+
+            <ul id="mobile-nav-list">
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#home">Início</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#path">Trilhas</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#profession">Profissões</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#quizzes">Quizzes</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#games">Jogos</a>
+
+                </li>
+
+            </ul>
+
+            
+
+        
+
+    </header>
+
+    <main class="module-container">
+
+        <div class="module-header">
+            <img class="module-image" src="../../../landing/images/path/front-end.svg" alt="">
+            <h1 class="section-title">Front End</h1>
+        </div>
+        
+        <section class="module-type">
+            <h1 class="section-subtitle">Módulo 2 — Estilizando com CSS</h1>
+            <p class="module-description">
+                Neste módulo, você aprenderá a transformar páginas HTML simples em sites bonitos e organizados, utilizando o poder do CSS. Vamos abordar passo a passo cada aspecto fundamental do CSS.
+            </p>
+        </section>
+
+        <section class="module-arrows">
+
+            <a href="modulo-1.html">
+                <div class="area-arrows">
+                    <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg
+                    " alt="" class="arrows">
+                </div>
+            </a>
+
+            <a href="modulo-3.html">
+                <div class="area-arrows"><img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows"></div>
+            </a>
+
+        </section>
+
+        <section class="module-section">
+            <h3>1. Introdução ao CSS</h3>
+            <ul>
+                <li>CSS significa <strong>Cascading Style Sheets</strong> (Folhas de Estilo em Cascata) e é usado para definir o visual de uma página HTML.</li>
+                <li><strong>Formas de aplicar CSS</strong>: 
+                    <ul>
+                        <li><strong>Inline</strong>: dentro da tag HTML (<span class="html-tags">&ltp style="color: red;"&gtTexto&lt/p&gt</span>).</li>
+
+                        <li><strong>Interno</strong>: dentro da tag <span class="html-tags">&ltstyle&gt</span> no <span class="html-tags">&lthead&gt</span>.</li>
+
+                        <li><strong>Externo</strong>: arquivo .css separado e vinculado via <span class="html-tags">&ltlink rel="stylesheet" href="style.css"&gt</span>.</li>
+                    </ul> 
+                </li>
+                <li><strong>Sintaxe básica:</strong>
+                    <div class="area-tags">
+                        <p class="pequeno">css</p>
+                        <p class="codigo">seletor { <br>
+                            <span class="teste">propriedade: valor;</span> <br>
+                            }
+                        </p>
+                    </div>
+
+                    <p>Exemplo:</p>
+                    <div class="area-tags">
+                        <p class="pequeno">css</p>
+                        <p class="codigo">
+                            <span class="seletor">p</span> { <br>
+
+                                <span class="propiedade">color</span>: blue; 
+                                <br>
+                                <span class="propiedade">font-size</span>: <span class="valor">16px</span>; <br>
+                            }
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="area-tags">
+                        <p class="pequeno">css</p>
+
+                        <p class="comentario"><em>/*Este é um comentário*/</em></p>
+
+                    </div>
+                </li>
+                
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h3>2. Cores e fontes</h3>
+            <ul>
+                <li>É possível usar <strong>cores por nome</strong>, <strong>hexadecimal</strong> ou <strong>RGB</strong>:
+
+                    <div class="area-tags">
+                        <p class="pequeno">css</p>
+                        <p class="codigo">
+                            <span class="propiedade">color</span>: red; <span class="comentario">/*nome*/</span>
+                            <br>
+                            <span class="propiedade">color</span>: <span class="valor">#FF0000</span> <span class="comentario">/*hexadecimal*/</span>
+                            <br>
+                            <span class="propiedade">color</span>: <span class="valor">rgb(255,0,0);</span> <span class="comentario">/*RGB*/</span>
+                        </p>
+                    </div>
+
+                </li>
+            <li>
+                <strong>Fontes</strong>: escolha fontes legíveis e      coerentes com o design.
+
+                <div class="area-tags">
+                    <p class="pequeno">css</p>
+
+                    <p class="codigo">
+                        <span class="propiedade">font-family</span>: Arial, sans-serif;
+                        <br>
+                        <span class="propiedade">font-size</span>: <span class="valor">16px</span>;
+                        <br>
+                        <span class="propiedade">font-wight</span>: bold;
+                        <br>
+                        <span class="propiedade">font-style</span>: italic;
+                        <br>
+                        <span class="propiedade">text-transform</span>: uppercase;
+                    </p>
+
+                </div>
+
+                </li>
+                <li>Aplicações: textos, títulos, links, botões e elementos de interface.
+
+                </li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h3>3. Margens, padding e bordas</h3>
+            <ul>
+                <li>
+                    <strong>Margin</strong>: controla o espaço fora de um elemento.
+                
+                    <div class="area-tags">
+                        <p class="pequeno">css</p>
+                        <p class="codigo">
+                            <span class="propiedade">margin</span>: <span class="valor">20px</span>;
+                        </p>
+                    </div>
+
+                </li>
+
+                <li><strong>Padding</strong>: controla o espaço interno de um elemento.
+
+                    <div class="area-tags">
+                        <p class="pequeno">css</p>
+                        <p class="codigo">
+                            <span class="propiedade">padding</span>: <span class="valor">10px</span>;
+                        </p>
+                    </div>
+
+                </li>
+
+                <li><strong>Bordas</strong>: definem limites visíveis para os elementos.
+
+                    <div class="area-tags">
+                        <p class="pequeno">css</p>
+                        <p class="codigo">
+                            <span class="propiedade">border-width</span>: <span class="valor">2px</span>;
+                            <br>
+                            <span class="propiedade">border-style</span>: solid;
+                            <br>
+                            <span class="propiedade">border-color</span>: black;
+                            <br>
+                            <span class="propiedade">border-radius</span>: <span class="valor">8px</span>; <span class="comentario">/*bordas arredondadas*/</span>
+
+                        </p>
+                    </div>
+
+                </li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h3>4. Layout e posicionamento</h3>
+            <ul>
+                <li>
+                    <strong>Tipos de exibição:</strong>
+
+                    <ul>
+                        <li><span class="html-tags">block</span>: ocupa toda a largura disponível.</li>
+                        <li><span class="html-tags">inline</span>: ocupa apenas o espaço do conteúdo.</li>
+                    </ul>
+
+                </li>
+                <li>
+                    <strong>Posicionamento:</strong>
+
+                    <ul>
+                        <li><span class="html-tags">static</span>: padrão.</li>
+                        <li><span class="html-tags">relative</span>: posição relativa ao lugar original.</li>
+                        <li><span class="html-tags">absolute</span>: posição em relação ao elemento pai.</li>
+                        <li><span class="html-tags">fixed</span>: posição fixa na tela.</li>
+                    </ul>
+
+                </li>
+                <li>
+                    <strong>Flexbox</strong>: organizar elementos horizontal ou verticalmente.
+
+                    <div class="area-tags">
+                        <p class="pequeno">css</p>
+                        <p class="codigo">
+                            <span class="propiedade">display</span>: flex;
+                            <br>
+                            <span class="propiedade">justify-content</span>: space-between;
+                            <br>
+                            <span class="propiedade">align-items</span>: center;
+                        </p>
+                    </div>
+
+                </li>
+                <li>
+                    <strong>Grid</strong>: criar layouts com linhas e colunas.
+
+                    <div class="area-tags">
+                        <p class="pequeno">css</p>
+                        <p class="codigo">
+                            <span class="propiedade">display</span>: drid;
+                            <br>
+                            <span class="propiedade">grid-template-columns</span>: <span class="valor">repeat</span>(<span class="valor">3</span>, <span class="valor">1</span>fr);
+                            <br>
+                            <span class="propiedade">grid-gap</span>: <span class="valor">10px</span>;
+                        </p>
+                    </div>
+
+                </li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h3>5. Estilos avançados</h3>
+            <ul>
+                <li>
+                    <strong>Sombras</strong>:
+
+                    <div class="area-tags">
+                        <p class="pequeno">css</p>
+                        <p class="codigo">
+                            <span class="propiedade">box-shadow</span>: <span class="valor">2px 2px 5px</span> gray;
+                            <br>
+                            <span class="propiedade">text-shadow</span>: <span class="valor">1px 1px 2px</span> black;
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Gradientes</strong>:
+
+                    <div class="area-tags">
+                        <p class="pequeno">css</p>
+                        <p class="codigo">
+                            <span class="propiedade">background</span>: <span class="valor">linear-gradient</span>(to right, red, yellow);
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Pseudo-classes</strong>: interatividade com o usuário.
+
+                    <div class="area-tags">
+                        <p class="pequeno">css</p>
+                        <p class="codigo">
+                            <span class="seletor">a</span> <span class="valor">:hover</span> {
+                                <br>
+                                <span class="propiedade">color</span>: green; <br>
+                            }
+                            <br>
+                            <span class="seletor">button</span> <span class="valor">:active</span> {
+                                <br>
+                                <span class="propiedade">background-color</span>: blue; <br>
+                            }
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <strong>Pseudo-elementos</strong>: criar efeitos decorativos.
+
+                    <div class="area-tags">
+                        <p class="pequeno">css</p>
+                        <p class="codigo">
+                            <span class="seletor">p</span><span class="valor">::before</span> {
+                                <br>
+                                <span class="propiedade">content</span>: <span class="valor">"• "</span>; <br>
+                            }
+                        </p>
+                    </div>
+                </li>
+            
+            </ul>
+        </section>
+
+        <!--QUESTÕES-->
+
+        <section id="coding-questions"></section>
+
+        <section class="module-arrows">
+
+            <a href="modulo-1.html">
+                <div class="area-arrows">
+                    <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg
+                    " alt="" class="arrows">
+                </div>
+            </a>
+
+            <a href="modulo-3.html">
+                <div class="area-arrows"><img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows"></div>
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="../../../landing/images/footer/wave.svg" alt="">
+        <div id="footer-items">
+            <span>&copy 2025 Ana Clarissi</span>
+            <div class="social-media-buttons">
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!--Scripts-->
+
+    <script src="../../../landing/js/usuario.js"></script>
+
+    <script src="../../../landing/js/script.js"></script>
+
+    <script>
+        const codingExercises = [
+            {
+                id: 1,
+                title: "Crie um título principal usando a tag <h1>",
+                description: "Escreva um código HTML que exiba o texto: Front-End Básico",
+                expected: "<h1>Front-End Básico</h1>"
+            },
+            {
+                id: 2,
+                title: "Crie um parágrafo",
+                description: "Crie um parágrafo contendo o texto: Aprendendo HTML agora!",
+                expected: "<p>Aprendendo HTML agora!</p>"
+            },
+            {
+                id: 3,
+                title: "Adicione uma classe a um elemento",
+                description: "Crie uma &ltdiv&gt com a classe caixa e o texto Teste.",
+                expected: '<div class="caixa">Teste</div>'
+            },
+            {
+                id: 4,
+                title: "Crie um botão",
+                description: "Crie um botão com o texto Clique aqui",
+                expected: "<button>Clique aqui</button>"
+            }
+        ];
+
+        // Função que renderiza as questões
+        const renderExercises = () => {
+            const container = document.getElementById("coding-questions");
+
+            codingExercises.forEach(ex => {
+                container.innerHTML += `
+                    <div class="exercise-box">
+                        <h3>${ex.id}. ${ex.title}</h3>
+                        <p>${ex.description}</p>
+
+                        <textarea id="answer-${ex.id}" placeholder="Escreva seu código aqui..."></textarea>
+
+                        <button class="btn-default" onclick="checkAnswer(${ex.id})">Verificar Resposta</button>
+
+                        <div id="result-${ex.id}" class="result"></div>
+                    </div>
+                `;
+            });
+        }
+
+        // Função que compara a resposta do aluno
+        const checkAnswer = (id) => {
+            const question = codingExercises.find(q => q.id === id);
+
+            const studentAnswer = document.getElementById(`answer-${id}`).value
+                .trim()
+                .replace(/\s+/g, " "); // remove múltiplos espaços
+
+            const expectedAnswer = question.expected.trim().replace(/\s+/g, " ");
+
+            const resultBox = document.getElementById(`result-${id}`);
+
+            if (studentAnswer === expectedAnswer) {
+                resultBox.innerHTML = "<span class='correct'>✔ Correto!</span>";
+            } else {
+                resultBox.innerHTML = `
+                    <span class='wrong'>✘ Resposta incorreta</span>
+                    <br><strong>Resposta esperada:</strong><br>
+                    <code>${question.expected.replace(/</g, "&lt;")}</code>
+                `;
+            }
+        }
+
+        renderExercises();
+
+    </script>
+
+
+</body>
+
+</html>

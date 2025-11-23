@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Final</title>
+
+    <link rel="stylesheet" href="../../css/quiz-final.css">
+
+    <script defer src="../../js/script-final.js"></script>
+</head>
+<body>
+    
+    <main>
+
+        <div class="app">
+
+            <h1>Quiz Final: <span>Todos os Módulos</span></h1>
+
+            <div class="quiz" id="quiz-final">
+                <h2 id="questions">As Questões estão aqui</h2>
+                <div id="btn-answers">
+                    <button class="btn">Resposta 1</button>
+                    <button class="btn">Resposta 2</button>
+                    <button class="btn">Resposta 3</button>
+                    <button class="btn">Resposta 4</button>
+                </div>
+                <button id="btn-next" class="btn-default">Próximo</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        const questionsFinalExam = [
+
+    // MÓDULO 1 — Fundamentos de Segurança da Informação
+            {
+                question: "Qual é o principal objetivo da segurança da informação?",
+                answer: [
+                    { id: 1, text: "Instalar softwares novos em todas as máquinas", correct: false },
+                    { id: 2, text: "Proteger dados, sistemas e redes contra acessos não autorizados", correct: true },
+                    { id: 3, text: "Aumentar a velocidade do computador", correct: false },
+                    { id: 4, text: "Vender equipamentos de TI", correct: false }
+                ]
+            },
+
+            {
+                question: "O que significa confidencialidade em segurança da informação?",
+                answer: [
+                    { id: 1, text: "Garantir que o sistema nunca caia", correct: false },
+                    { id: 2, text: "Garantir que dados sejam acessíveis apenas por pessoas autorizadas", correct: true },
+                    { id: 3, text: "Instalar antivírus", correct: false },
+                    { id: 4, text: "Executar backups diariamente", correct: false }
+                ]
+            },
+
+            // MÓDULO 2 — Proteção de Dispositivos e Rede
+            {
+                question: "Qual é a função de um firewall?",
+                answer: [
+                    { id: 1, text: "Bloquear e monitorar tráfego de rede não autorizado", correct: true },
+                    { id: 2, text: "Formatar discos rígidos", correct: false },
+                    { id: 3, text: "Aumentar o desempenho do processador", correct: false },
+                    { id: 4, text: "Limpar arquivos temporários do computador", correct: false }
+                ]
+            },
+
+            {
+                question: "O que significa manter os dispositivos atualizados?",
+                answer: [
+                    { id: 1, text: "Reiniciar o computador uma vez por semana", correct: false },
+                    { id: 2, text: "Instalar patches, atualizações de sistema e antivírus regularmente", correct: true },
+                    { id: 3, text: "Trocar a senha do usuário diariamente", correct: false },
+                    { id: 4, text: "Apenas desligar e ligar o roteador", correct: false }
+                ]
+            },
+
+            // MÓDULO 3 — Senhas, Acessos e Autenticação
+            {
+                question: "O que torna uma senha forte?",
+                answer: [
+                    { id: 1, text: "Ser apenas o nome do usuário", correct: false },
+                    { id: 2, text: "Ser a mesma em todos os sistemas", correct: false },
+                    { id: 3, text: "Ser longa, incluir letras maiúsculas, minúsculas, números e símbolos", correct: true },
+                    { id: 4, text: "Ter apenas números", correct: false }
+                ]
+            },
+
+            {
+                question: "O que é autenticação multifator?",
+                answer: [
+                    { id: 1, text: "Usar apenas senha simples", correct: false },
+                    { id: 2, text: "Trocar a senha a cada 24 horas", correct: false },
+                    { id: 3, text: "Permitir acesso sem login", correct: false },
+                    { id: 4, text: "Usar mais de um método de verificação, como senha e código enviado ao celular", correct: true }
+                ]
+            },
+
+            // MÓDULO 4 — Segurança de Dados e Backup
+            {
+                question: "Qual é o objetivo do backup?",
+                answer: [
+                    { id: 1, text: "Salvar cópias de dados importantes para restaurar em caso de perda", correct: true },
+                    { id: 2, text: "Deletar arquivos antigos", correct: false },
+                    { id: 3, text: "Enviar dados por e-mail", correct: false },
+                    { id: 4, text: "Melhorar a velocidade do sistema", correct: false }
+                ]
+            },
+
+            {
+                question: "Por que criptografar os dados?",
+                answer: [
+                    { id: 1, text: "Para reduzir o tamanho dos arquivos", correct: false },
+                    { id: 2, text: "Para que apenas usuários autorizados possam acessá-los", correct: true },
+                    { id: 3, text: "Para compartilhar mais rapidamente na internet", correct: false },
+                    { id: 4, text: "Para facilitar a impressão de documentos", correct: false }
+                ]
+            },
+
+            // MÓDULO 5 — Incidentes, Ataques e Resposta
+            {
+                question: "O que é um ataque de phishing?",
+                answer: [
+                    { id: 1, text: "Uma atualização de sistema", correct: false },
+                    { id: 2, text: "Mensagem fraudulenta para enganar o usuário e obter informações", correct: true },
+                    { id: 3, text: "Um antivírus atualizado", correct: false },
+                    { id: 4, text: "Backup de dados", correct: false }
+                ]
+            },
+
+            {
+                question: "Qual é a primeira ação ao identificar um incidente de segurança?",
+                answer: [
+                    { id: 1, text: "Publicar nas redes sociais", correct: false },
+                    { id: 2, text: "Trocar todos os computadores", correct: false },
+                    { id: 3, text: "Isolar os sistemas afetados para conter o problema", correct: true },
+                    { id: 4, text: "Desinstalar softwares de segurança", correct: false }
+                ]
+            },
+
+            {
+                question: "Por que documentar incidentes é importante?",
+                answer: [
+                    { id: 1, text: "Para registrar ações tomadas e prevenir futuros problemas", correct: true },
+                    { id: 2, text: "Para punir usuários", correct: false },
+                    { id: 3, text: "Para deletar arquivos antigos", correct: false },
+                    { id: 4, text: "Para compartilhar nas redes sociais", correct: false }
+                ]
+            }
+
+        ];
+
+
+
+        const questionElement = document.getElementById("questions");
+        const answersBtn = document.getElementById("btn-answers");
+        const nextButton = document.getElementById("btn-next");
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const startQuiz = () => {
+            currentQuestionIndex = 0;
+            score = 0;
+            nextButton.textContent = "Próximo";
+            nextButton.style.display = "none";
+            showQuestion();
+        };
+
+        const showQuestion = () => {
+            resetState();
+
+            let currentQuestion = questionsFinalExam[currentQuestionIndex];
+            questionElement.textContent = currentQuestion.question;
+
+            currentQuestion.answer.forEach(resp => {
+                const button = document.createElement("button");
+                button.classList.add("btn");
+                button.textContent = resp.text;
+
+                if (resp.correct) button.dataset.correct = "true";
+
+                button.addEventListener("click", selectAnswer);
+                answersBtn.appendChild(button);
+            });
+        };
+
+        const resetState = () => {
+            nextButton.style.display = "none";
+            answersBtn.innerHTML = "";
+        };
+
+        const selectAnswer = (e) => {
+            const selectedBtn = e.target;
+            const isCorrect = selectedBtn.dataset.correct === "true";
+
+            selectedBtn.classList.add(isCorrect ? "correct" : "incorrect");
+            if (isCorrect) score++;
+
+            Array.from(answersBtn.children).forEach(button => {
+                if (button.dataset.correct === "true") button.classList.add("correct");
+                button.disabled = true;
+            });
+
+            nextButton.style.display = "block";
+        };
+
+        const finishQuiz = () => {
+            resetState();
+
+            questionElement.innerHTML = `
+                <strong>Quiz Concluído!</strong><br>
+                Você acertou <strong>${score}</strong> de <strong>${questionsFinalExam.length}</strong> questões.
+            `;
+
+            nextButton.textContent = "Voltar à Segurança da Informação";
+            nextButton.style.display = "block";
+
+            nextButton.onclick = () => {
+                window.location.href = "seguranca-da-informacao.html";
+            };
+        };
+
+        nextButton.addEventListener("click", () => {
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < questionsFinalExam.length) {
+                showQuestion();
+            } else {
+                finishQuiz();
+            }
+        });
+
+        startQuiz();
+    </script>
+
+
+</body>
+</html>

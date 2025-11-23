@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 3 — Sistemas Operacionais</title>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+
+    <!-- Google Fonts Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- CSS do módulo -->
+    <link rel="stylesheet" href="../../css/modulo.css">
+</head>
+
+<body>
+
+    <header>
+        
+        <nav id="nav-bar">
+
+            <span id="nav-logo">
+
+                <img src="" alt="" >
+                
+                Informática Manhã
+
+            </span>
+
+            <ul id="nav-list">
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#home">Início</a>
+
+                </li>
+
+                <li class="nav-item active">
+                    
+                    <a href="../../../landing/home.html#path">Trilhas</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#profession">Profissões</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#quizzes">Quizzes</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#games">Jogos</a>
+
+                </li>
+
+            </ul>
+
+            <button class="btn-default user">
+
+                <i class="fa-solid fa-user"></i>
+                <span class="user-name">Area do Aluno</span>
+
+            </button>
+
+            <button id="mobile-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </nav>
+
+        <div id="user-menu">
+
+            <ul id="user-nav-list">
+
+                <li class="user-item">
+                    
+                    <a href="">Conquistas</a>
+
+                </li>
+
+                <li class="user-item">
+                    
+                    <a href="">Pontos</a>
+
+                </li>
+
+                <li class="user-item">
+                    
+                    <a href="">Minha Conta</a>
+
+                </li>
+
+                <li class="user-item">
+                    
+                    <a href="">Sair</a>
+
+                </li>
+
+            </ul>
+
+            
+
+        </div>
+
+        <div id="mobile-menu">
+
+            <ul id="mobile-nav-list">
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#home">Início</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#path">Trilhas</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#profession">Profissões</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#quizzes">Quizzes</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#games">Jogos</a>
+
+                </li>
+
+            </ul>
+
+            
+
+        
+
+    </header>
+
+    <main class="module-container">
+
+        <div class="module-header">
+            <img class="module-image" src="../../../landing/images/path/Security On-bro.svg" alt="">
+            <h1 class="section-title">Segurança da informação</h1>
+        </div>
+
+        <section class="module-type">
+            <h1 class="section-subtitle">Módulo 3 — Senhas, Acessos e Autenticação</h2>
+            <p class="module-description">
+                Este módulo aborda os métodos e boas práticas de controle de acesso a sistemas, redes e dados, fundamentais para proteger informações sensíveis e prevenir invasões. O foco está na criação de senhas seguras, gerenciamento de permissões, autenticação de usuários e prevenção de acessos não autorizados.
+            </p>
+        </section>
+
+        <section class="module-arrows">
+
+            <a href="modulo-2.html">
+                <div class="area-arrows">
+                    <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg
+                    " alt="" class="arrows">
+                </div>
+            </a>
+
+            <a href="modulo-4.html">
+                <div class="area-arrows"><img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows"></div>
+            </a>
+
+        </section>
+
+        <!-- CONTEÚDO DO MÓDULO -->
+        <section class="module-section">
+            <h2>1. O que são senhas e por que são importantes?</h2>
+            <ul>
+                <li>Senhas são <strong>barreiras de proteção</strong> contra acessos não autorizados.</li>
+                <li>Servem para confirmar que <strong>você é realmente você</strong></li>
+                <li>Sem boas senhas, sistemas podem ser invadidos e dados roubados</li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h2>2. Boas práticas para criar senhas fortes</h2>
+
+            <p>Uma senha forte deve ter:</p>
+            <ul>
+                <li>Letras maiúsculas e minúsculas</li>
+                <li>Números</li>
+                <li>Símbolos</li>
+                <li>Pelo menos <strong>10 caracteres</strong></li>
+            </ul>
+
+            <p>Exemplos:</p>
+            <ul>
+                <li>Senha fraca: ana123</li>
+                <li>Senha forte: A!naC0d3_2025</li>
+            </ul>
+
+            <p>Dicas:</p>
+            <ul>
+                <li>Evite nomes, datas e palavras óbvias.</li>
+                <li>Nunca use a mesma senha para tudo.</li>
+            </ul>
+
+        </section>
+
+        <section class="module-section">
+            <h2>3. Gerenciamento de senhas</h2>
+            <ul>
+                <li>Use um <strong>gerenciador de senhas</strong> (KeePass, Bitwarden, 1Password).</li>
+                <li>Ele guarda todas as suas senhas em um “cofre”.</li>
+                <li>Você só precisa lembrar uma <strong>senha mestra</strong>.</li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h2>4. Autenticação em duas etapas (2FA)</h2>
+            <p>
+                2FA adiciona uma <strong>segunda camada de segurança</strong>.
+            </p>
+
+            <p>Pode ser:</p>
+            <ul>
+                <li>Código via SMS</li>
+                <li>Aplicativos como Google Authenticator</li>
+                <li>Chave física USB (como YubiKey)</li>
+                <li>Reconhecimento facial ou digital</li>
+            </ul>
+
+            <p><strong>Sem 2FA → Fácil invadir</strong></p>
+            <p><strong>Com 2FA → Muito mais difícil</strong></p>
+
+        </section>
+
+        <section class="module-section">
+            <h2>5. Tipos de autenticação</h2>
+            <p>
+                Existem três categorias
+            </p>
+
+            <h3>Algo que você sabe</h3>
+            <ul>
+                <li>Senha</li>
+                <li>PIN</li>
+                <li>Pergunta secreta</li>
+            </ul>
+
+            <h3>Algo que você tem</h3>
+            <ul>
+                <li>Token</li>
+                <li>Smartphone</li>
+                <li>Cartão de acesso</li>
+            </ul>
+
+            <h3>Algo que você é</h3>
+            <ul>
+                <li>Digital</li>
+                <li>Rosto</li>
+                <li>Íris</li>
+                <li>Voz</li>
+            </ul>
+
+            <p>Quanto mais tipos combinados, mais seguro.</p>
+
+        </section>
+
+        <section class="module-section">
+            <h2>6. Controle de acessos</h2>
+            <ul>
+                <li>Define <strong>quem pode acessar o quê</strong> dentro de uma organização.</li>
+            </ul>
+
+            <p>Principais modelos:</p>
+            <ul>
+                <li><strong>ACL (Lista de Controle de Acesso)</strong>: regras definem quem acessa cada item.</li>
+                <li><strong>RBAC (Controle baseado em papéis)</strong>: permissões ligadas a cargos (ex: administrador, usuário).</li>
+                <li><strong>ABAC (Controle baseado em atributos)</strong>: considera condições (local, horário, dispositivo, regras).</li>
+            </ul>
+
+        </section>
+
+        <section class="module-section">
+            <h2>7. Riscos e ataques comuns</h2>
+
+            <h3>Phishing</h3>
+            <ul>
+                <li>Golpes que tentam roubar senhas via e-mail falsos.</li>
+            </ul>
+
+            <h3>Brute force</h3>
+            <ul>
+                <li>Tentativas infinitas de adivinhar a senha.</li>
+            </ul>
+
+            <h3>Keyloggers</h3>
+            <ul>
+                <li>Programas que gravam tudo que você digita.</li>
+            </ul>
+
+            <h3>Roubo de sessão</h3>
+            <ul>
+                <li>Invasor sequestra sua sessão logada.</li>
+            </ul>
+
+            <p>Como se proteger:</p>
+            <ul>
+                <li>Usar 2FA</li>
+                <li>Senhas fortes</li>
+                <li>Não clicar em links duvidosos</li>
+                <li>Manter o sistema atualizado</li>
+            </ul>
+
+        </section>
+
+        <section class="module-section">
+            <h2>8. Políticas de senha</h2>
+
+            <p>Empresas geralmente exigem:</p>
+            <ul>
+                <li>Mínimo de caracteres</li>
+                <li>Renovação periódica</li>
+                <li>Bloqueio após tentativas erradas</li>
+                <li>Proibição de senhas repetidas</li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h2>9. Exemplos de situações reais</h2>
+            <ul>
+                <li>Funcionário compartilha senha com colegas → risco alto.</li>
+                <li>Usuário usa “123456” → senha vulnerável.</li>
+                <li>Sistema sem 2FA é invadido → dados vazados.</li>
+                <li>Aplicativo bloqueia após 5 tentativas → medida de segurança.</li>
+            </ul>
+        </section>
+
+
+        <!-- QUIZ -->
+        <section class="module-section quiz-section">
+
+            <h2>Quiz — Módulo 3</h2>
+
+            <div id="quiz"></div>
+
+            <div class="quiz-controls" style="margin-top:20px;">
+                <button id="submitBtn" class="btn-default">Enviar respostas</button>
+                <button id="resetBtn" class="btn-default secondary">Refazer</button>
+            </div>
+
+            <div id="scoreDisplay" style="margin-top:12px; font-size:18px;"></div>
+
+        </section>
+
+        <section class="module-arrows">
+
+            <a href="modulo-2.html">
+                <div class="area-arrows">
+                    <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg
+                    " alt="" class="arrows">
+                </div>
+            </a>
+
+            <a href="modulo-4.html">
+                <div class="area-arrows"><img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows"></div>
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="../../../landing/images/footer/wave.svg" alt="">
+        <div id="footer-items">
+            <span>&copy 2025 Ana Clarissi</span>
+            <div class="social-media-buttons">
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../../landing/js/usuario.js"></script>
+
+    <script src="../../../landing/js/script.js"></script>
+
+
+    <!--QUIZ-->
+
+    <script>
+    // QUIZ DO MÓDULO 3
+
+        const quizContainer = document.getElementById("quiz");
+        const submitBtn = document.getElementById("submitBtn");
+        const resetBtn = document.getElementById("resetBtn");
+        const scoreDisplay = document.getElementById("scoreDisplay");
+
+        const questions = [
+    {
+        question: "Qual é a característica de uma senha segura?",
+        options: [
+            "Usar datas de nascimento ou nomes de familiares",
+            "Combinar letras maiúsculas e minúsculas, números e símbolos",
+            "Usar apenas números sequenciais"
+        ],
+        answer: 1
+    },
+    {
+        question: "O que significa o princípio do menor privilégio?",
+        options: [
+            "Dar acesso completo a todos os usuários",
+            "Dar acesso apenas às permissões necessárias para cada função",
+            "Permitir acesso temporário ilimitado"
+        ],
+        answer: 1
+    },
+    {
+        question: "Qual é a principal vantagem da autenticação multifator (MFA)?",
+        options: [
+            "Reduz o tempo de login",
+            "Evita acessos não autorizados combinando senha, token e/ou biometria",
+            "Elimina a necessidade de senha"
+        ],
+        answer: 1
+    },
+    {
+        question: "O que não é uma boa prática de segurança de senhas?",
+        options: [
+            "Não compartilhar senhas entre sistemas",
+            "Anotar senhas em papéis visíveis",
+            "Alterar senhas periodicamente"
+        ],
+        answer: 1
+    },
+    {
+        question: "Qual ação ajuda a proteger sua conta contra phishing?",
+        options: [
+            "Clicar em links desconhecidos para verificar mensagens",
+            "Verificar a autenticidade de e-mails e nunca fornecer credenciais",
+            "Compartilhar senhas com colegas de confiança"
+        ],
+        answer: 1
+    }
+];
+
+
+    // GERAR QUIZ NA TELA
+        const quizDiv = document.getElementById("quiz");
+
+        questions.forEach((q, index) => {
+            const card = document.createElement("div");
+            card.style.padding = "16px";
+            card.style.marginBottom = "16px";
+            card.style.border = "1px solid #ddd";
+            card.style.borderRadius = "10px";
+            card.style.background = "#ddd";
+
+            let html = `<p><strong>${index + 1}. ${q.question}</strong></p>`;
+
+            q.options.forEach((opt, i) => {
+                html += `
+                    <label style="display:block; margin-top:6px; cursor:pointer;">
+                        <input type="radio" name="q${index}" value="${i}">
+                        ${opt}
+                    </label>
+                `;
+            });
+
+            card.innerHTML = html;
+            quizDiv.appendChild(card);
+        });
+
+        // BOTÃO ENVIAR
+        document.getElementById("submitBtn").addEventListener("click", () => {
+            let score = 0;
+
+            questions.forEach((q, index) => {
+                const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                if (selected && parseInt(selected.value) === q.answer) {
+                    score++;
+                }
+            });
+
+            document.getElementById("scoreDisplay").innerHTML =
+                `Você acertou <strong>${score}</strong> de <strong>${questions.length}</strong>.`;
+        });
+
+        // BOTÃO REFAZER
+        document.getElementById("resetBtn").addEventListener("click", () => {
+            document.querySelectorAll("input[type=radio]").forEach(r => r.checked = false);
+            document.getElementById("scoreDisplay").innerHTML = "";
+        });
+    </script>
+
+
+</body>
+</html>

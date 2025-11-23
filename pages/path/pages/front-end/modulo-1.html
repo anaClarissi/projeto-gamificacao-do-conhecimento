@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 1 — Fundamentos de Front-End</title>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+
+    <!-- Google Fonts Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- CSS do módulo -->
+    <link rel="stylesheet" href="../../css/modulo.css">
+</head>
+
+<body>
+
+    <header>
+        
+        <nav id="nav-bar">
+
+            <span id="nav-logo">
+
+                <img src="" alt="" >
+                
+                Informática Manhã
+
+            </span>
+
+            <ul id="nav-list">
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#home">Início</a>
+
+                </li>
+
+                <li class="nav-item active">
+                    
+                    <a href="../../../landing/home.html#path">Trilhas</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#profession">Profissões</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#quizzes">Quizzes</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#games">Jogos</a>
+
+                </li>
+
+            </ul>
+
+            <button class="btn-default user">
+
+                <i class="fa-solid fa-user"></i>
+                <span class="user-name">Area do Aluno</span>
+
+            </button>
+
+            <button id="mobile-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </nav>
+
+        <div id="user-menu">
+
+            <ul id="user-nav-list">
+
+                <li class="user-item">
+                    
+                    <a href="">Conquistas</a>
+
+                </li>
+
+                <li class="user-item">
+                    
+                    <a href="">Pontos</a>
+
+                </li>
+
+                <li class="user-item">
+                    
+                    <a href="">Minha Conta</a>
+
+                </li>
+
+                <li class="user-item">
+                    
+                    <a href="">Sair</a>
+
+                </li>
+
+            </ul>
+
+            
+
+        </div>
+
+        <div id="mobile-menu">
+
+            <ul id="mobile-nav-list">
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#home">Início</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#path">Trilhas</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#profession">Profissões</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#quizzes">Quizzes</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#games">Jogos</a>
+
+                </li>
+
+            </ul>
+
+            
+
+        
+
+    </header>
+
+    <main class="module-container">
+
+        <div class="module-header">
+            <img class="module-image" src="../../../landing/images/path/front-end.svg" alt="">
+            <h1 class="section-title">Front End</h1>
+        </div>
+
+        <section class="module-type">
+            <h1 class="section-subtitle">Módulo 1 — Fundamentos de Front-End</h1>
+            <p class="module-description">
+               Neste módulo, você vai começar a explorar o mundo do desenvolvimento Front-End, que é a parte visual e interativa de um site. Você vai aprender o que faz um desenvolvedor Front-End e entender como as páginas da web são estruturadas.
+            </p>
+
+            
+        </section>
+
+        <section class="module-arrows">
+
+            <a href="front-end.html">
+                <div class="area-arrows">
+                    <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg
+                    " alt="" class="arrows">
+                </div>
+            </a>
+
+            <a href="modulo-2.html">
+                <div class="area-arrows"><img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows"></div>
+            </a>
+
+        </section>
+
+        <!-- CONTEÚDO DO MÓDULO -->
+        <section class="module-section">
+            <h2>1. O que faz um desenvolvedor Front-End</h2>
+            <p>
+                O desenvolvedor Front-End é responsável por criar e implementar a interface visual de sites e aplicações web. Ele transforma designs em páginas funcionais que os usuários podem interagir, garantindo que tudo seja responsivo, acessível e intuitivo. Além disso, precisa otimizar o desempenho e compatibilidade com diferentes navegadores e dispositivos.
+            </p>
+        </section>
+
+        <section class="module-section">
+            <h2>2. Estrutura de páginas web com HTML</h2>
+            <p>
+            HTML (HyperText Markup Language) é a linguagem usada para estruturar conteúdos na web. Cada página web é composta por elementos HTML, como títulos, parágrafos, listas, imagens, links e formulários. É essencial entender a hierarquia de elementos, a organização do código e a correta utilização das tags.  
+            </p>
+        </section>
+
+        <section class="module-section">
+            <h2>3. Elementos semânticos</h2>
+            <p>Elementos semânticos descrevem claramente o papel do conteúdo dentro da página. Por exemplo:</p>
+            <ul>
+                <li><span class="html-tags">&ltheader&gt</span>: cabeçalho da página ou seção</li>
+                <li><span class="html-tags">&ltnav&gt</span>: área de navegação</li>
+                <li><span class="html-tags">&ltmain&gt</span>: conteúdo principal</li>
+                <li><span class="html-tags">&ltsection&gt</span>: seções de conteúdo</li>
+                <li><span class="html-tags">&ltfooter&gt</span>: rodapé da página</li>
+            </ul>
+            <p>O uso correto de elementos semânticos melhora a acessibilidade e o SEO do site.</p>
+
+        </section>
+
+        <section class="module-section">
+            <h2>4. Links, listas e imagens</h2>
+            <ul>
+                <li><strong>Links</strong>: <span class="html-tags">&lta href="url"&gtTexto do link&lt/a&gt</span> permite navegação entre páginas ou seções.</li>
+                <li><strong>Listas</strong>: <span class="html-tags">&ltul&gt</span> (não ordenada) ou <span class="html-tags">&ltol&gt</span> (ordenada) organizam informações de forma hierárquica.</li>
+                <li><strong>Imagens</strong>: <span class="html-tags">&ltimg src="caminho" alt="descrição"&gt</span> insere imagens, sendo importante sempre usar o atributo alt para acessibilidade.</li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h2>5. Formulários e inputs</h2>
+            <p>Formulários coletam informações dos usuários e podem incluir:</p>
+            <ul>
+                <li>Campos de texto (<span class="html-tags">&ltinput type="text"</span>)</li>
+                <li>Senhas (<span class="html-tags">&ltinput type="password"</span>)</li>
+                <li>Botões (<span class="html-tags">&ltbutton</span> ou <span class="html-tags">&ltinput type="submit"</span>)</li>
+                <li>Caixas de seleção (&ltselect e <span class="html-tags">&ltoption</span>)</li>
+                <li>Checkboxes (<span class="html-tags">&ltinput type="checkbox"</span>) e rádios (<span class="html-tags">&ltinput type="radio"</span>)</li>
+            </ul>
+            <p>Formulários devem ser claros, acessíveis e fáceis de usar.</p>
+            
+        </section>
+
+        <section class="module-section">
+            <h2>6. Introdução a CSS: cores, fontes, tamanhos e margens</h2>
+            <p>CSS (Cascading Style Sheets) define a aparência visual da página. Alguns conceitos básicos:</p>
+            <ul>
+                <li><strong>Cores</strong>: <span class="html-tags">color</span> para texto, <span class="html-tags">background-color</span> para fundos</li>
+                <li><strong>Fontes</strong>: <span class="html-tags">font-family</span>, <span class="html-tags">font-size</span></li>
+                <li><strong>Margens e espaçamentos</strong>: <span class="html-tags">margin</span>, <span class="html-tags">padding</span></li>
+                <li><strong>Bordas</strong>: <span class="html-tags">border</span> define a linha ao redor de elementos</li>
+            </ul>
+            <p>CSS pode ser aplicado inline, em <span class="html-tags">&ltstyle&gt</span> no HTML ou em arquivos <span class="html-tags">.css</span> externos.</p>
+            
+        </section>
+
+        
+        <!-- QUIZ -->
+        <section class="module-section quiz-section">
+
+            <h2>Quiz — Módulo 1</h2>
+
+            <div id="quiz"></div>
+
+            <div class="quiz-controls" style="margin-top:20px;">
+                <button id="submitBtn" class="btn-default">Enviar respostas</button>
+                <button id="resetBtn" class="btn-default secondary">Refazer</button>
+            </div>
+
+            <div id="scoreDisplay" style="margin-top:12px; font-size:18px;"></div>
+
+        </section>
+
+        <section class="module-arrows">
+
+            <a href="front-end.html">
+                <div class="area-arrows">
+                    <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg
+                    " alt="" class="arrows">
+                </div>
+            </a>
+
+            <a href="modulo-2.html">
+                <div class="area-arrows"><img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows"></div>
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="../../../landing/images/footer/wave.svg" alt="">
+        <div id="footer-items">
+            <span>&copy 2025 Ana Clarissi</span>
+            <div class="social-media-buttons">
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../../landing/js/usuario.js"></script>
+
+    <script src="../../../landing/js/script.js"></script>
+
+
+    <!--QUIZ-->
+
+    <script>
+    // QUESTÕES DO QUIZ
+        const questions = [
+            {
+                question: "O que significa Front-End?",
+                options: [
+                    "A parte visual e interação de um site ou aplicativo",
+                    "A lógica interna e banco de dados",
+                    "O gerenciamento de servidores",
+                ],
+                answer: 0
+            },
+            {
+                question: "Qual é a função da tag <a> no HTML?",
+                options: [
+                    "Inserir imagens",
+                    "Criar links para outras páginas ou seções",
+                    "Criar listas",
+                ],
+                answer: 1
+            },
+            {
+                question: "Qual propriedade CSS altera a cor do texto?",
+                options: [
+                    "background-color",
+                    "font-size",
+                    "color",
+                ],
+                answer: 2
+            },
+            {
+                question: "O que é um elemento semântico?",
+                options: [
+                    "Elemento que tem significado e função clara no HTML",
+                    "Elemento que não pode ser estilizado",
+                    "Elemento usado apenas em JavaScript",
+                ],
+                answer: 0
+            },
+            {
+                question: "Qual linguagem é usada para estruturar o conteúdo da página?",
+                options: [
+                    "CSS",
+                    "HTML",
+                    "JavaScript",
+                ],
+                answer: 1
+            }
+        ];
+
+
+
+        // GERAR QUIZ NA TELA
+        const quizDiv = document.getElementById("quiz");
+
+        questions.forEach((q, index) => {
+            const card = document.createElement("div");
+            card.style.padding = "16px";
+            card.style.marginBottom = "16px";
+            card.style.border = "1px solid #ddd";
+            card.style.borderRadius = "10px";
+            card.style.background = "#ddd";
+
+            let html = `<p><strong>${index + 1}. ${q.question}</strong></p>`;
+
+            q.options.forEach((opt, i) => {
+                html += `
+                    <label style="display:block; margin-top:6px; cursor:pointer;">
+                        <input type="radio" name="q${index}" value="${i}">
+                        ${opt}
+                    </label>
+                `;
+            });
+
+            card.innerHTML = html;
+            quizDiv.appendChild(card);
+        });
+
+        // BOTÃO ENVIAR
+        document.getElementById("submitBtn").addEventListener("click", () => {
+            let score = 0;
+
+            questions.forEach((q, index) => {
+                const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                if (selected && parseInt(selected.value) === q.answer) {
+                    score++;
+                }
+            });
+
+            document.getElementById("scoreDisplay").innerHTML =
+                `Você acertou <strong>${score}</strong> de <strong>${questions.length}</strong>.`;
+        });
+
+        // BOTÃO REFAZER
+        document.getElementById("resetBtn").addEventListener("click", () => {
+            document.querySelectorAll("input[type=radio]").forEach(r => r.checked = false);
+            document.getElementById("scoreDisplay").innerHTML = "";
+        });
+    </script>
+
+</body>
+</html>

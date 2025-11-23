@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo 4 — Redes de Computadores</title>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+
+    <!-- Google Fonts Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- CSS do módulo -->
+    <link rel="stylesheet" href="../../css/modulo.css">
+</head>
+
+<body>
+
+    <header>
+        
+        <nav id="nav-bar">
+
+            <span id="nav-logo">
+
+                <img src="" alt="" >
+                
+                Informática Manhã
+
+            </span>
+
+            <ul id="nav-list">
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#home">Início</a>
+
+                </li>
+
+                <li class="nav-item active">
+                    
+                    <a href="../../../landing/home.html#path">Trilhas</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#profession">Profissões</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#quizzes">Quizzes</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#games">Jogos</a>
+
+                </li>
+
+            </ul>
+
+            <button class="btn-default user">
+
+                <i class="fa-solid fa-user"></i>
+                <span class="user-name">Area do Aluno</span>
+
+            </button>
+
+            <button id="mobile-btn">
+
+                <i class="fa-solid fa-bars"></i>
+
+            </button>
+
+        </nav>
+
+        <div id="user-menu">
+
+            <ul id="user-nav-list">
+
+                <li class="user-item">
+                    
+                    <a href="">Conquistas</a>
+
+                </li>
+
+                <li class="user-item">
+                    
+                    <a href="">Pontos</a>
+
+                </li>
+
+                <li class="user-item">
+                    
+                    <a href="">Minha Conta</a>
+
+                </li>
+
+                <li class="user-item">
+                    
+                    <a href="">Sair</a>
+
+                </li>
+
+            </ul>
+
+            
+
+        </div>
+
+        <div id="mobile-menu">
+
+            <ul id="mobile-nav-list">
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#home">Início</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#path">Trilhas</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#profession">Profissões</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#quizzes">Quizzes</a>
+
+                </li>
+
+                <li class="nav-item">
+                    
+                    <a href="../../../landing/home.html#games">Jogos</a>
+
+                </li>
+
+            </ul>
+
+            
+
+        
+
+    </header>
+
+    <main class="module-container">
+
+        <div class="module-header">
+            <img class="module-image" src="../../../landing/images/path/Security On-bro.svg" alt="">
+            <h1 class="section-title">Segurança da Informação</h1>
+        </div>
+
+        <section class="module-type">
+            <h1 class="section-subtitle">Módulo 4 — Segurança de Dados e Backup</h1>
+            <p class="module-description">
+                A segurança de dados é essencial para proteger informações importantes contra perda, roubo ou corrupção. Neste módulo, você vai aprender como manter os dados seguros, como fazer backups corretamente e como garantir que informações críticas estejam sempre disponíveis.
+            </p>
+        </section>
+
+        <section class="module-arrows">
+
+            <a href="modulo-3.html">
+                <div class="area-arrows">
+                    <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg
+                    " alt="" class="arrows">
+                </div>
+            </a>
+
+            <a href="modulo-5.html">
+                <div class="area-arrows"><img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows"></div>
+            </a>
+
+        </section>
+
+        <!-- CONTEÚDO DO MÓDULO -->
+        <section class="module-section">
+            <h2>1. O que são dados e por que protegê-los</h2>
+            <p>
+            Os dados podem ser qualquer tipo de informação armazenada em computadores, servidores ou na nuvem: documentos, fotos, planilhas, cadastros de clientes, senhas, entre outros.
+            </p>
+
+            <p>Proteger esses dados é fundamental porque:</p>
+            <ul>
+                <li>Dados perdidos podem causar prejuízos financeiros.</li>
+                <li>Informações confidenciais podem ser roubadas por hackers.</li>
+                <li>A integridade dos dados garante que as informações estejam corretas e confiáveis.</li>
+            </ul>
+            <p>Exemplo: Uma empresa de vendas que perde os registros de clientes não consegue processar pedidos corretamente, prejudicando toda a operação.</p>
+
+        </section>
+
+        <section class="module-section">
+            <h2>2. Tipos de backup</h2>
+
+            <p>O backup é a cópia de segurança dos seus dados. Ele serve para restaurar arquivos caso algo aconteça, como falhas no computador ou ataques de ransomware.</p>
+
+            <p>Existem diferentes tipos de backup:</p>
+            <ul>
+                <li><strong>Backup completo</strong>: Copia todos os arquivos e pastas. É mais seguro, mas ocupa mais espaço.</li>
+                <li><strong>Backup incremental</strong>: Copia apenas os arquivos alterados desde o último backup. É rápido e economiza espaço.</li>
+                <li><strong>Backup diferencial</strong>: Copia todos os arquivos modificados desde o último backup completo. É um equilíbrio entre completo e incremental.</li>
+            </ul>
+
+            <p>Além disso, backups podem ser armazenados:</p>
+            <ul>
+                <li><strong>Localmente</strong>: em HDs externos ou servidores da empresa.</li>
+                <li><strong>Na nuvem</strong>: em serviços online seguros, que permitem acesso remoto e proteção contra falhas físicas.</li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h2>3. Como fazer backups seguros</h2>
+            <p>Para que o backup realmente proteja seus dados, é preciso seguir algumas boas práticas:</p>
+
+            <ul>
+                <li>Realizar backups <strong>regularmente</strong> (diários, semanais ou mensais, dependendo da necessidade).</li>
+                <li>Testar a <strong>restauração</strong> de arquivos para garantir que as cópias funcionam.</li>
+                <li>Armazenar os backups em locais <strong>separados do computador principal</strong>, de preferência em nuvem ou HD externo seguro.</li>
+                <li>Utilizar <strong>criptografia</strong> para proteger os arquivos de acessos não autorizados.</li>
+                <li>Manter um <strong>histórico de versões</strong>, salvando diferentes versões de um arquivo para poder recuperar alterações anteriores.</li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h2>4. Proteção contra ameaças</h2>
+            <p>Mesmo com backup, os dados podem ser ameaçados por:</p>
+            <ul>
+                <li><strong>Ransomware</strong>: vírus que criptografa arquivos e exige pagamento para liberar acesso.</li>
+                <li><strong>Malware</strong>: programas que podem corromper arquivos ou roubar informações.</li>
+                <li><strong>Falhas de hardware</strong>: HDs e servidores podem quebrar, perdendo dados se não houver backup.</li>
+            </ul>
+
+            <p>Para se proteger:</p>
+            <ul>
+                <li>Use antivírus atualizado.</li>
+                <li>Não abra arquivos suspeitos.</li>
+                <li>Habilite autenticação e senhas fortes para acessar backups.</li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h2>5. Conclusão</h2>
+            <p>
+                Segurança de dados e backups são fundamentais para qualquer pessoa ou empresa que dependa de informações digitais. Um backup confiável e políticas de proteção bem aplicadas evitam perdas, ataques e problemas graves.
+            </p>
+            <p>Aprender essas técnicas garante que, mesmo diante de falhas ou ataques, os dados estarão sempre disponíveis, preservando operações, conhecimento e informações importantes.</p>
+        </section>
+
+        <!-- QUIZ -->
+         <section class="module-section quiz-section">
+
+            <h2>Quiz — Módulo 4</h2>
+
+            <div id="quiz"></div>
+
+            <div class="quiz-controls" style="margin-top:20px;">
+                <button id="submitBtn" class="btn-default">Enviar respostas</button>
+                <button id="resetBtn" class="btn-default secondary">Refazer</button>
+            </div>
+
+            <div id="scoreDisplay" style="margin-top:12px; font-size:18px;"></div>
+
+        </section>
+
+        <section class="module-arrows">
+
+            <a href="modulo-3.html">
+                <div class="area-arrows">
+                    <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg
+                    " alt="" class="arrows">
+                </div>
+            </a>
+
+            <a href="modulo-5.html">
+                <div class="area-arrows"><img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows"></div>
+            </a>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+        <img src="../../../landing/images/footer/wave.svg" alt="">
+        <div id="footer-items">
+            <span>&copy 2025 Ana Clarissi</span>
+            <div class="social-media-buttons">
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../../landing/js/usuario.js"></script>
+
+    <script src="../../../landing/js/script.js"></script>
+
+
+    <!--QUIZ-->
+
+    <script>
+    // QUESTÕES DO QUIZ
+        const questions = [
+            {
+                question: "Qual é a principal função do backup?",
+                options: [
+                    "Liberar espaço no computador",
+                    "Proteger os dados e permitir recuperação em caso de perda",
+                    "Enviar arquivos para outros usuários"
+                ],
+                answer: 1
+            },
+            {
+                question: "Qual tipo de backup copia apenas os arquivos alterados desde o último backup?",
+                options: [
+                    "Backup completo",
+                    "Backup incremental",
+                    "Backup diferencial"
+                ],
+                answer: 1
+            },
+            {
+                question: "Qual prática garante que o backup realmente funciona?",
+                options: [
+                    "Testar a restauração dos arquivos",
+                    "Fazer backup apenas uma vez",
+                    "Armazenar todos os backups no mesmo HD do computador principal"
+                ],
+                answer: 0
+            },
+            {
+                question: "Qual ameaça pode criptografar arquivos e exigir pagamento para liberar acesso?",
+                options: [
+                    "Malware comum",
+                    "Ransomware",
+                    "Phishing"
+                ],
+                answer: 1
+            },
+            {
+                question: "Qual medida aumenta a segurança dos backups em caso de acesso não autorizado?",
+                options: [
+                    "Criptografia dos arquivos",
+                    "Salvar apenas arquivos de texto",
+                    "Usar HD antigo"
+                ],
+                answer: 0
+            },
+            {
+                question: "Por que é importante manter um histórico de versões dos arquivos?",
+                options: [
+                    "Para economizar espaço em disco",
+                    "Para poder recuperar versões anteriores de um arquivo",
+                    "Para compartilhar com colegas de trabalho"
+                ],
+                answer: 1
+            },
+            {
+                question: "Onde é mais seguro armazenar backups de arquivos críticos?",
+                options: [
+                    "No mesmo computador que os arquivos originais",
+                    "Em locais separados, como nuvem ou HD externo",
+                    "Em pen drives antigos sem criptografia"
+                ],
+                answer: 1
+            },
+            {
+                question: "Qual é uma boa prática para proteger dados mesmo com backup?",
+                options: [
+                    "Usar senhas fracas e simples",
+                    "Manter antivírus atualizado e evitar arquivos suspeitos",
+                    "Deixar computadores ligados 24h sem proteção"
+                ],
+                answer: 1
+            }
+        ];
+
+
+
+        // GERAR QUIZ NA TELA
+        const quizDiv = document.getElementById("quiz");
+
+        questions.forEach((q, index) => {
+            const card = document.createElement("div");
+            card.style.padding = "16px";
+            card.style.marginBottom = "16px";
+            card.style.border = "1px solid #ddd";
+            card.style.borderRadius = "10px";
+            card.style.background = "#ddd";
+
+            let html = `<p><strong>${index + 1}. ${q.question}</strong></p>`;
+
+            q.options.forEach((opt, i) => {
+                html += `
+                    <label style="display:block; margin-top:6px; cursor:pointer;">
+                        <input type="radio" name="q${index}" value="${i}">
+                        ${opt}
+                    </label>
+                `;
+            });
+
+            card.innerHTML = html;
+            quizDiv.appendChild(card);
+        });
+
+        // BOTÃO ENVIAR
+        document.getElementById("submitBtn").addEventListener("click", () => {
+            let score = 0;
+
+            questions.forEach((q, index) => {
+                const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                if (selected && parseInt(selected.value) === q.answer) {
+                    score++;
+                }
+            });
+
+            document.getElementById("scoreDisplay").innerHTML =
+                `Você acertou <strong>${score}</strong> de <strong>${questions.length}</strong>.`;
+        });
+
+        // BOTÃO REFAZER
+        document.getElementById("resetBtn").addEventListener("click", () => {
+            document.querySelectorAll("input[type=radio]").forEach(r => r.checked = false);
+            document.getElementById("scoreDisplay").innerHTML = "";
+        });
+    </script>
+
+</body>
+</html>

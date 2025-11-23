@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Final</title>
+
+    <link rel="stylesheet" href="../../css/quiz-final.css">
+
+    <script defer src="../../js/script-final.js"></script>
+</head>
+<body>
+    
+    <main>
+
+        <div class="app">
+
+            <h1>Quiz Final: <span>Todos os Módulos</span></h1>
+
+            <div class="quiz" id="quiz-final">
+                <h2 id="questions">As Questões estão aqui</h2>
+                <div id="btn-answers">
+                    <button class="btn">Resposta 1</button>
+                    <button class="btn">Resposta 2</button>
+                    <button class="btn">Resposta 3</button>
+                    <button class="btn">Resposta 4</button>
+                </div>
+                <button id="btn-next" class="btn-default">Próximo</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        const questionsFinalExam = [
+
+            // MÓDULO 1
+            {
+                question: "Qual é o principal objetivo do suporte técnico?",
+                answer: [
+                    { id: 1, text: "Criar novos softwares", correct: false },
+                    { id: 2, text: "Restaurar o funcionamento e prevenir problemas", correct: true },
+                    { id: 3, text: "Gerenciar bancos de dados", correct: false },
+                    { id: 4, text: "Vender equipamentos", correct: false }
+                ]
+            },
+
+            // MÓDULO 2
+            {
+                question: "Qual é a função da memória RAM em um computador?",
+                answer: [
+                    { id: 1, text: "Armazenar dados permanentemente", correct: false },
+                    { id: 2, text: "Processar imagens", correct: false },
+                    { id: 3, text: "Armazenar dados temporários e dar velocidade ao sistema", correct: true },
+                    { id: 4, text: "Controlar dispositivos de rede", correct: false }
+                ]
+            },
+
+            {
+                question: "Qual desses sistemas operacionais é mais utilizado em servidores?",
+                answer: [
+                    { id: 1, text: "Windows 10 Home", correct: false },
+                    { id: 2, text: "Android", correct: false },
+                    { id: 3, text: "Linux", correct: true },
+                    { id: 4, text: "iOS", correct: false }
+                ]
+            },
+
+            // MÓDULO 3
+            {
+                question: "O que significa a sigla IP?",
+                answer: [
+                    { id: 1, text: "Internet Protocol", correct: true },
+                    { id: 2, text: "Internal Program", correct: false },
+                    { id: 3, text: "Internet Protection", correct: false },
+                    { id: 4, text: "Input Process", correct: false }
+                ]
+            },
+
+            {
+                question: "Qual equipamento distribui a internet entre vários dispositivos?",
+                answer: [
+                    { id: 1, text: "Switch", correct: false },
+                    { id: 2, text: "Roteador", correct: true },
+                    { id: 3, text: "Modem", correct: false },
+                    { id: 4, text: "Servidor", correct: false }
+                ]
+            },
+
+            // MÓDULO 4
+            {
+                question: "O que é phishing?",
+                answer: [
+                    { id: 1, text: "Um ataque para enganar usuários e roubar informações", correct: true },
+                    { id: 2, text: "Vírus que infecta USB", correct: false },
+                    { id: 3, text: "Um tipo de firewall", correct: false },
+                    { id: 4, text: "Sistema de backup", correct: false }
+                ]
+            },
+
+            {
+                question: "Como criar senhas mais seguras?",
+                answer: [
+                    { id: 1, text: "Usar datas de nascimento", correct: false },
+                    { id: 2, text: "Repetir a mesma senha", correct: false },
+                    { id: 3, text: "Criar senhas longas com números, letras e símbolos", correct: true },
+                    { id: 4, text: "Usar somente letras", correct: false }
+                ]
+            },
+
+            // MÓDULO 5
+            {
+                question: "O que é essencial em um bom atendimento técnico?",
+                answer: [
+                    { id: 1, text: "Usar linguagem técnica sempre", correct: false },
+                    { id: 2, text: "Ter paciência, ouvir o usuário e explicar claramente", correct: true },
+                    { id: 3, text: "Resolver rápido sem explicar", correct: false },
+                    { id: 4, text: "Falar pouco com o cliente", correct: false }
+                ]
+            },
+
+            {
+                question: "O que significa SLA?",
+                answer: [
+                    { id: 1, text: "Service Level Agreement", correct: true },
+                    { id: 2, text: "System Login Access", correct: false },
+                    { id: 3, text: "Support Level Action", correct: false },
+                    { id: 4, text: "Server Link Adapter", correct: false }
+                ]
+            },
+
+            {
+                question: "Qual é o primeiro passo para resolver um problema?",
+                answer: [
+                    { id: 1, text: "Formatar o computador", correct: false },
+                    { id: 2, text: "Entender o problema descrito pelo usuário", correct: true },
+                    { id: 3, text: "Instalar novos programas", correct: false },
+                    { id: 4, text: "Trocar o equipamento", correct: false }
+                ]
+            }
+        ];
+
+        const questionElement = document.getElementById("questions");
+        const answersBtn = document.getElementById("btn-answers");
+        const nextButton = document.getElementById("btn-next");
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const startQuiz = () => {
+            currentQuestionIndex = 0;
+            score = 0;
+            nextButton.textContent = "Próximo";
+            nextButton.style.display = "none";
+            showQuestion();
+        };
+
+        const showQuestion = () => {
+            resetState();
+
+            let currentQuestion = questionsFinalExam[currentQuestionIndex];
+            questionElement.textContent = currentQuestion.question;
+
+            currentQuestion.answer.forEach(resp => {
+                const button = document.createElement("button");
+                button.classList.add("btn");
+                button.textContent = resp.text;
+
+                if (resp.correct) button.dataset.correct = "true";
+
+                button.addEventListener("click", selectAnswer);
+                answersBtn.appendChild(button);
+            });
+        };
+
+        const resetState = () => {
+            nextButton.style.display = "none";
+            answersBtn.innerHTML = "";
+        };
+
+        const selectAnswer = (e) => {
+            const selectedBtn = e.target;
+            const isCorrect = selectedBtn.dataset.correct === "true";
+
+            selectedBtn.classList.add(isCorrect ? "correct" : "incorrect");
+            if (isCorrect) score++;
+
+            Array.from(answersBtn.children).forEach(button => {
+                if (button.dataset.correct === "true") button.classList.add("correct");
+                button.disabled = true;
+            });
+
+            nextButton.style.display = "block";
+        };
+
+        const finishQuiz = () => {
+            resetState();
+
+            questionElement.innerHTML = `
+                <strong>Quiz Concluído!</strong><br>
+                Você acertou <strong>${score}</strong> de <strong>${questionsFinalExam.length}</strong> questões.
+            `;
+
+            nextButton.textContent = "Voltar ao Suporte Técnico";
+            nextButton.style.display = "block";
+
+            nextButton.onclick = () => {
+                window.location.href = "suporte-tecnico.html";
+            };
+        };
+
+        nextButton.addEventListener("click", () => {
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < questionsFinalExam.length) {
+                showQuestion();
+            } else {
+                finishQuiz();
+            }
+        });
+
+        startQuiz();
+    </script>
+
+
+</body>
+</html>
