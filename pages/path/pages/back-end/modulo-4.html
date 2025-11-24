@@ -1,11 +1,271 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Módulo 4 — Autenticação e Segurança</title>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+
+    <!-- Google Fonts Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- CSS do módulo -->
+    <link rel="stylesheet" href="../../css/modulo.css">
 </head>
+
 <body>
-    
+
+<header>
+    <nav id="nav-bar">
+        <span id="nav-logo">
+            <img src="" alt="">
+            Informática Manhã
+        </span>
+
+        <ul id="nav-list">
+            <li class="nav-item"><a href="../../../landing/home.html#home">Início</a></li>
+            <li class="nav-item active"><a href="../../../landing/home.html#path">Trilhas</a></li>
+            <li class="nav-item"><a href="../../../landing/home.html#profession">Profissões</a></li>
+            <li class="nav-item"><a href="../../../landing/home.html#quizzes">Quizzes</a></li>
+            <li class="nav-item"><a href="../../../landing/home.html#games">Jogos</a></li>
+        </ul>
+
+        <button class="btn-default user">
+            <i class="fa-solid fa-user"></i>
+            <span class="user-name">Área do Aluno</span>
+        </button>
+
+        <button id="mobile-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
+    <div id="user-menu">
+        <ul id="user-nav-list">
+            <li class="user-item"><a href="">Conquistas</a></li>
+            <li class="user-item"><a href="">Pontos</a></li>
+            <li class="user-item"><a href="">Minha Conta</a></li>
+            <li class="user-item"><a href="">Sair</a></li>
+        </ul>
+    </div>
+
+    <div id="mobile-menu">
+        <ul id="mobile-nav-list">
+            <li class="nav-item"><a href="../../../landing/home.html#home">Início</a></li>
+            <li class="nav-item"><a href="../../../landing/home.html#path">Trilhas</a></li>
+            <li class="nav-item"><a href="../../../landing/home.html#profession">Profissões</a></li>
+            <li class="nav-item"><a href="../../../landing/home.html#quizzes">Quizzes</a></li>
+            <li class="nav-item"><a href="../../../landing/home.html#games">Jogos</a></li>
+        </ul>
+    </div>
+</header>
+
+<main class="module-container">
+
+    <div class="module-header">
+        <img class="module-image" src="../../../landing/images/path/security.svg" alt="">
+        <h1 class="section-title">Autenticação e Segurança (Back-End)</h1>
+    </div>
+
+    <section class="module-type">
+        <h1 class="section-subtitle">Módulo 4 — Back-End Seguro</h1>
+        <p class="module-description">
+            Neste módulo você aprenderá a criar autenticação de usuários, proteger senhas usando hashing e aplicar boas práticas de segurança em APIs Node.js.
+        </p>
+    </section>
+
+    <section class="module-arrows">
+        <a href="modulo-3.html">
+            <div class="area-arrows">
+                <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows">
+            </div>
+        </a>
+
+        <a href="modulo-5.html">
+            <div class="area-arrows">
+                <img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows">
+            </div>
+        </a>
+    </section>
+
+    <section class="module-section">
+        <h3>1. Autenticação com Node.js</h3>
+        <p>
+            Autenticação verifica se o usuário é quem diz ser. Normalmente usamos **login e senha**. Em Node.js, podemos criar rotas de login simples.
+        </p>
+        <pre class="area-tags"> <p class="pequeno">html</p>
+&lt;<span class="seletor">form</span>&gt;
+    &lt;<span class="seletor">input</span> <span class="valor">type</span>="email" <span class="valor">placeholder</span>="Email"&gt;
+    &lt;<span class="seletor">input</span> <span class="valor">type</span>="password" <span class="valor">placeholder</span>="Senha"&gt;
+    &lt;<span class="seletor">button</span>&gt;Entrar&lt;/<span class="seletor">button</span>&gt;
+&lt;/<span class="seletor">form</span>&gt;
+        </pre>
+    </section>
+
+    <section class="module-section">
+        <h3>2. Protegendo senhas (Hashing)</h3>
+        <p>
+            Nunca armazene senhas em texto simples! Use bibliotecas como <strong>bcrypt</strong> para criar hashes seguros.
+        </p>
+        <pre class="area-tags"> <p class="pequeno">node.js</p>
+<span class="variavel">const</span> bcrypt = <span class="funcao">require</span>('bcrypt');
+
+<span class="variavel">const</span> senha = "minhaSenha123";
+<span class="variavel">const</span> hash = bcrypt.<span class="funcao">hashSync</span>(senha, 10); <span class="comentario">// 10 = força do hash</span>
+<span class="valor">console</span>.log(hash);
+
+<span class="comentario">// Para comparar durante o login</span>
+<span class="variavel">const</span> valido = <span class="valor">bcrypt</span>.<span class="funcao">compareSync</span>("minhaSenha123", hash);
+<span class="valor">console</span>.log(valido); <span class="comentario">// true</span>
+        </pre>
+    </section>
+
+    <section class="module-section">
+        <h3>3. Rotas de login simples</h3>
+        <pre class="area-tags"> <p class="pequeno">node.js</p>
+<span class="variavel">const</span> http = <span class="funcao">require</span>('http');
+<span class="variavel">let</span> usuarios = [{email:'ana@email.com', senhaHash: hash}];
+
+<span class="variavel">const</span> server = <span class="valor">http</span>.<span class="funcao">createServer</span>((req,res)=>{
+    <span class="variavel">if</span>(<span class="valor">req</span>.<span class="funcao">url</span>==='/login' && req.<span class="funcao">method</span>==='POST'){
+        <span class="variavel">let</span> body='';
+        <span class="valor">req</span>.<span class="funcao">on</span>('data',chunk=>{body+=chunk.<span class="funcao">toString</span>();});
+        <span class="valor">req</span>.<span class="funcao">on</span>('end',()=>{
+            <span class="variavel">const</span> dados = <span class="valor">JSON</span>.<span class="funcao">parse</span>(body);
+            <span class="variavel">const</span> usuario = <span class="valor">usuarios</span>.<span class="funcao">find</span>(u=><span class="valor">u</span>.<span class="funcao">email</span>===<span class="valor">dados</span>.<span class="funcao">email</span>);
+            <span class="variavel">if</span>(usuario && <span class="valor">bcrypt</span>.<span class="funcao">compareSync</span>(<span class="valor">dados</span>.<span class="funcao">senha</span>, <span class="valor">usuario</span>.<span class="funcao">senhaHash</span>)){
+                <span class="valor">res</span>.<span class="funcao">writeHead</span>(200, {'Content-Type':'application/json'});
+                <span class="valor">res</span>.<span class="funcao">end</span>(JSON.stringify({mensagem:'Login bem-sucedido!'}));
+            } <span class="variavel">else</span> {
+                <span class="valor">res</span>.<span class="funcao">writeHead</span>(401, {'Content-Type':'application/json'});
+                <span class="valor">res</span>.<span class="funcao">end</span>(JSON.stringify({mensagem:'Email ou senha inválidos'}));
+            }
+        });
+    }
+});
+
+<span class="valor">server</span>.<span class="funcao">listen</span>(3000);
+        </pre>
+    </section>
+
+    <section class="module-section">
+        <h3>4. Boas práticas de segurança em APIs</h3>
+        <ul>
+            <li>Usar HTTPS para criptografar dados.</li>
+            <li>Validar e sanitizar todos os dados recebidos.</li>
+            <li>Evitar expor informações sensíveis em respostas de erro.</li>
+            <li>Limitar tentativas de login para prevenir ataques de força bruta.</li>
+        </ul>
+    </section>
+
+    <!--QUESTÕES-->
+    <section id="coding-questions"></section>
+
+    <section class="module-arrows">
+        <a href="modulo-3.html">
+            <div class="area-arrows">
+                <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows">
+            </div>
+        </a>
+
+        <a href="modulo-5.html">
+            <div class="area-arrows">
+                <img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows">
+            </div>
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <img src="../../../landing/images/footer/wave.svg" alt="">
+    <div id="footer-items">
+        <span>&copy 2025 Ana Clarissi</span>
+        <div class="social-media-buttons">
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="../../../landing/js/usuario.js"></script>
+<script src="../../../landing/js/script.js"></script>
+
+<script>
+    const codingExercises = [
+        {
+            id: 1,
+            title: "Crie um hash de senha",
+            description: "Use bcrypt para criar um hash da senha '123456'.",
+            expected: "const hash = bcrypt.hashSync('123456',10);"
+        },
+        {
+            id: 2,
+            title: "Comparar senha",
+            description: "Crie uma verificação para comparar a senha '123456' com o hash.",
+            expected: "bcrypt.compareSync('123456',hash);"
+        },
+        {
+            id: 3,
+            title: "Rota POST /login",
+            description: "Crie uma rota de login que receba email e senha e retorne mensagem de sucesso ou erro.",
+            expected: "if(usuario && bcrypt.compareSync(dados.senha, usuario.senhaHash)){res.end(JSON.stringify({mensagem:'Login bem-sucedido!'}));}"
+        },
+        {
+            id: 4,
+            title: "Boas práticas",
+            description: "Liste duas boas práticas de segurança para APIs.",
+            expected: "1. Usar HTTPS 2. Validar e sanitizar dados"
+        }
+    ];
+
+    const renderExercises = () => {
+        const container = document.getElementById("coding-questions");
+        codingExercises.forEach(ex => {
+            container.innerHTML += `
+                <div class="exercise-box">
+                    <h3>${ex.id}. ${ex.title}</h3>
+                    <p>${ex.description}</p>
+                    <textarea id="answer-${ex.id}" placeholder="Escreva seu código aqui..."></textarea>
+                    <button class="btn-default" onclick="checkAnswer(${ex.id})">Verificar Resposta</button>
+                    <div id="result-${ex.id}" class="result"></div>
+                </div>
+            `;
+        });
+    }
+
+    const normalizeCode = (code) => {
+        if (!code) return "";
+        code = code.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "");
+        code = code.replace(/\r\n/g, "\n").replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+        return code;
+    }
+
+    const checkAnswer = (id) => {
+        const question = codingExercises.find(q => q.id === id);
+        const studentRaw = document.getElementById(`answer-${id}`).value || "";
+        const studentNormalized = normalizeCode(studentRaw.toLowerCase());
+        const expectedNormalized = normalizeCode(question.expected.toLowerCase());
+        const resultBox = document.getElementById(`result-${id}`);
+        if (studentNormalized.includes(expectedNormalized)) {
+            resultBox.innerHTML = "<span class='correct'>✔ Correto!</span>";
+        } else {
+            resultBox.innerHTML = `<span class='wrong'>✘ Tente novamente!</span><br>Exemplo: ${question.expected}`;
+        }
+    }
+
+    renderExercises();
+</script>
+
 </body>
-</html>pages/path/pages/suporte-tecnico/modulo-1.html
+</html>

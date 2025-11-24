@@ -520,7 +520,7 @@ const startQuizEasy = (number) => {
 
     }
 
-    const randomNumber = () => Math.floor(Math.random() * 5);
+    const randomNumber = () => Math.floor(Math.random() * questions.length);;
 
     const setRandomNumber = () => {
 
@@ -533,9 +533,7 @@ const startQuizEasy = (number) => {
         }
 
         return number;
-
     }
-
     const saveQuestion = (number) =>{
 
         if (!listOfPositionCurrentQuestion.includes(number)) {

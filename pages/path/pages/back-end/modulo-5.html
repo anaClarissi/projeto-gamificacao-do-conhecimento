@@ -1,11 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+    <title>Módulo 5 — Design e Boas Práticas em Back-End</title>
     
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <!-- Google Fonts Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <!-- CSS do módulo -->
+    <link rel="stylesheet" href="../../css/modulo.css">
+</head>
+
+<body>
+
+<header>
+    <nav id="nav-bar">
+        <span id="nav-logo">
+            <img src="" alt="">
+            Informática Manhã
+        </span>
+
+        <ul id="nav-list">
+            <li class="nav-item"><a href="../../../landing/home.html#home">Início</a></li>
+            <li class="nav-item active"><a href="../../../landing/home.html#path">Trilhas</a></li>
+            <li class="nav-item"><a href="../../../landing/home.html#profession">Profissões</a></li>
+            <li class="nav-item"><a href="../../../landing/home.html#quizzes">Quizzes</a></li>
+            <li class="nav-item"><a href="../../../landing/home.html#games">Jogos</a></li>
+        </ul>
+
+        <button class="btn-default user">
+            <i class="fa-solid fa-user"></i>
+            <span class="user-name">Área do Aluno</span>
+        </button>
+
+        <button id="mobile-btn">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+</header>
+
+<main class="module-container">
+
+    <div class="module-header">
+        <img class="module-image" src="../../../landing/images/path/back-end.svg" alt="">
+        <h1 class="section-title">Back-End</h1>
+    </div>
+    
+    <section class="module-type">
+        <h1 class="section-subtitle">Módulo 5 — Design e Boas Práticas em Back-End</h1>
+        <p class="module-description">
+            Neste módulo, você vai aprender boas práticas de desenvolvimento em Back-End, incluindo organização de código, padronização de APIs, tratamento de erros e design de sistemas escaláveis e seguros.
+        </p>
+    </section>
+
+    <section class="module-arrows">
+        <a href="modulo-4.html">
+            <div class="area-arrows">
+                <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows">
+            </div>
+        </a>
+
+        <a href="back-end.html">
+            <div class="area-arrows">
+                <img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows">
+            </div>
+        </a>
+    </section>
+
+    <section class="module-section">
+        <h3>1. Organização de Código</h3>
+        <p>
+            Manter o código organizado é fundamental. Algumas práticas importantes:
+            <ul>
+                <li>Separar rotas, controladores e modelos.</li>
+                <li>Usar arquivos diferentes para funcionalidades distintas.</li>
+                <li>Evitar código duplicado (DRY – Don't Repeat Yourself).</li>
+            </ul>
+        </p>
+        <pre class="area-tags">
+<p class="pequeno">node.js</p>
+project/
+ ├─ routes/
+ │   └─ usuarios.js
+ ├─ controllers/
+ │   └─ usuariosController.js
+ ├─ models/
+ │   └─ usuario.js
+ └─ server.js
+        </pre>
+    </section>
+
+    <section class="module-section">
+        <h3>2. Tratamento de Erros</h3>
+        <p>
+            Sempre trate erros de forma clara para facilitar a manutenção e depuração.  
+            Exemplo de try/catch em Node.js:
+        </p>
+        <pre class="area-tags">
+<p class="pequeno">node.js</p>
+try {
+    const usuario = await Usuario.findById(id);
+    if(!usuario) throw new Error('Usuário não encontrado');
+} catch(error) {
+    console.error(error.message);
+}
+        </pre>
+    </section>
+
+    <section class="module-section">
+        <h3>3. Padronização de APIs</h3>
+        <p>
+            APIs bem desenhadas seguem padrões claros:
+            <ul>
+                <li>Rotas RESTful: GET, POST, PUT, DELETE</li>
+                <li>Resposta consistente em JSON</li>
+                <li>Status HTTP correto (200, 201, 404, 500)</li>
+            </ul>
+        </p>
+        <pre>
+GET /usuarios        -> lista usuários
+POST /usuarios       -> cria usuário
+PUT /usuarios/:id    -> atualiza usuário
+DELETE /usuarios/:id -> remove usuário
+        </pre>
+    </section>
+
+    <section class="module-section">
+        <h3>4. Segurança e Boas Práticas</h3>
+        <ul>
+            <li>Valide entradas do usuário para evitar injeção de código.</li>
+            <li>Use hashing para senhas (bcrypt).</li>
+            <li>Não exponha informações sensíveis na API.</li>
+            <li>Use HTTPS sempre que possível.</li>
+        </ul>
+        <pre class="area-tags">
+<p class="pequeno">node.js</p>
+const bcrypt = require('bcrypt');
+const senhaHash = await bcrypt.hash('123456', 10);
+const valido = await bcrypt.compare('123456', senhaHash);
+        </pre>
+    </section>
+
+    <section class="module-section">
+        <h3>5. Exercícios Práticos</h3>
+        <p>
+            Pratique boas práticas criando rotas organizadas, tratando erros e aplicando segurança na API.
+        </p>
+    </section>
+
+    <!--QUESTÕES-->
+    <section id="coding-questions"></section>
+
+    <section class="module-arrows">
+        <a href="modulo-4.html">
+            <div class="area-arrows">
+                <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows">
+            </div>
+        </a>
+
+        <a href="back-end.html">
+            <div class="area-arrows">
+                <img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows">
+            </div>
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <img src="../../../landing/images/footer/wave.svg" alt="">
+    <div id="footer-items">
+        <span>&copy 2025 Ana Clarissi</span>
+        <div class="social-media-buttons">
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="../../../landing/js/usuario.js"></script>
+<script src="../../../landing/js/script.js"></script>
+
+<script>
+    const codingExercises = [
+        {
+            id: 1,
+            title: "Criar controlador simples",
+            description: "Crie um arquivo usuariosController.js que exporte uma função listar que retorna um array de usuários com apenas o nome.",
+            expected: `module.exports = {
+        listar: (req, res) => { res.json([{nome:'Ana'}, {nome:'Pedro'}]); }
+    };`
+        },
+        {
+            id: 2,
+            title: "Rota GET fácil",
+            description: "Crie uma rota GET /usuarios que chame a função listar do controlador e retorne os usuários.",
+            expected: `const express = require('express');
+    const router = express.Router();
+    const ctrl = require('./usuariosController');
+    router.get('/usuarios', ctrl.listar);
+    module.exports = router;`
+        },
+        {
+            id: 3,
+            title: "Hash simples de senha",
+            description: "Use bcrypt para gerar um hash da senha '123456'. Apenas crie o hash e mostre no console.",
+            expected: `const bcrypt = require('bcrypt');
+    bcrypt.hash('123456', 10).then(hash => console.log(hash));`
+        },
+        {
+            id: 4,
+            title: "Tratamento de erro fácil",
+            description: "Crie um try/catch que tenta mostrar o nome de um usuário e imprime erro se não existir.",
+            expected: `try {
+        const usuario = null; // simula não encontrado
+        console.log(usuario.nome);
+    } catch(error) {
+        console.log('Erro: usuário não encontrado');
+    }`
+        }
+    ];
+
+
+    const renderExercises = () => {
+        const container = document.getElementById("coding-questions");
+        codingExercises.forEach(ex => {
+            container.innerHTML += `
+                <div class="exercise-box">
+                    <h3>${ex.id}. ${ex.title}</h3>
+                    <p>${ex.description}</p>
+                    <textarea id="answer-${ex.id}" placeholder="Escreva seu código aqui..."></textarea>
+                    <button class="btn-default" onclick="checkAnswer(${ex.id})">Verificar Resposta</button>
+                    <div id="result-${ex.id}" class="result"></div>
+                </div>
+            `;
+        });
+    }
+
+    const normalizeCode = (code) => {
+        if (!code) return "";
+        code = code.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "");
+        code = code.replace(/\r\n/g, "\n").replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+        code = code.replace(/\s*([\=\+\-\*\/%<>!,\:\(\)\{\}\[\]\|&])\s*/g, "$1");
+        code = code.replace(/;+/g, "");
+        return code;
+    }
+
+    const checkAnswer = (id) => {
+        const question = codingExercises.find(q => q.id === id);
+        const studentRaw = document.getElementById(`answer-${id}`).value || "";
+        const studentNormalized = normalizeCode(studentRaw);
+        const expectedNormalized = normalizeCode(question.expected);
+        const resultBox = document.getElementById(`result-${id}`);
+        if (studentNormalized === expectedNormalized) {
+            resultBox.innerHTML = "<span class='correct'>✔ Correto!</span>";
+        } else {
+            resultBox.innerHTML = `
+                <span class='wrong'>✘ Resposta incorreta</span>
+                <br><strong>Exemplo esperado (formatado):</strong>
+                <pre style="white-space:pre-wrap; background:#f7f7f7; padding:8px; border-radius:4px;">${question.expected.replace(/</g, "&lt;")}</pre>
+                <details><summary>O que foi enviado (normalizado)</summary><pre style="white-space:pre-wrap;">${studentNormalized.replace(/</g,"&lt;")}</pre></details>
+            `;
+        }
+    }
+
+    renderExercises();
+</script>
+
 </body>
 </html>

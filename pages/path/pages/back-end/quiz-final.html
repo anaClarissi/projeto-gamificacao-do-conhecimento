@@ -1,11 +1,226 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Quiz Final</title>
+
+    <link rel="stylesheet" href="../../css/quiz-final.css">
+
+    <script defer src="../../js/script-final.js"></script>
 </head>
 <body>
     
+    <main>
+
+        <div class="app">
+
+            <h1>Quiz Final: <span>Todos os Módulos</span></h1>
+
+            <div class="quiz" id="quiz-final">
+                <h2 id="questions">As Questões estão aqui</h2>
+                <div id="btn-answers">
+                    <button class="btn">Resposta 1</button>
+                    <button class="btn">Resposta 2</button>
+                    <button class="btn">Resposta 3</button>
+                    <button class="btn">Resposta 4</button>
+                </div>
+                <button id="btn-next" class="btn-default">Próximo</button>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        const questionsFinalExam = [
+
+            // MÓDULO 1 — Fundamentos de Back-End
+            {
+                question: "Qual é a principal função do Back-End em uma aplicação?",
+                answer: [
+                    { id: 1, text: "Exibir conteúdo visual na página", correct: false },
+                    { id: 2, text: "Gerenciar dados, lógica e comunicação com o servidor", correct: true },
+                    { id: 3, text: "Criar animações e efeitos visuais", correct: false },
+                    { id: 4, text: "Estilizar elementos com CSS", correct: false }
+                ]
+            },
+            {
+                question: "Qual linguagem é comumente usada para criar servidores no Back-End?",
+                answer: [
+                    { id: 1, text: "HTML", correct: false },
+                    { id: 2, text: "Node.js (JavaScript)", correct: true },
+                    { id: 3, text: "CSS", correct: false },
+                    { id: 4, text: "Photoshop", correct: false }
+                ]
+            },
+
+            // MÓDULO 2 — Bancos de Dados
+            {
+                question: "O que é um banco de dados relacional?",
+                answer: [
+                    { id: 1, text: "Um banco que organiza dados em tabelas com relações entre elas", correct: true },
+                    { id: 2, text: "Um banco que só armazena arquivos de imagem", correct: false },
+                    { id: 3, text: "Um banco que não pode ser consultado", correct: false },
+                    { id: 4, text: "Um banco que roda apenas no Front-End", correct: false }
+                ]
+            },
+            {
+                question: "Qual comando SQL é usado para inserir dados em uma tabela?",
+                answer: [
+                    { id: 1, text: "INSERT INTO", correct: true },
+                    { id: 2, text: "SELECT FROM", correct: false },
+                    { id: 3, text: "UPDATE SET", correct: false },
+                    { id: 4, text: "DELETE FROM", correct: false }
+                ]
+            },
+
+            // MÓDULO 3 — Servidores e APIs
+            {
+                question: "Qual é o papel de um servidor em uma aplicação Back-End?",
+                answer: [
+                    { id: 1, text: "Receber requisições dos clientes e enviar respostas", correct: true },
+                    { id: 2, text: "Criar animações no site", correct: false },
+                    { id: 3, text: "Estilizar os elementos da página", correct: false },
+                    { id: 4, text: "Controlar apenas o banco de dados local", correct: false }
+                ]
+            },
+            {
+                question: "O que significa API REST?",
+                answer: [
+                    { id: 1, text: "Um padrão para criar interfaces gráficas", correct: false },
+                    { id: 2, text: "Um conjunto de regras para trocar dados entre sistemas via HTTP", correct: true },
+                    { id: 3, text: "Um tipo de banco de dados", correct: false },
+                    { id: 4, text: "Uma função do CSS", correct: false }
+                ]
+            },
+
+            // MÓDULO 4 — Autenticação e Segurança
+            {
+                question: "Por que é importante criptografar senhas no Back-End?",
+                answer: [
+                    { id: 1, text: "Para armazená-las em texto puro", correct: false },
+                    { id: 2, text: "Para proteger os dados dos usuários caso o banco seja comprometido", correct: true },
+                    { id: 3, text: "Para deixar o site mais rápido", correct: false },
+                    { id: 4, text: "Para evitar o uso de variáveis", correct: false }
+                ]
+            },
+            {
+                question: "O que é um token JWT?",
+                answer: [
+                    { id: 1, text: "Um tipo de banco de dados", correct: false },
+                    { id: 2, text: "Um formato seguro para transmitir informações de autenticação entre cliente e servidor", correct: true },
+                    { id: 3, text: "Uma linguagem de programação", correct: false },
+                    { id: 4, text: "Um editor de código", correct: false }
+                ]
+            },
+
+            // MÓDULO 5 — Design e Boas Práticas em Back-End
+            {
+                question: "Por que é importante separar controladores, rotas e modelos em pastas diferentes?",
+                answer: [
+                    { id: 1, text: "Para deixar o código confuso", correct: false },
+                    { id: 2, text: "Para organizar melhor o projeto e facilitar manutenção", correct: true },
+                    { id: 3, text: "Para evitar a criação de variáveis", correct: false },
+                    { id: 4, text: "Para tornar o código mais lento", correct: false }
+                ]
+            },
+            {
+                question: "O que significa escrever código limpo?",
+                answer: [
+                    { id: 1, text: "Usar nomes claros, comentar trechos importantes e manter boa organização", correct: true },
+                    { id: 2, text: "Escrever todo o código em uma linha só", correct: false },
+                    { id: 3, text: "Evitar usar funções", correct: false },
+                    { id: 4, text: "Misturar HTML, CSS e JS no mesmo arquivo", correct: false }
+                ]
+            }
+
+        ];
+
+
+
+
+        const questionElement = document.getElementById("questions");
+        const answersBtn = document.getElementById("btn-answers");
+        const nextButton = document.getElementById("btn-next");
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const startQuiz = () => {
+            currentQuestionIndex = 0;
+            score = 0;
+            nextButton.textContent = "Próximo";
+            nextButton.style.display = "none";
+            showQuestion();
+        };
+
+        const showQuestion = () => {
+            resetState();
+
+            let currentQuestion = questionsFinalExam[currentQuestionIndex];
+            questionElement.textContent = currentQuestion.question;
+
+            currentQuestion.answer.forEach(resp => {
+                const button = document.createElement("button");
+                button.classList.add("btn");
+                button.textContent = resp.text;
+
+                if (resp.correct) button.dataset.correct = "true";
+
+                button.addEventListener("click", selectAnswer);
+                answersBtn.appendChild(button);
+            });
+        };
+
+        const resetState = () => {
+            nextButton.style.display = "none";
+            answersBtn.innerHTML = "";
+        };
+
+        const selectAnswer = (e) => {
+            const selectedBtn = e.target;
+            const isCorrect = selectedBtn.dataset.correct === "true";
+
+            selectedBtn.classList.add(isCorrect ? "correct" : "incorrect");
+            if (isCorrect) score++;
+
+            Array.from(answersBtn.children).forEach(button => {
+                if (button.dataset.correct === "true") button.classList.add("correct");
+                button.disabled = true;
+            });
+
+            nextButton.style.display = "block";
+        };
+
+        const finishQuiz = () => {
+            resetState();
+
+            questionElement.innerHTML = `
+                <strong>Quiz Concluído!</strong><br>
+                Você acertou <strong>${score}</strong> de <strong>${questionsFinalExam.length}</strong> questões.
+            `;
+
+            nextButton.textContent = "Voltar ao Back End";
+            nextButton.style.display = "block";
+
+            nextButton.onclick = () => {
+                window.location.href = "back-end.html";
+            };
+        };
+
+        nextButton.addEventListener("click", () => {
+            currentQuestionIndex++;
+
+            if (currentQuestionIndex < questionsFinalExam.length) {
+                showQuestion();
+            } else {
+                finishQuiz();
+            }
+        });
+
+        startQuiz();
+    </script>
+
+
 </body>
 </html>

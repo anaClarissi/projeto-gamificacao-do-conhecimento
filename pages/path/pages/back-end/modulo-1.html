@@ -1,11 +1,280 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Módulo 1 — Fundamentos de Back-End</title>
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+
+    <!-- JQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+
+    <!-- Google Fonts Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
+    <!-- CSS do módulo -->
+    <link rel="stylesheet" href="../../css/modulo.css">
 </head>
+
 <body>
-    
+
+    <header>
+        <nav id="nav-bar">
+            <span id="nav-logo">
+                <img src="" alt="">
+                Informática Manhã
+            </span>
+            <ul id="nav-list">
+                <li class="nav-item"><a href="../../../landing/home.html#home">Início</a></li>
+                <li class="nav-item active"><a href="../../../landing/home.html#path">Trilhas</a></li>
+                <li class="nav-item"><a href="../../../landing/home.html#profession">Profissões</a></li>
+                <li class="nav-item"><a href="../../../landing/home.html#quizzes">Quizzes</a></li>
+                <li class="nav-item"><a href="../../../landing/home.html#games">Jogos</a></li>
+            </ul>
+
+            <button class="btn-default user">
+                <i class="fa-solid fa-user"></i>
+                <span class="user-name">Area do Aluno</span>
+            </button>
+
+            <button id="mobile-btn"><i class="fa-solid fa-bars"></i></button>
+        </nav>
+
+        <div id="user-menu">
+            <ul id="user-nav-list">
+                <li class="user-item"><a href="">Conquistas</a></li>
+                <li class="user-item"><a href="">Pontos</a></li>
+                <li class="user-item"><a href="">Minha Conta</a></li>
+                <li class="user-item"><a href="">Sair</a></li>
+            </ul>
+        </div>
+
+        <div id="mobile-menu">
+            <ul id="mobile-nav-list">
+                <li class="nav-item"><a href="../../../landing/home.html#home">Início</a></li>
+                <li class="nav-item"><a href="../../../landing/home.html#path">Trilhas</a></li>
+                <li class="nav-item"><a href="../../../landing/home.html#profession">Profissões</a></li>
+                <li class="nav-item"><a href="../../../landing/home.html#quizzes">Quizzes</a></li>
+                <li class="nav-item"><a href="../../../landing/home.html#games">Jogos</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="module-container">
+
+        <div class="module-header">
+            <img class="module-image" src="../../../landing/images/path/back-end.svg" alt="">
+            <h1 class="section-title">Back-End</h1>
+        </div>
+
+        <section class="module-type">
+            <h1 class="section-subtitle">Módulo 1 — Fundamentos de Back-End</h1>
+            <p class="module-description">
+                Neste módulo, você vai aprender os conceitos fundamentais do desenvolvimento Back-End, entender como servidores, bancos de dados e APIs funcionam, e conhecer as linguagens mais utilizadas para criar a lógica de sistemas.
+            </p>
+        </section>
+
+        <section class="module-arrows">
+            <a href="back-end.html">
+                <div class="area-arrows">
+                    <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows">
+                </div>
+            </a>
+            <a href="modulo-2.html">
+                <div class="area-arrows">
+                    <img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows">
+                </div>
+            </a>
+        </section>
+
+        <!-- CONTEÚDO DO MÓDULO -->
+        <section class="module-section">
+            <h2>1. O que é Back-End</h2>
+            <p>
+                O Back-End é a parte de um sistema que processa a lógica, gerencia dados e garante que tudo funcione corretamente no servidor. Ele não é visível para o usuário, mas é essencial para que aplicativos e sites funcionem.
+            </p>
+        </section>
+
+        <section class="module-section">
+            <h2>2. Arquitetura Cliente-Servidor</h2>
+            <p>
+                O modelo cliente-servidor separa responsabilidades: o cliente (front-end) exibe a interface, enquanto o servidor processa dados, armazena informações e responde às requisições. Essa comunicação é feita via protocolos como HTTP ou HTTPS.
+            </p>
+        </section>
+
+        <section class="module-section">
+            <h2>3. Linguagens Comuns de Back-End</h2>
+            <ul>
+                <li>Node.js (JavaScript no servidor)</li>
+                <li>Python (Django, Flask)</li>
+                <li>PHP (Laravel, CodeIgniter)</li>
+                <li>Java (Spring Boot)</li>
+                <li>Ruby (Ruby on Rails)</li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h2>4. Conceitos importantes</h2>
+            <ul>
+                <li><strong>API</strong>: Permite que sistemas diferentes se comuniquem.</li>
+                <li><strong>Request/Response</strong>: Requisição do cliente e resposta do servidor.</li>
+                <li><strong>JSON</strong>: Formato padrão de troca de dados entre sistemas.</li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h2>5. Ambiente de desenvolvimento</h2>
+            <p>
+                É importante configurar corretamente seu ambiente de Back-End. Instale a linguagem escolhida (Node.js, Python, etc.), configure sua IDE (VSCode recomendado) e aprenda a usar o terminal para executar scripts no servidor.
+            </p>
+        </section>
+
+        <!-- QUIZ -->
+        <section class="module-section quiz-section">
+            <h2>Quiz — Módulo 1</h2>
+            <div id="quiz"></div>
+
+            <div class="quiz-controls" style="margin-top:20px;">
+                <button id="submitBtn" class="btn-default">Enviar respostas</button>
+                <button id="resetBtn" class="btn-default secondary">Refazer</button>
+            </div>
+
+            <div id="scoreDisplay" style="margin-top:12px; font-size:18px;"></div>
+        </section>
+
+        <section class="module-arrows">
+            <a href="back-end.html">
+                <div class="area-arrows">
+                    <img src="../../imagens/arrow_back_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows">
+                </div>
+            </a>
+            <a href="modulo-2.html">
+                <div class="area-arrows">
+                    <img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows">
+                </div>
+            </a>
+        </section>
+
+    </main>
+
+    <footer>
+        <img src="../../../landing/images/footer/wave.svg" alt="">
+        <div id="footer-items">
+            <span>&copy 2025 Ana Clarissi</span>
+            <div class="social-media-buttons">
+                <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../../../landing/js/usuario.js"></script>
+    <script src="../../../landing/js/script.js"></script>
+
+    <!-- QUIZ -->
+    <script>
+        const questions = [
+            {
+                question: "O que faz o Back-End em um sistema?",
+                options: [
+                    "Cria a interface visual",
+                    "Processa lógica, dados e comunicação com o servidor",
+                    "Define apenas cores e fontes",
+                ],
+                answer: 1
+            },
+            {
+                question: "O que é uma API?",
+                options: [
+                    "Um banco de dados",
+                    "Uma interface para comunicação entre sistemas",
+                    "Um tipo de servidor",
+                ],
+                answer: 1
+            },
+            {
+                question: "Qual linguagem é usada no servidor com Node.js?",
+                options: [
+                    "JavaScript",
+                    "HTML",
+                    "CSS",
+                ],
+                answer: 0
+            },
+            {
+                question: "O que significa arquitetura cliente-servidor?",
+                options: [
+                    "Separação entre front-end e back-end para comunicação via requisições",
+                    "Organizar cores e estilos",
+                    "Criar gráficos para o usuário",
+                ],
+                answer: 0
+            },
+            {
+                question: "Qual formato de dados é muito usado para comunicação entre sistemas?",
+                options: [
+                    "XML",
+                    "JSON",
+                    "TXT",
+                ],
+                answer: 1
+            }
+        ];
+
+        // GERAR QUIZ NA TELA
+        const quizDiv = document.getElementById("quiz");
+
+        questions.forEach((q, index) => {
+            const card = document.createElement("div");
+            card.style.padding = "16px";
+            card.style.marginBottom = "16px";
+            card.style.border = "1px solid #ddd";
+            card.style.borderRadius = "10px";
+            card.style.background = "#ddd";
+
+            let html = `<p><strong>${index + 1}. ${q.question}</strong></p>`;
+
+            q.options.forEach((opt, i) => {
+                html += `
+                    <label style="display:block; margin-top:6px; cursor:pointer;">
+                        <input type="radio" name="q${index}" value="${i}">
+                        ${opt}
+                    </label>
+                `;
+            });
+
+            card.innerHTML = html;
+            quizDiv.appendChild(card);
+        });
+
+        // BOTÃO ENVIAR
+        document.getElementById("submitBtn").addEventListener("click", () => {
+            let score = 0;
+
+            questions.forEach((q, index) => {
+                const selected = document.querySelector(`input[name="q${index}"]:checked`);
+                if (selected && parseInt(selected.value) === q.answer) {
+                    score++;
+                }
+            });
+
+            document.getElementById("scoreDisplay").innerHTML =
+                `Você acertou <strong>${score}</strong> de <strong>${questions.length}</strong>.`;
+        });
+
+        // BOTÃO REFAZER
+        document.getElementById("resetBtn").addEventListener("click", () => {
+            document.querySelectorAll("input[type=radio]").forEach(r => r.checked = false);
+            document.getElementById("scoreDisplay").innerHTML = "";
+        });
+    </script>
+
 </body>
 </html>
