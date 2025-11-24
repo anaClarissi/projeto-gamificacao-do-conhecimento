@@ -34,118 +34,122 @@
     <script>
         const questionsFinalExam = [
 
-    // MÓDULO 1 — Fundamentos de Segurança da Informação
+
+            // MÓDULO 1 — Fundamentos de Front-End
+
             {
-                question: "Qual é o principal objetivo da segurança da informação?",
+                question: "Qual é a principal função do HTML em um projeto Front-End?",
                 answer: [
-                    { id: 1, text: "Instalar softwares novos em todas as máquinas", correct: false },
-                    { id: 2, text: "Proteger dados, sistemas e redes contra acessos não autorizados", correct: true },
-                    { id: 3, text: "Aumentar a velocidade do computador", correct: false },
-                    { id: 4, text: "Vender equipamentos de TI", correct: false }
+                    { id: 1, text: "Criar a estrutura e o conteúdo da página", correct: true },
+                    { id: 2, text: "Estilizar elementos com cores e fontes", correct: false },
+                    { id: 3, text: "Adicionar interatividade avançada", correct: false },
+                    { id: 4, text: "Controlar o banco de dados", correct: false }
+                ]
+            },
+            {
+                question: "O que o CSS faz em um site?",
+                answer: [
+                    { id: 1, text: "Cria menus e botões automaticamente", correct: false },
+                    { id: 2, text: "É responsável pela lógica da aplicação", correct: false },
+                    { id: 3, text: "Define a aparência visual da página", correct: true },
+                    { id: 4, text: "Controla servidores e APIs", correct: false }
                 ]
             },
 
+
+            // MÓDULO 2 — HTML e CSS
+
             {
-                question: "O que significa confidencialidade em segurança da informação?",
+                question: "Qual tag HTML é usada para criar um link?",
                 answer: [
-                    { id: 1, text: "Garantir que o sistema nunca caia", correct: false },
-                    { id: 2, text: "Garantir que dados sejam acessíveis apenas por pessoas autorizadas", correct: true },
-                    { id: 3, text: "Instalar antivírus", correct: false },
-                    { id: 4, text: "Executar backups diariamente", correct: false }
+                    { id: 1, text: "<a>", correct: true },
+                    { id: 2, text: "<link>", correct: false },
+                    { id: 3, text: "<href>", correct: false },
+                    { id: 4, text: "<url>", correct: false }
+                ]
+            },
+            {
+                question: "Qual propriedade CSS altera a cor do texto?",
+                answer: [
+                    { id: 1, text: "text-size", correct: false },
+                    { id: 2, text: "font-style", correct: false },
+                    { id: 3, text: "color", correct: true },
+                    { id: 4, text: "background-color", correct: false }
                 ]
             },
 
-            // MÓDULO 2 — Proteção de Dispositivos e Rede
+
+            // MÓDULO 3 — Introdução ao JavaScript
+
             {
-                question: "Qual é a função de um firewall?",
+                question: "Para que serve o JavaScript no Front-End?",
                 answer: [
-                    { id: 1, text: "Bloquear e monitorar tráfego de rede não autorizado", correct: true },
-                    { id: 2, text: "Formatar discos rígidos", correct: false },
-                    { id: 3, text: "Aumentar o desempenho do processador", correct: false },
-                    { id: 4, text: "Limpar arquivos temporários do computador", correct: false }
+                    { id: 1, text: "Controlar servidores", correct: false },
+                    { id: 2, text: "Adicionar interatividade e lógica à página", correct: true },
+                    { id: 3, text: "Criar apenas estilos visuais", correct: false },
+                    { id: 4, text: "Criar bancos de dados", correct: false }
+                ]
+            },
+            {
+                question: "Como declaramos uma variável em JavaScript?",
+                answer: [
+                    { id: 1, text: "var, let ou const", correct: true },
+                    { id: 2, text: "int e string", correct: false },
+                    { id: 3, text: "def e new", correct: false },
+                    { id: 4, text: "declare e value", correct: false }
                 ]
             },
 
+
+            // MÓDULO 4 — JavaScript Avançado
+
             {
-                question: "O que significa manter os dispositivos atualizados?",
+                question: "O método map() é usado para:",
                 answer: [
-                    { id: 1, text: "Reiniciar o computador uma vez por semana", correct: false },
-                    { id: 2, text: "Instalar patches, atualizações de sistema e antivírus regularmente", correct: true },
-                    { id: 3, text: "Trocar a senha do usuário diariamente", correct: false },
-                    { id: 4, text: "Apenas desligar e ligar o roteador", correct: false }
+                    { id: 1, text: "Filtrar itens do array", correct: false },
+                    { id: 2, text: "Transformar cada item do array em um novo valor", correct: true },
+                    { id: 3, text: "Somar todos os itens", correct: false },
+                    { id: 4, text: "Remover elementos duplicados", correct: false }
+                ]
+            },
+            {
+                question: "O que é uma arrow function?",
+                answer: [
+                    { id: 1, text: "Um tipo de comentário", correct: false },
+                    { id: 2, text: "Uma forma curta de escrever funções", correct: true },
+                    { id: 3, text: "Uma função que cria objetos", correct: false },
+                    { id: 4, text: "Uma função usada apenas no backend", correct: false }
                 ]
             },
 
-            // MÓDULO 3 — Senhas, Acessos e Autenticação
+
+            // MÓDULO 5 — Design e Boas Práticas
+        
             {
-                question: "O que torna uma senha forte?",
+                question: "O que é responsividade?",
                 answer: [
-                    { id: 1, text: "Ser apenas o nome do usuário", correct: false },
-                    { id: 2, text: "Ser a mesma em todos os sistemas", correct: false },
-                    { id: 3, text: "Ser longa, incluir letras maiúsculas, minúsculas, números e símbolos", correct: true },
-                    { id: 4, text: "Ter apenas números", correct: false }
+                    { id: 1, text: "Fazer o site rodar apenas no computador", correct: false },
+                    { id: 2, text: "Criar um layout que funciona bem em diferentes telas", correct: true },
+                    { id: 3, text: "Adicionar animações ao site", correct: false },
+                    { id: 4, text: "Criar bancos de dados mais rápidos", correct: false }
                 ]
             },
-
             {
-                question: "O que é autenticação multifator?",
+                question: "Por que a hierarquia visual é importante no design?",
                 answer: [
-                    { id: 1, text: "Usar apenas senha simples", correct: false },
-                    { id: 2, text: "Trocar a senha a cada 24 horas", correct: false },
-                    { id: 3, text: "Permitir acesso sem login", correct: false },
-                    { id: 4, text: "Usar mais de um método de verificação, como senha e código enviado ao celular", correct: true }
+                    { id: 1, text: "Para deixar o texto sempre colorido", correct: false },
+                    { id: 2, text: "Para organizar informações e facilitar a leitura", correct: true },
+                    { id: 3, text: "Para aumentar o tamanho das imagens", correct: false },
+                    { id: 4, text: "Para criar efeitos em 3D", correct: false }
                 ]
             },
-
-            // MÓDULO 4 — Segurança de Dados e Backup
             {
-                question: "Qual é o objetivo do backup?",
+                question: "Qual é uma boa prática ao escrever código Front-End?",
                 answer: [
-                    { id: 1, text: "Salvar cópias de dados importantes para restaurar em caso de perda", correct: true },
-                    { id: 2, text: "Deletar arquivos antigos", correct: false },
-                    { id: 3, text: "Enviar dados por e-mail", correct: false },
-                    { id: 4, text: "Melhorar a velocidade do sistema", correct: false }
-                ]
-            },
-
-            {
-                question: "Por que criptografar os dados?",
-                answer: [
-                    { id: 1, text: "Para reduzir o tamanho dos arquivos", correct: false },
-                    { id: 2, text: "Para que apenas usuários autorizados possam acessá-los", correct: true },
-                    { id: 3, text: "Para compartilhar mais rapidamente na internet", correct: false },
-                    { id: 4, text: "Para facilitar a impressão de documentos", correct: false }
-                ]
-            },
-
-            // MÓDULO 5 — Incidentes, Ataques e Resposta
-            {
-                question: "O que é um ataque de phishing?",
-                answer: [
-                    { id: 1, text: "Uma atualização de sistema", correct: false },
-                    { id: 2, text: "Mensagem fraudulenta para enganar o usuário e obter informações", correct: true },
-                    { id: 3, text: "Um antivírus atualizado", correct: false },
-                    { id: 4, text: "Backup de dados", correct: false }
-                ]
-            },
-
-            {
-                question: "Qual é a primeira ação ao identificar um incidente de segurança?",
-                answer: [
-                    { id: 1, text: "Publicar nas redes sociais", correct: false },
-                    { id: 2, text: "Trocar todos os computadores", correct: false },
-                    { id: 3, text: "Isolar os sistemas afetados para conter o problema", correct: true },
-                    { id: 4, text: "Desinstalar softwares de segurança", correct: false }
-                ]
-            },
-
-            {
-                question: "Por que documentar incidentes é importante?",
-                answer: [
-                    { id: 1, text: "Para registrar ações tomadas e prevenir futuros problemas", correct: true },
-                    { id: 2, text: "Para punir usuários", correct: false },
-                    { id: 3, text: "Para deletar arquivos antigos", correct: false },
-                    { id: 4, text: "Para compartilhar nas redes sociais", correct: false }
+                    { id: 1, text: "Usar nomes de variáveis confusos", correct: false },
+                    { id: 2, text: "Comentar apenas códigos importantes", correct: true },
+                    { id: 3, text: "Nunca identar o código", correct: false },
+                    { id: 4, text: "Misturar CSS dentro de funções JavaScript", correct: false }
                 ]
             }
 
@@ -214,11 +218,11 @@
                 Você acertou <strong>${score}</strong> de <strong>${questionsFinalExam.length}</strong> questões.
             `;
 
-            nextButton.textContent = "Voltar à Segurança da Informação";
+            nextButton.textContent = "Voltar à Front End";
             nextButton.style.display = "block";
 
             nextButton.onclick = () => {
-                window.location.href = "seguranca-da-informacao.html";
+                window.location.href = "front-end.html";
             };
         };
 

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Módulo 5 — Segurança da Informação</title>
-
+    <title>Módulo 5 — Design e Boas Práticas</title>
+    
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 
@@ -19,6 +20,7 @@
 
     <!-- CSS do módulo -->
     <link rel="stylesheet" href="../../css/modulo.css">
+
 </head>
 
 <body>
@@ -163,14 +165,15 @@
     <main class="module-container">
 
         <div class="module-header">
-            <img class="module-image" src="../../../landing/images/path/Security On-bro.svg" alt="">
-            <h1 class="section-title">Segurança da Informação</h1>
+            <img class="module-image" src="../../../landing/images/path/front-end.svg" alt="">
+            <h1 class="section-title">Front End</h1>
         </div>
-
+        
         <section class="module-type">
-            <h1 class="section-subtitle">Módulo 5 — Incidentes, Ataques e Resposta</h1>
+            <h1 class="section-subtitle">Módulo 5 — Design e Boas Práticas</h1>
             <p class="module-description">
-                O módulo aborda como identificar, prevenir e reagir a incidentes de segurança digital, protegendo sistemas e dados contra ataques. Ele explica os tipos mais comuns de ameaças, como reconhecer sinais de ataques e quais medidas adotar para minimizar danos e recuperar sistemas.
+                Este módulo ensina como criar interfaces bonitas, organizadas e profissionais usando princípios de design e boas práticas de front-end.
+                É aqui que o aluno aprende como deixar o site agradável, limpo, legível e intuitivo, mesmo sem ser designer.
             </p>
         </section>
 
@@ -183,77 +186,329 @@
                 </div>
             </a>
 
-            <a href="seguranca-da-informacao.html">
+            <a href="front-end.html">
                 <div class="area-arrows"><img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows"></div>
             </a>
 
         </section>
 
-        <!-- CONTEÚDO DO MÓDULO -->
         <section class="module-section">
-            <h2>1. Conceitos de Incidentes de Segurança</h2>
+            <h2>1. O que é Design no Front-End?</h2>
+            <p>Design no front-end não é só deixar o site “bonito”. É tornar tudo funcional, claro, equilibrado e fácil de entender.</p>
+            <p>Um site bem projetado:</p>
             <ul>
-                <li>Um <strong>incidente de segurança</strong> é qualquer evento que comprometa a confidencialidade, integridade ou disponibilidade de dados e sistemas.</li>
-                <li>Exemplos: invasão de sistemas, malware, roubo de dados, falhas de software ou ataques de engenharia social.</li>
-                <li>Importância: entender os incidentes ajuda a reagir rapidamente e minimizar prejuízos.</li>
+                <li>É fácil de navegar</li>
+                <li>Usa cores que combinam</li>
+                <li>Tem textos legíveis</li>
+                <li>Tem espaçamentos que deixam tudo organizado</li>
+                <li>Funciona bem em telas grandes e pequenas</li>
             </ul>
+            
+            <p>Você não precisa ser designer — apenas seguir princípios simples.</p>
+            
         </section>
 
         <section class="module-section">
-            <h2>2. Tipos de Ataques</h2>
+            <h2>2. Tipografia — Como escolher e usar fontes</h2>
+
+            <p>A tipografia define a forma como o texto aparece no site.</p>
+
             <ul>
-                <li><strong>Phishing</strong>: mensagens fraudulentas que tentam enganar o usuário para obter dados sensíveis (senhas, números de cartão, etc.).</li>
-                <li><strong>Malware</strong>: programas maliciosos, como vírus, worms, trojans e ransomware, que podem danificar sistemas ou criptografar arquivos.</li>
-                <li><strong>Ataques de rede</strong>: exploração de falhas em redes, incluindo DDoS (sobrecarregando servidores) e sniffing (captura de pacotes de dados).</li>
-                <li><strong>Ataques internos</strong>: ações maliciosas feitas por pessoas com acesso autorizado, como funcionários descontentes.</li>
+                <li>
+                    <strong>Tamanho e hierarquia</strong>
+                    <p>Use tamanhos diferentes para indicar o que é mais importante:</p>
+                    <ul>
+                        <li><strong>Título principal (h1)</strong>: maior</li>
+                        <li><strong>Subtítulos (h2, h3)</strong>: médios</li>
+                        <li><strong>Texto comum (p)</strong>: tamanho confortável</li>
+                    </ul>
+                    <p>Regra: títulos grandes → chamam atenção; textos pequenos demais cansam a leitura.</p>
+
+                </li>
+                <li>
+                    <strong>Peso da fonte</strong>
+                    <ul>
+                        <li><strong>bold</strong>: destaque</li>
+                        <li><strong>regular</strong>: leitura normal</li>
+                    </ul>
+
+                </li>
+                <li>
+                    <strong>Espaçamento entre linhas</strong>
+                    <p>Sites profissionais sempre usam espaços maiores entre linhas para que o texto “respire”.</p>
+                    <p>Exemplo CSS:</p>
+
+                    <div class="area-tags">
+
+                        <p class="pequeno">css</p>
+
+                        <p class="codigo">
+
+                            <span class="seletor">p</span> { <br>
+                                <span class="propiedade">line-heigth</span>: <span class="valor">1.6</span>; <br>
+                            }
+
+                        </p>
+
+                    </div>
+
+                </li>
             </ul>
+            
         </section>
 
         <section class="module-section">
-            <h2>3. Como Detectar Incidentes</h2>
+            <h2>Cores — Como escolher paletas harmônicas</h2>
+
+            <h3>Paleta principal</h3>
+            <p>Use <strong>1 cor principal</strong> e <strong>1 ou 2 cores secundárias</strong>.</p>
+            <p>Ex.:</p>
             <ul>
-                <li>Sinais comuns: lentidão incomum do sistema, mensagens de erro estranhas, arquivos corrompidos ou sumidos, alertas de antivírus.</li>
-                <li>Monitoramento contínuo: logs de servidores, sistemas de detecção de intrusão (IDS), antivírus e firewall.</li>
-                <li>Educação do usuário: treinar funcionários e alunos para identificar sinais de phishing e outros ataques.</li>
+                <li>Cor primária: azul</li>
+                <li>Secundária: verde</li>
+                <li>Neutra: cinza</li>
             </ul>
+
+            <h3>Cores de destaque</h3>
+            <p>Use cores fortes apenas para:</p>
+            <ul>
+                <li>Botões importantes</li>
+                <li>Avisos</li>
+                <li>Chamada para ação (CTA)</li>
+            </ul>
+
+            <h3>Acessibilidade</h3>
+            <p>Certifique-se de que o <strong>texto contraste com o fundo</strong> para facilitar a leitura.</p>
+            <p>Exemplo:</p>
+            <p>Texto branco em fundo amarelo → ruim</p>
+            <p>Texto branco em fundo azul escuro → ótimo</p>
+            <p>Ferramenta útil (não citei links): verificador de contraste de cores (o aluno pode pesquisar no Google).</p>
+
         </section>
 
         <section class="module-section">
-            <h2>4. Procedimentos de Resposta</h2>
-            <ul>
-                <li><strong>Isolamento</strong>: desconectar sistemas afetados para evitar propagação.</li>
-                <li><strong>Análise</strong>: identificar a origem, tipo e extensão do ataque.</li>
-                <li><strong>Remediação</strong>: remover malware, corrigir vulnerabilidades, restaurar sistemas a partir de backups confiáveis.</li>
-                <li><strong>Documentação</strong>: registrar o incidente, ações tomadas e lições aprendidas para prevenção futura.</li>
-            </ul>
-        </section>
+            <h2>Layout — Organização visual da página</h2>
 
-        <section class="module-section">
-            <h2>5. Boas Práticas de Prevenção</h2>
-            <ul>
-                <li>Manter sistemas e softwares sempre atualizados.</li>
-                <li>Usar <strong>antivírus e firewalls</strong> confiáveis.</li>
-                <li>Treinar usuários sobre segurança digital e phishing.</li>
-                <li>Realizar testes de penetração e auditorias periódicas.</li>
-                <li>Criar planos de resposta a incidentes documentados e revisados regularmente.</li>
-            </ul>
-        </section>
+            <h3>Espaçamentos</h3>
+            <p>Espaçamentos deixam o conteúdo organizado.</p>
+            <p>Exemplo:</p>
+            <div class="area-tags">
 
-        <!-- QUIZ -->
-        <section class="module-section quiz-section">
+                <p class="pequeno">css</p>
 
-            <h2>Quiz — Módulo 5</h2>
+                <p class="codigo">
 
-            <div id="quiz"></div>
+                    <span class="seletor">section</span> { <br>
+                        <span class="propiedade">padding</span>: <span class="valor">20px</span>; <br>
+                    }
 
-            <div class="quiz-controls" style="margin-top:20px;">
-                <button id="submitBtn" class="btn-default">Enviar respostas</button>
-                <button id="resetBtn" class="btn-default secondary">Refazer</button>
+                </p>
+
             </div>
 
-            <div id="scoreDisplay" style="margin-top:12px; font-size:18px;"></div>
+            <h3>Alinhamento</h3>
+            <p>Alinhar corretamente torna o site mais limpo:</p>
+            <ul>
+                <li>Textos devem estar alinhados à esquerda</li>
+                <li>Botões alinhados</li>
+                <li>Imagens centralizadas (quando necessário)</li>
+            </ul>
+
+            <h3>Composição do layout</h3>
+            <p>Use estruturas que guiam o olhar do usuário:</p>
+            <ul>
+                <li>Colunas</li>
+                <li>Cards</li>
+                <li>Containers</li>
+                <li>Divisões claras</li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h2>5. Componentes Visuais</h2>
+            <p>São elementos prontos que melhoram o design:</p>
+            <ul>
+                <li>Cards</li>
+                <li>Botões estilizados</li>
+                <li>Barras de navegação</li>
+                <li>Caixas com sombra</li>
+                <li>Inputs com bordas suaves</li>
+            </ul>
+
+            <p>Exemplo de card:</p>
+
+            <div class="area-tags">
+
+                <p class="pequeno">html</p>
+
+                <p class="codigo">
+
+                    &lt<span class="seletor">div</span> <span class="valor">class</span>="card"&gt <br>
+
+                    <span style="margin-left: 40px;">&lt<span class="seletor">h3</span>&gtTítulo&lt/<span class="seletor">h3</span>&gt</span> <br>
+
+                    <span style="margin-left: 40px;">&lt<span class="seletor">p</span>&gtDescrição do card.&lt/<span class="seletor">p</span>&gt</span> <br>
+
+                    &lt/<span class="seletor">div</span>&gt
+
+                </p>
+
+            </div>
+
+            <div class="area-tags">
+
+                <p class="pequeno">css</p>
+
+                <p class="codigo">
+
+                    <span class="valor">.card</span> { <br>
+
+                        <span class="propiedade">padding</span>: <span class="valor">15px</span>; <br>
+                        <span class="propiedade">border-radius</span>: <span class="valor">10px</span>; <br>
+                        <span class="propiedade">box-shadow</span>: <span class="valor">0 2px 6px rgba(0, 0, 0, 0.15)</span>; <br>
+ 
+                    }
+
+                </p>
+
+            </div>
 
         </section>
+
+        <section class="module-section">
+            <h2>6. Boas Práticas de HTML</h2>
+
+            <ul>
+                <li>Feche todas as tags</li>
+                <li>Evite misturar estilos dentro do HTML</li>
+                <li>Nomeie classes claramente</li>
+                <li>Use indentação</li>
+                <li>Use semântica corretamente (h1, p, nav, header, section)</li>
+            </ul>
+
+            <p>Exemplo ruim:</p>
+            <div class="area-tags">
+
+                <p class="pequeno">html</p>
+
+                <p class="codigo">
+
+                    &lt<span class="seletor">div</span>&gt
+                    &lt<span class="seletor">p</span>&gt
+                    ola
+                    &lt/<span class="seletor">p</span>&gt
+                    &lt/<span class="seletor">div</span>&gt
+
+                </p>
+
+            </div>
+
+            <p>Exemplo bom:</p>
+            <div class="area-tags">
+
+                <p class="pequeno">html</p>
+
+                <p class="codigo">
+
+                    &lt<span class="seletor">section</span>&gt <br>
+                    <span style="margin-left: 40px;">
+                        &lt<span class="seletor">p</span>&gt
+                        Olá
+                        &lt/<span class="seletor">p</span>&gt
+                    </span> <br>
+                    &lt/<span class="seletor">section</span>&gt
+
+                </p>
+
+            </div>
+        </section>
+
+        <section class="module-section">
+            <h2>Boas Práticas de CSS</h2>
+
+            <h3>Organização</h3>
+            <p>Organize o CSS por blocos:</p>
+            <ul>
+                <li>Reset</li>
+                <li>Layout</li>
+                <li>Componentes</li>
+                <li>Botões</li>
+                <li>Responsividade</li>
+            </ul>
+
+            <h3>Evite repetir código</h3>
+            <p>Se dois elementos têm o mesmo estilo → crie uma classe.</p>
+
+            <h3>Responsividade</h3>
+            <p>Use medidas flexíveis:</p>
+
+            <ul>
+                <li><span class="html-tags">%</span></li>
+                <li><span class="html-tags">em</span></li>
+                <li><span class="html-tags">rem</span></li>
+                <li><span class="html-tags">vh</span></li>
+                <li><span class="html-tags">vw</span></li>
+            </ul>
+        </section>
+        
+        <section class="module-section">
+            <h2>8. Responsividade e Mobile First</h2>
+            <p>Sites devem funcionar bem em celulares, tablets e computadores.</p>
+
+            <h3>O que é mobile first?</h3>
+            <p>Você começa o layout pelo <strong>celular</strong>, depois aumenta para telas maiores.</p>
+
+            <h3>Media Queries</h3>
+
+            <div class="area-tags">
+
+                <p class="pequeno">css</p>
+
+                <p class="codigo">
+
+                    <span class="variavel">@media</span> (min-width: <span class="valor">768px</span>) { <br>
+
+                        <span class="comentarios">/* estilos para telas maiores */</span> <br>
+
+                    }
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="module-section">
+            <h2>9. Experiência do Usuário (UX)</h2>
+            <p>UX é como o usuário se sente usando o site.</p>
+            <ul>
+                <li>É fácil encontrar o que procura?</li>
+                <li>A navegação é clara?</li>
+                <li>Os botões parecem clicáveis?</li>
+                <li>Tem feedback visual (ex.: botão muda de cor ao clicar)?</li>
+            </ul>
+            <p>Essas pequenas coisas fazem o site parecer profissional.</p>
+        </section>
+
+        <section class="module-section">
+            <h2>10. Checklist Final do Design Profissional</h2>
+            <p>Antes de finalizar seu site, revise:</p>
+            <ul>
+                <li>Tipografia consistente</li>
+                <li>Paleta de cores bem definida</li>
+                <li>Layout organizado</li>
+                <li>Botões destacando ações importantes</li>
+                <li>Componentes reutilizáveis</li>
+                <li>Responsividade funcionando</li>
+                <li>Cores com bom contraste</li>
+                <li>Espaçamentos adequados</li>
+                <li>Uso correto de HTML semântico</li>
+            </ul>
+        </section>
+
+        <!--QUESTÕES-->
+
+        <section id="coding-questions"></section>
 
         <section class="module-arrows">
 
@@ -264,7 +519,7 @@
                 </div>
             </a>
 
-            <a href="seguranca-da-informacao.html">
+            <a href="front-end.html">
                 <div class="area-arrows"><img src="../../imagens/arrow_forward_ios_25dp_46FFA8_FILL0_wght400_GRAD0_opsz24.svg" alt="" class="arrows"></div>
             </a>
 
@@ -284,112 +539,165 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!--Scripts-->
+
     <script src="../../../landing/js/usuario.js"></script>
 
     <script src="../../../landing/js/script.js"></script>
 
-
-    <!--QUIZ-->
-
     <script>
-    // QUESTÕES DO QUIZ
-        const questions = [
+        const codingExercises = [
+
             {
-                question: "O que caracteriza um incidente de segurança?",
-                options: [
-                    "Qualquer evento que comprometa a confidencialidade, integridade ou disponibilidade de dados",
-                    "Somente ataques de vírus",
-                    "Problemas no hardware que não envolvem dados"
-                ],
-                answer: 0
+                id: 1,
+                title: "Organize o código com indentação",
+                description: "Escreva uma estrutura HTML simples com um header e um h1 dentro dele, corretamente identado.",
+                expected: `<header>
+            <h1></h1>
+        </header>`
             },
+
             {
-                question: "O que é phishing?",
-                options: [
-                    "Uma técnica de backup de dados",
-                    "Mensagens fraudulentas para enganar o usuário e obter informações",
-                    "Um tipo de firewall"
-                ],
-                answer: 1
+                id: 2,
+                title: "Use classes com nomes significativos",
+                description: "Crie uma div com a classe container-principal contendo o texto: Área principal.",
+                expected: `<div class="container-principal">Área principal</div>`
             },
+
             {
-                question: "Qual é a primeira ação a ser tomada ao identificar um ataque?",
-                options: [
-                    "Isolar os sistemas afetados para evitar propagação",
-                    "Instalar mais softwares",
-                    "Avisar todos os usuários sem verificar"
-                ],
-                answer: 0
+                id: 3,
+                title: "Crie um botão seguindo boas práticas",
+                description: "Crie um botão com a classe btn-primario e o texto Enviar.",
+                expected: `<button class="btn-primario">Enviar</button>`
             },
+
             {
-                question: "Qual tipo de ataque sobrecarrega servidores com tráfego massivo?",
-                options: [
-                    "Phishing",
-                    "DDoS",
-                    "Trojan"
-                ],
-                answer: 1
+                id: 4,
+                title: "Evite repetir código usando classes",
+                description: "Crie duas divs diferentes, ambas usando a classe caixa, com o Primeiro e Segundo.",
+                expected: `<div class="caixa">Primeiro</div>
+        <div class="caixa">Segundo</div>`
             },
+
             {
-                question: "Por que é importante documentar um incidente de segurança?",
-                options: [
-                    "Para saber quem será punido",
-                    "Para registrar ações tomadas e aprender com o incidente, prevenindo futuras ocorrências",
-                    "Para publicar nas redes sociais"
-                ],
-                answer: 1
+                id: 5,
+                title: "Use separação entre HTML e CSS",
+                description: "Crie um parágrafo com o texto: Texto estilizado. A estilização deve ser feita com uma classe chamada destaque (não use style inline).",
+                expected: `<p class="destaque">Texto estilizado</p>`
+            },
+
+            {
+                id: 6,
+                title: "Aplique espaçamento com boas práticas",
+                description: "Crie uma div com classe bloco e o texto Teste. A estilização (padding de 20px) será feita no CSS. Não use style inline.",
+                expected: `<div class="bloco">Teste</div>`
+            },
+
+            {
+                id: 7,
+                title: "Crie uma estrutura semântica",
+                description: "Crie uma seção usando a tag &ltsection&gt contendo um h2 com o texto Serviços.",
+                expected: `<section>
+            <h2>Serviços</h2>
+        </section>`
+            },
+
+            {
+                id: 8,
+                title: "Aplique alinhamento usando classes",
+                description: "Crie um parágrafo com classe centralizado contendo o texto Centralizado.",
+                expected: `<p class="centralizado">Centralizado</p>`
+            },
+
+            {
+                id: 9,
+                title: "Use comentários para organização",
+                description: "Crie um comentário dizendo 'Sessão principal' e logo abaixo uma div com o texto Conteúdo.",
+                expected: `<!-- Sessão principal -->
+        <div>Conteúdo</div>`
+            },
+
+            {
+                id: 10,
+                title: "Crie um layout simples e semântico",
+                description: "Crie um header com um nav dentro dele contendo um link para Home.",
+                expected: `<header>
+            <nav>
+                <a href="#">Home</a>
+            </nav>
+        </header>`
             }
+
         ];
 
 
-        // GERAR QUIZ NA TELA
-        const quizDiv = document.getElementById("quiz");
 
-        questions.forEach((q, index) => {
-            const card = document.createElement("div");
-            card.style.padding = "16px";
-            card.style.marginBottom = "16px";
-            card.style.border = "1px solid #ddd";
-            card.style.borderRadius = "10px";
-            card.style.background = "#ddd";
+        // Função que renderiza as questões
+        const renderExercises = () => {
+            const container = document.getElementById("coding-questions");
 
-            let html = `<p><strong>${index + 1}. ${q.question}</strong></p>`;
+            codingExercises.forEach(ex => {
+                container.innerHTML += `
+                    <div class="exercise-box">
+                        <h3>${ex.id}. ${ex.title}</h3>
+                        <p>${ex.description}</p>
 
-            q.options.forEach((opt, i) => {
-                html += `
-                    <label style="display:block; margin-top:6px; cursor:pointer;">
-                        <input type="radio" name="q${index}" value="${i}">
-                        ${opt}
-                    </label>
+                        <textarea id="answer-${ex.id}" placeholder="Escreva seu código aqui..."></textarea>
+
+                        <button class="btn-default" onclick="checkAnswer(${ex.id})">Verificar Resposta</button>
+
+                        <div id="result-${ex.id}" class="result"></div>
+                    </div>
                 `;
             });
+        }
 
-            card.innerHTML = html;
-            quizDiv.appendChild(card);
-        });
+        const normalizeCode = (code) => {
+            if (!code) return "";
+            
+            code = code.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "");
+        
+            code = code.replace(/\r\n/g, "\n").replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+           
+            code = code.replace(/\s*([\=\+\-\*\/%<>!,\:\(\)\{\}\[\]\|&])\s*/g, "$1");
+            
+            code = code.replace(/;+/g, "");
+            return code;
+        }
 
-        // BOTÃO ENVIAR
-        document.getElementById("submitBtn").addEventListener("click", () => {
-            let score = 0;
+        // Função que compara a resposta do aluno
+        const checkAnswer = (id) => {
 
-            questions.forEach((q, index) => {
-                const selected = document.querySelector(`input[name="q${index}"]:checked`);
-                if (selected && parseInt(selected.value) === q.answer) {
-                    score++;
-                }
-            });
+            const question = codingExercises.find(q => q.id === id);
 
-            document.getElementById("scoreDisplay").innerHTML =
-                `Você acertou <strong>${score}</strong> de <strong>${questions.length}</strong>.`;
-        });
+            const studentRaw = document.getElementById(`answer-${id}`).value || "";
 
-        // BOTÃO REFAZER
-        document.getElementById("resetBtn").addEventListener("click", () => {
-            document.querySelectorAll("input[type=radio]").forEach(r => r.checked = false);
-            document.getElementById("scoreDisplay").innerHTML = "";
-        });
+            const studentNormalized = normalizeCode(studentRaw);
+
+            const expectedNormalized = normalizeCode(question.expected);
+
+            const resultBox = document.getElementById(`result-${id}`);
+
+            if (studentNormalized === expectedNormalized) {
+
+                resultBox.innerHTML = "<span class='correct'>✔ Correto!</span>";
+
+            } else {
+                
+                resultBox.innerHTML = `
+                    <span class='wrong'>✘ Resposta incorreta</span>
+                    <br><strong>Exemplo esperado (formatado):</strong>
+                    <pre style="white-space:pre-wrap; background:#f7f7f7; padding:8px; border-radius:4px;">${question.expected.replace(/</g, "&lt;")}</pre>
+                    <details><summary>O que foi enviado (normalizado)</summary><pre style="white-space:pre-wrap;">${studentNormalized.replace(/</g,"&lt;")}</pre></details>
+                `;
+            }
+        }
+
+        renderExercises();
+
     </script>
 
+
 </body>
+
 </html>

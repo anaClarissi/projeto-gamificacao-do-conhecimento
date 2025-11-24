@@ -121,6 +121,14 @@
     font-style: italic;
 }
 
+.variavel {
+    color: var(--color-primary-23);
+}
+
+.funcao {
+    color: var(--color-primary-24);
+}
+
 .exercise-box {
     background: var(--color-primary-10);
     padding: 18px;
@@ -170,4 +178,14 @@ code {
     border-radius: 4px;
     display: inline-block;
     margin-top: 6px;
+}
+
+.tipos-dados {
+    border-collapse: collapse;
+}
+
+.tipos-dados td {
+    border-top: 2px solid var(--color-primary-18);
+    padding: 20px 0;
+    width: 200px;
 }

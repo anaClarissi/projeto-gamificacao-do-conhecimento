@@ -15,12 +15,15 @@ main {
     background-color: var(--color-primary-1);
     height: 100vh;
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
 }
 
 .app {
     background-color: var(--color-primary-5);
     width: 50vw;
+    height: 80%;
     padding: 30px;
     border-radius: 20px;
     border: 2px solid var(--color-primary-4);
@@ -36,6 +39,18 @@ main {
     border-bottom: 1px solid var(--color-primary-7);
     padding-bottom: 30px;
     width: 80%;
+}
+
+.text-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.text-title .title {
+    display: flex;
+    flex-direction: column;
 }
 
 .app h1 span {
@@ -122,6 +137,53 @@ main {
 .incorrect {
     background-color: #ff9393;
     color: var(--color-primary-11);
+}
+
+.quiz-arrows {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin: 20px;
+}
+
+.area-arrows {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.area-arrows:hover {
+    background-color: var(--color-primary-5);
+    transition: background-color .3s ease;
+}
+
+.arrows {
+    width: 35px;
+    padding: 0;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.icon-home {
+    width: 30px;
+}
+
+.home-area {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-area:hover {
+    background-color: var(--color-primary-1);
+    border: 1px solid var(--color-primary-4);
+    transition: all .3s ease;
 }
 
 @media screen and (max-width: 1170px) {

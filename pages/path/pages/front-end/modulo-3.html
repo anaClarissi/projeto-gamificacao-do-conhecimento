@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Módulo 3 — Sistemas Operacionais</title>
-
+    <title>Módulo 3 — Introdução ao JavaScript</title>
+    
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 
@@ -19,6 +20,7 @@
 
     <!-- CSS do módulo -->
     <link rel="stylesheet" href="../../css/modulo.css">
+
 </head>
 
 <body>
@@ -163,14 +165,15 @@
     <main class="module-container">
 
         <div class="module-header">
-            <img class="module-image" src="../../../landing/images/path/Security On-bro.svg" alt="">
-            <h1 class="section-title">Segurança da informação</h1>
+            <img class="module-image" src="../../../landing/images/path/front-end.svg" alt="">
+            <h1 class="section-title">Front End</h1>
         </div>
-
+        
         <section class="module-type">
-            <h1 class="section-subtitle">Módulo 3 — Senhas, Acessos e Autenticação</h2>
+            <h1 class="section-subtitle">Módulo 3 — Introdução ao JavaScript</h1>
             <p class="module-description">
-                Este módulo aborda os métodos e boas práticas de controle de acesso a sistemas, redes e dados, fundamentais para proteger informações sensíveis e prevenir invasões. O foco está na criação de senhas seguras, gerenciamento de permissões, autenticação de usuários e prevenção de acessos não autorizados.
+                <strong>O objetivo deste módulo é ensinar os alunos a dar os primeiros passos na linguagem que dá vida às páginas web: o JavaScript.</strong>
+                Você aprenderá como o JS funciona, como criar scripts simples, como manipular elementos da página e como começar a programar de verdade.
             </p>
         </section>
 
@@ -189,187 +192,423 @@
 
         </section>
 
-        <!-- CONTEÚDO DO MÓDULO -->
         <section class="module-section">
-            <h2>1. O que são senhas e por que são importantes?</h2>
+            <h2>1. O que é JavaScript? Para que ele serve?</h2>
+
+            <p>JavaScript é a linguagem responsável por tornar <strong>sites dinâmicos e interativos</strong>.
+            Enquanto o HTML estrutura a página e o CSS cria o visual, o JS controla o comportamento.</p>
+
+            <p>Exemplos de coisas feitas com JavaScript:</p>
             <ul>
-                <li>Senhas são <strong>barreiras de proteção</strong> contra acessos não autorizados.</li>
-                <li>Servem para confirmar que <strong>você é realmente você</strong></li>
-                <li>Sem boas senhas, sistemas podem ser invadidos e dados roubados</li>
+                <li>Mostrar ou esconder elementos (menus, pop-ups, alertas)</li>
+                <li>Validar formulários</li>
+                <li>Criar animações</li>
+                <li>Trabalhar com APIs</li>
+                <li>Criar jogos</li>
+            </ul>
+
+            <p>Hoje JS é usado <strong>em sites, apps, jogos e até no backend</strong>, mas aqui trabalharemos apenas o <strong>JavaScript para front-end</strong>.</p>
+            
+        </section>
+
+        <section class="module-section">
+            <h2>2. Inserindo JavaScript no HTML</h2>
+            <p>Existem 3 formas principais de colocar JS no seu projeto:</p>
+            <ul>
+                <li><strong>JavaScript inline (dentro do HTML)</strong>
+
+                    <div class="area-tags">
+                        <p class="pequeno">html</p>
+                        <p class="codigo">
+                            
+                            &lt<span class="seletor">button</span> <span class="valor">onclick</span>=<span>"alert('Olá!')"</span>&gtClique aqui&lt/<span class="seletor">button</span>&gt
+                            
+                        </p>
+                    </div>
+
+                    <p>Usado apenas para coisas simples.</p>
+
+                </li>
+            <li>
+                <strong>JavaScript interno (dentro da tag <span class="html-tags">&ltscript&gt</span> no HTML)&lt/strong&gt</strong>
+
+                <div class="area-tags">
+                    <p class="pequeno">html</p>
+
+                    <p class="codigo">
+                        &lt<span class="seletor">script</span>&gt <br>
+                        <span class="valor">console.</span>log("Página carregada!"); <br>
+                        &lt/<span class="seletor">script</span>&gt
+                    </p>
+                    
+                </div>
+
+                </li>
+                <li>
+                    <strong>JavaScript externo (arquivo separado .js)</strong>
+                    <p>A forma mais profissional.</p>
+                    <h3>HTML:</h3>
+
+                    <div class="area-tags">
+
+                        <p class="pequeno">html</p>
+
+                        <p class="codigo">
+                            &lt<span class="seletor">script</span> <span class="valor">src</span>="script.js"&gt&lt/<span class="seletor">script</span>&gt
+                        </p>
+
+                    </div>
+
+                    <h3>script.js:</h3>
+
+                    <div class="area-tags">
+
+                        <p class="pequeno">javascript</p>
+
+                        <p class="codigo">
+
+                            <span class="valor">console.</span>log("Arquivo JS conectado!");
+
+                        </p>
+
+                    </div>
+
+
+                </li>
             </ul>
         </section>
 
         <section class="module-section">
-            <h2>2. Boas práticas para criar senhas fortes</h2>
+            <h3>3. Variáveis: let, const e var</h3>
+            <p>Variáveis guardam valores.</p>
+            <p>As mais utilizadas no front-end atual são:</p>
 
-            <p>Uma senha forte deve ter:</p>
             <ul>
-                <li>Letras maiúsculas e minúsculas</li>
-                <li>Números</li>
-                <li>Símbolos</li>
-                <li>Pelo menos <strong>10 caracteres</strong></li>
+                <li>
+
+                    <strong>let — variável que pode mudar</strong>
+
+                    <div class="area-tags">
+
+                        <p class="pequeno">javascript</p>
+
+                        <p class="codigo">
+
+                            <span class="variavel">let</span> idade = <span class="valor">20</span>; <br>
+                            idade = <span class="valor">21</span>;
+
+                        </p>
+
+                    </div>
+
+                </li>
+                <li>
+
+                    <strong>const — variável que NÃO pode mudar</strong>
+
+                    <div class="area-tags">
+
+                        <p class="pequeno">javascript</p>
+
+                        <p class="codigo">
+
+                            <span class="variavel">const</span> nome = <span class="valor">"Ana"</span>;
+
+                        </p>
+
+                    </div>
+
+                </li>
+                <li>
+
+                    <strong>var — antiga, quase não se usa mais**</strong>
+                    <p>Problemas com escopo → evitar.</p>
+
+                </li>
             </ul>
 
-            <p>Exemplos:</p>
-            <ul>
-                <li>Senha fraca: ana123</li>
-                <li>Senha forte: A!naC0d3_2025</li>
-            </ul>
-
-            <p>Dicas:</p>
-            <ul>
-                <li>Evite nomes, datas e palavras óbvias.</li>
-                <li>Nunca use a mesma senha para tudo.</li>
-            </ul>
 
         </section>
 
         <section class="module-section">
-            <h2>3. Gerenciamento de senhas</h2>
-            <ul>
-                <li>Use um <strong>gerenciador de senhas</strong> (KeePass, Bitwarden, 1Password).</li>
-                <li>Ele guarda todas as suas senhas em um “cofre”.</li>
-                <li>Você só precisa lembrar uma <strong>senha mestra</strong>.</li>
-            </ul>
-        </section>
+            <h2>4. Tipos de Dados</h2>
+            <p>JS identifica automaticamente o tipo de cada variável:</p>
+            
+            <table class="tipos-dados">
 
-        <section class="module-section">
-            <h2>4. Autenticação em duas etapas (2FA)</h2>
-            <p>
-                2FA adiciona uma <strong>segunda camada de segurança</strong>.
-            </p>
+                <thead>
+                    <tr>
+                        <th>Tipo</th>
+                        <th>Exemplos</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>String </td>
+                        <td><span class="html-tags">"Olá"</span></td>
+                    </tr>
+                    <tr>
+                        <td>Number</td>
+                        <td><span class="html-tags">10, 5.3</span></td>
+                    </tr>
+                    <tr>
+                        <td>Boolean</td>
+                        <td><span class="html-tags">true, false</span></td>
+                    </tr>
+                    <tr>
+                        <td>Array</td>
+                        <td><span class="html-tags">["Ana", "Lucas"]</span></td>
+                    </tr>
+                    <tr>
+                        <td>Object</td>
+                        <td><span class="html-tags">{ nome: "Ana", idade: 15 }</span></td>
+                    </tr>
+                    <tr>
+                        <td>Null</td>
+                        <td><span class="html-tags">valor propositalmente vazio</span></td>
+                    </tr>
+                    <tr>
+                        <td>Undefined</td>
+                        <td><span class="html-tags">ainda não definido</span></td>
+                    </tr>
+                </tbody>
 
-            <p>Pode ser:</p>
-            <ul>
-                <li>Código via SMS</li>
-                <li>Aplicativos como Google Authenticator</li>
-                <li>Chave física USB (como YubiKey)</li>
-                <li>Reconhecimento facial ou digital</li>
-            </ul>
+            </table>
 
-            <p><strong>Sem 2FA → Fácil invadir</strong></p>
-            <p><strong>Com 2FA → Muito mais difícil</strong></p>
-
-        </section>
-
-        <section class="module-section">
-            <h2>5. Tipos de autenticação</h2>
-            <p>
-                Existem três categorias
-            </p>
-
-            <h3>Algo que você sabe</h3>
-            <ul>
-                <li>Senha</li>
-                <li>PIN</li>
-                <li>Pergunta secreta</li>
-            </ul>
-
-            <h3>Algo que você tem</h3>
-            <ul>
-                <li>Token</li>
-                <li>Smartphone</li>
-                <li>Cartão de acesso</li>
-            </ul>
-
-            <h3>Algo que você é</h3>
-            <ul>
-                <li>Digital</li>
-                <li>Rosto</li>
-                <li>Íris</li>
-                <li>Voz</li>
-            </ul>
-
-            <p>Quanto mais tipos combinados, mais seguro.</p>
-
-        </section>
-
-        <section class="module-section">
-            <h2>6. Controle de acessos</h2>
-            <ul>
-                <li>Define <strong>quem pode acessar o quê</strong> dentro de uma organização.</li>
-            </ul>
-
-            <p>Principais modelos:</p>
-            <ul>
-                <li><strong>ACL (Lista de Controle de Acesso)</strong>: regras definem quem acessa cada item.</li>
-                <li><strong>RBAC (Controle baseado em papéis)</strong>: permissões ligadas a cargos (ex: administrador, usuário).</li>
-                <li><strong>ABAC (Controle baseado em atributos)</strong>: considera condições (local, horário, dispositivo, regras).</li>
-            </ul>
-
-        </section>
-
-        <section class="module-section">
-            <h2>7. Riscos e ataques comuns</h2>
-
-            <h3>Phishing</h3>
-            <ul>
-                <li>Golpes que tentam roubar senhas via e-mail falsos.</li>
-            </ul>
-
-            <h3>Brute force</h3>
-            <ul>
-                <li>Tentativas infinitas de adivinhar a senha.</li>
-            </ul>
-
-            <h3>Keyloggers</h3>
-            <ul>
-                <li>Programas que gravam tudo que você digita.</li>
-            </ul>
-
-            <h3>Roubo de sessão</h3>
-            <ul>
-                <li>Invasor sequestra sua sessão logada.</li>
-            </ul>
-
-            <p>Como se proteger:</p>
-            <ul>
-                <li>Usar 2FA</li>
-                <li>Senhas fortes</li>
-                <li>Não clicar em links duvidosos</li>
-                <li>Manter o sistema atualizado</li>
-            </ul>
-
-        </section>
-
-        <section class="module-section">
-            <h2>8. Políticas de senha</h2>
-
-            <p>Empresas geralmente exigem:</p>
-            <ul>
-                <li>Mínimo de caracteres</li>
-                <li>Renovação periódica</li>
-                <li>Bloqueio após tentativas erradas</li>
-                <li>Proibição de senhas repetidas</li>
-            </ul>
-        </section>
-
-        <section class="module-section">
-            <h2>9. Exemplos de situações reais</h2>
-            <ul>
-                <li>Funcionário compartilha senha com colegas → risco alto.</li>
-                <li>Usuário usa “123456” → senha vulnerável.</li>
-                <li>Sistema sem 2FA é invadido → dados vazados.</li>
-                <li>Aplicativo bloqueia após 5 tentativas → medida de segurança.</li>
-            </ul>
-        </section>
+            <p>Exemplo:</p>
 
 
-        <!-- QUIZ -->
-        <section class="module-section quiz-section">
+            <div class="area-tags">
 
-            <h2>Quiz — Módulo 3</h2>
+                <p class="pequeno">javascript</p>
 
-            <div id="quiz"></div>
+                <p class="codigo">
+                    <span class="variavel">let</span> nome = "Pedro"; <span class="comentario">// String</span><br> 
+                    <span class="variavel">let</span> idade = <span class="valor">17</span>; <span class="comentario">// Number</span><br>
+                    <span class="variavel">let</span> aprovado = true; <span class="comentario">// Boolean</span>
+                </p>
 
-            <div class="quiz-controls" style="margin-top:20px;">
-                <button id="submitBtn" class="btn-default">Enviar respostas</button>
-                <button id="resetBtn" class="btn-default secondary">Refazer</button>
             </div>
 
-            <div id="scoreDisplay" style="margin-top:12px; font-size:18px;"></div>
+        </section>
+
+        <section class="module-section">
+            <h2>5. Operadores</h2>
+
+            <h3>Matemáticos:</h3>
+            <ul>
+                <li><span class="html-tags">+</span> soma</li>
+                <li><span class="html-tags">-</span> subtração</li>
+                <li><span class="html-tags">*</span> multiplicação</li>
+                <li><span class="html-tags">/</span> divisão</li>
+                <li><span class="html-tags">%</span> resto</li>
+            </ul>
+
+            <h3>Comparação:</h3>
+            <ul>
+                <li><span class="html-tags">===</span> igual (valor e tipo)</li>
+                <li><span class="html-tags">!==</span> diferente</li>
+                <li><span class="html-tags">&gt</span> maior</li>
+                <li><span class="html-tags">&lt</span> menor</li>
+                
+            </ul>
+
+            <h3>Lógicos:</h3>
+            <ul>
+                <li><span class="html-tags">&&</span> E</li>
+                <li><span class="html-tags">||</span> OU</li>
+                <li><span class="html-tags">!</span> NÃO</li>
+            </ul>
+        </section>
+
+        <section class="module-section">
+            <h2>6. Condicionais (if, else if, else)</h2>
+            <p>Usado para tomar decisões:</p>
+
+            <div class="area-tags">
+                <p class="pequeno">javascript</p>
+                <p class="codigo">
+
+                    <span class="variavel">let</span> idade = <span class="valor">16</span>; <br>
+
+                    <br>
+
+                    <span class="variavel">if</span> (idade >= <span class="18"></span>) { <br>
+
+                        <span style="margin-left: 40px;"><span class="valor">console.</span>log("Maior de idade");</span> <br>
+                    
+                    } <span class="variavel">else</span> { <br>
+
+                        <span style="margin-left: 40px;"><span class="valor">console.</span>log("Menor de idade");</span> <br>
+
+                    }
+
+                </p>
+            </div>
 
         </section>
+
+        <section class="module-section">
+            <h2>7. Funções — blocos de código que executam ações</h2>
+
+            <p>Função simples:</p>
+            <div class="area-tags">
+                <p class="pequeno">javascript</p>
+                <p class="codigo">
+                    <span class="variavel">function</span> <span class="funcao">saudacao</span> () { <br>
+                        <span style="margin-left: 40px;"><span class="valor">console.</span>log("Bem-vindo!");</span> <br>
+                    } <br>
+
+                    <br>
+
+                    <span class="funcao">saudacao</span>();
+                </p>
+            </div>
+
+            <p>Função com parâmetro:</p>
+            <div class="area-tags">
+                <p class="pequeno">javascript</p>
+                <p class="codigo">
+                    <span class="variavel">function</span> <span class="funcao">somar</span>(a, b) { <br>
+                        
+                        <span style="margin-left: 40px;"><span class="variavel">return</span> a + b;</span> <br>
+
+                    } <br>
+                    <br>
+                    <span class="valor">console.</span>log(<span class="funcao">somar</span>(<span class="valor">2</span>, <span class="valor">3</span>));
+                </p>
+            </div>
+
+            <p>Função arrow:</p>
+            <div class="area-tags">
+                <p class="pequeno">javascript</p>
+                <p class="codigo">
+                    <span class="variavel">const</span> <span class="funcao">dobrar</span> = x => x * 2; <br>
+                    <span class="valor">console.</span>log(<span class="funcao">dobrar</span>(<span class="valor">5</span>));
+                </p>
+            </div>
+
+        </section>
+
+        <section class="module-section">
+            <h2>8. Manipulação do DOM</h2>
+            <p>O DOM é a "árvore" de elementos HTML.</p>
+
+            <p>Com JavaScript, podemos:</p>
+            <ul>
+                <li>pegar elementos</li>
+                <li>mudar texto</li>
+                <li>mudar estilos</li>
+                <li>criar elementos</li>
+                <li>apagar elementos</li>
+            </ul>
+
+            <h3>Selecionar elementos:</h3>
+            <div class="area-tags">
+                <p class="pequeno">javascript</p>
+                <p class="codigo">
+                    <span class="valor">document.</span><span class="funcao">getElementById</span>("titulo"); <br>
+                    <span class="valor">document.</span><span class="funcao">querrySelector</span>(".btn");
+                </p>
+            </div>
+
+            <h3>Alterar texto:</h3>
+            <div class="area-tags">
+                <p class="pequeno">javascript</p>
+                <p class="codigo">
+                    <span class="valor">document.</span><span class="funcao">getElementById</span>("titulo").textContent = "Novo Título!";
+                </p>
+            </div>
+
+            <h3>Alterar estilo:</h3>
+            <div class="area-tags">
+                <p class="pequeno">javascript</p>
+                <p class="codigo">
+                    <span class="valor">document.</span><span class="funcao">querrySelector</span>(".caixa").style.background = "blue"; <br>
+                </p>
+            </div>
+
+            <h3>Reagir a eventos:</h3>
+            <div class="area-tags">
+                <p class="pequeno">javascript</p>
+                <p class="codigo">
+                    <span class="valor">document.</span><span class="funcao"></span>(".btn").<span class="funcao">addEventListener</span>("click", () => { <br>
+                        <span style="margin-left: 40px;" class="funcao">alert</span>("Botão clicado!"); <br>
+                    });
+                </p>
+            </div>
+
+        </section>
+
+        <section class="module-section">
+
+            <h2>9. Eventos</h2>
+            <p>Eventos são ações que acontecem na página:</p>
+
+            <ul>
+                <li>click</li>
+                <li>mouseover</li>
+                <li>keydown</li>
+                <li>submit</li>
+                <li>change</li>
+            </ul>
+
+            <p>Exemplo:</p>
+
+            <div class="area-tags">
+                <p class="pequeno">javascript</p>
+                <p class="codigo">
+
+                    <span class="variavel">const</span> btn = <span class="valor">document.</span><span class="funcao">querrySelector</span>("#enviar"); <br>
+                    <br>
+                    btn.<span class="funcao">addEventListener</span>("click", () => { <br>
+
+                        <span style="margin-left: 40px;" class="valor">console.</span>log("Você clicou!");
+                        <br>
+
+                    });
+
+                </p>
+            </div>
+
+        </section>
+
+        <section class="module-section">
+            <h2>10. Introdução à lógica aplicada no front-end</h2>
+            <p>JavaScript é usado para:</p>
+
+            <ul>
+                <li>validação de formulários</li>
+                <li>interações com o usuário</li>
+                <li>mostrar mensagens</li>
+                <li>fazer cálculos</li>
+                <li>criar animações simples</li>
+                <li>atualizar conteúdo dinamicamente</li>
+            </ul>
+
+            <p>Exemplo de formulário simples:</p>
+
+            <div class="area-tags">
+                <p class="pequeno">javascript</p>
+                <p class="codigo">
+
+                    <span class="variavel">const</span> input = <span class="valor">document.</span><span class="funcao">querrySelector</span>("#nome"); <br>
+                    <span class="variavel">const</span> button = <span class="valor">document.</span><span class="funcao">querrySelector</span>("ok"); <br>
+                    <br>
+                    button.<span class="funcao">addEventListener</span>("click", () => { <br>
+                        
+                        <span style="margin-left: 40px;" class="funcao">alert</span>(`Olá, <span class="seletor">${input.value}</span>!`); <br>
+
+                    });
+
+                </p>
+            </div>
+
+        </section>
+
+        <!--QUESTÕES-->
+
+        <section id="coding-questions"></section>
 
         <section class="module-arrows">
 
@@ -400,119 +639,131 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!--Scripts-->
+
     <script src="../../../landing/js/usuario.js"></script>
 
     <script src="../../../landing/js/script.js"></script>
 
-
-    <!--QUIZ-->
-
     <script>
-    // QUIZ DO MÓDULO 3
-
-        const quizContainer = document.getElementById("quiz");
-        const submitBtn = document.getElementById("submitBtn");
-        const resetBtn = document.getElementById("resetBtn");
-        const scoreDisplay = document.getElementById("scoreDisplay");
-
-        const questions = [
+        const codingExercises = [
     {
-        question: "Qual é a característica de uma senha segura?",
-        options: [
-            "Usar datas de nascimento ou nomes de familiares",
-            "Combinar letras maiúsculas e minúsculas, números e símbolos",
-            "Usar apenas números sequenciais"
-        ],
-        answer: 1
+        id: 1,
+        title: "Declare uma variável",
+        description: "Crie uma variável chamada nome e atribua a ela o valor Ana.",
+        expected: "let nome = \"Ana\";"
     },
     {
-        question: "O que significa o princípio do menor privilégio?",
-        options: [
-            "Dar acesso completo a todos os usuários",
-            "Dar acesso apenas às permissões necessárias para cada função",
-            "Permitir acesso temporário ilimitado"
-        ],
-        answer: 1
+        id: 2,
+        title: "Crie uma função simples",
+        description: "Crie uma função chamada cumprimentar que retorna o texto: Olá!",
+        expected: "function cumprimentar() { return \"Olá!\"; }"
     },
     {
-        question: "Qual é a principal vantagem da autenticação multifator (MFA)?",
-        options: [
-            "Reduz o tempo de login",
-            "Evita acessos não autorizados combinando senha, token e/ou biometria",
-            "Elimina a necessidade de senha"
-        ],
-        answer: 1
+        id: 3,
+        title: "Somar valores",
+        description: "Crie uma variável chamada total que receba a soma de 10 + 5.",
+        expected: "let total = 10 + 5;"
     },
     {
-        question: "O que não é uma boa prática de segurança de senhas?",
-        options: [
-            "Não compartilhar senhas entre sistemas",
-            "Anotar senhas em papéis visíveis",
-            "Alterar senhas periodicamente"
-        ],
-        answer: 1
+        id: 4,
+        title: "Manipulação do DOM — alterar texto",
+        description: "Escreva o código JavaScript que altera o texto de um elemento com id titulo para: Bem-vindo!",
+        expected: "document.getElementById(\"titulo\").innerText = \"Bem-vindo!\";"
     },
     {
-        question: "Qual ação ajuda a proteger sua conta contra phishing?",
-        options: [
-            "Clicar em links desconhecidos para verificar mensagens",
-            "Verificar a autenticidade de e-mails e nunca fornecer credenciais",
-            "Compartilhar senhas com colegas de confiança"
-        ],
-        answer: 1
+        id: 5,
+        title: "Adicionar evento de clique",
+        description: "Crie um código que execute a função mostrarMensagem ao clicar no botão com id btn.",
+        expected: "document.getElementById(\"btn\").onclick = mostrarMensagem;"
+    },
+    {
+        id: 6,
+        title: "Criar array",
+        description: "Crie um array chamado frutas contendo os valores: maçã, banana, uva.",
+        expected: "let frutas = [\"maçã\", \"banana\", \"uva\"];"
+    },
+    {
+        id: 7,
+        title: "Condicional simples",
+        description: "Crie um if que verifica se idade é maior ou igual a 18 e retorna 'Adulto'.",
+        expected: "if (idade >= 18) { return \"Adulto\"; }"
+    },
+    {
+        id: 8,
+        title: "Função com parâmetro",
+        description: "Crie uma função chamada dobro que recebe um número e retorna esse número multiplicado por 2.",
+        expected: "function dobro(n) { return n * 2; }"
     }
 ];
 
 
-    // GERAR QUIZ NA TELA
-        const quizDiv = document.getElementById("quiz");
+        // Função que renderiza as questões
+        const renderExercises = () => {
+            const container = document.getElementById("coding-questions");
 
-        questions.forEach((q, index) => {
-            const card = document.createElement("div");
-            card.style.padding = "16px";
-            card.style.marginBottom = "16px";
-            card.style.border = "1px solid #ddd";
-            card.style.borderRadius = "10px";
-            card.style.background = "#ddd";
+            codingExercises.forEach(ex => {
+                container.innerHTML += `
+                    <div class="exercise-box">
+                        <h3>${ex.id}. ${ex.title}</h3>
+                        <p>${ex.description}</p>
 
-            let html = `<p><strong>${index + 1}. ${q.question}</strong></p>`;
+                        <textarea id="answer-${ex.id}" placeholder="Escreva seu código aqui..."></textarea>
 
-            q.options.forEach((opt, i) => {
-                html += `
-                    <label style="display:block; margin-top:6px; cursor:pointer;">
-                        <input type="radio" name="q${index}" value="${i}">
-                        ${opt}
-                    </label>
+                        <button class="btn-default" onclick="checkAnswer(${ex.id})">Verificar Resposta</button>
+
+                        <div id="result-${ex.id}" class="result"></div>
+                    </div>
                 `;
             });
+        }
 
-            card.innerHTML = html;
-            quizDiv.appendChild(card);
-        });
+        const normalizeCode = (code) => {
+            if (!code) return "";
+            
+            code = code.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "");
+        
+            code = code.replace(/\r\n/g, "\n").replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+           
+            code = code.replace(/\s*([\=\+\-\*\/%<>!,\:\(\)\{\}\[\]\|&])\s*/g, "$1");
+            
+            code = code.replace(/;+/g, "");
+            return code;
+        }
 
-        // BOTÃO ENVIAR
-        document.getElementById("submitBtn").addEventListener("click", () => {
-            let score = 0;
+        // Função que compara a resposta do aluno
+        const checkAnswer = (id) => {
 
-            questions.forEach((q, index) => {
-                const selected = document.querySelector(`input[name="q${index}"]:checked`);
-                if (selected && parseInt(selected.value) === q.answer) {
-                    score++;
-                }
-            });
+            const question = codingExercises.find(q => q.id === id);
 
-            document.getElementById("scoreDisplay").innerHTML =
-                `Você acertou <strong>${score}</strong> de <strong>${questions.length}</strong>.`;
-        });
+            const studentRaw = document.getElementById(`answer-${id}`).value || "";
 
-        // BOTÃO REFAZER
-        document.getElementById("resetBtn").addEventListener("click", () => {
-            document.querySelectorAll("input[type=radio]").forEach(r => r.checked = false);
-            document.getElementById("scoreDisplay").innerHTML = "";
-        });
+            const studentNormalized = normalizeCode(studentRaw);
+
+            const expectedNormalized = normalizeCode(question.expected);
+
+            const resultBox = document.getElementById(`result-${id}`);
+
+            if (studentNormalized === expectedNormalized) {
+
+                resultBox.innerHTML = "<span class='correct'>✔ Correto!</span>";
+
+            } else {
+                
+                resultBox.innerHTML = `
+                    <span class='wrong'>✘ Resposta incorreta</span>
+                    <br><strong>Exemplo esperado (formatado):</strong>
+                    <pre style="white-space:pre-wrap; background:#f7f7f7; padding:8px; border-radius:4px;">${question.expected.replace(/</g, "&lt;")}</pre>
+                    <details><summary>O que foi enviado (normalizado)</summary><pre style="white-space:pre-wrap;">${studentNormalized.replace(/</g,"&lt;")}</pre></details>
+                `;
+            }
+        }
+
+        renderExercises();
+
     </script>
 
 
 </body>
+
 </html>

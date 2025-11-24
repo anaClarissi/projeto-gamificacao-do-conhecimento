@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Módulo 4 — Redes de Computadores</title>
-
+    <title>Módulo 4 — JavaScript Avançado</title>
+    
     <!-- Swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
 
@@ -19,6 +20,7 @@
 
     <!-- CSS do módulo -->
     <link rel="stylesheet" href="../../css/modulo.css">
+
 </head>
 
 <body>
@@ -163,14 +165,14 @@
     <main class="module-container">
 
         <div class="module-header">
-            <img class="module-image" src="../../../landing/images/path/Security On-bro.svg" alt="">
-            <h1 class="section-title">Segurança da Informação</h1>
+            <img class="module-image" src="../../../landing/images/path/front-end.svg" alt="">
+            <h1 class="section-title">Front End</h1>
         </div>
-
+        
         <section class="module-type">
-            <h1 class="section-subtitle">Módulo 4 — Segurança de Dados e Backup</h1>
+            <h1 class="section-subtitle">Módulo 4 — JavaScript Avançado</h1>
             <p class="module-description">
-                A segurança de dados é essencial para proteger informações importantes contra perda, roubo ou corrupção. Neste módulo, você vai aprender como manter os dados seguros, como fazer backups corretamente e como garantir que informações críticas estejam sempre disponíveis.
+                Este módulo aprofunda os conceitos essenciais para você escrever códigos mais organizados, inteligentes e profissionais em JavaScript. Aqui você entenderá como lidar com listas, textos, funções mais poderosas, organização do código e o funcionamento assíncrono do JavaScript — um dos temas mais importantes quando falamos de sites modernos.
             </p>
         </section>
 
@@ -189,95 +191,318 @@
 
         </section>
 
-        <!-- CONTEÚDO DO MÓDULO -->
         <section class="module-section">
-            <h2>1. O que são dados e por que protegê-los</h2>
-            <p>
-            Os dados podem ser qualquer tipo de informação armazenada em computadores, servidores ou na nuvem: documentos, fotos, planilhas, cadastros de clientes, senhas, entre outros.
-            </p>
+            <h2>1. Arrays Avançados</h2>
+            <p>Arrays (listas) aparecem em praticamente todo site real.</p>
+            <p>Aqui, você vai aprender métodos modernos que agilizam o tratamento de dados:</p>
 
-            <p>Proteger esses dados é fundamental porque:</p>
             <ul>
-                <li>Dados perdidos podem causar prejuízos financeiros.</li>
-                <li>Informações confidenciais podem ser roubadas por hackers.</li>
-                <li>A integridade dos dados garante que as informações estejam corretas e confiáveis.</li>
-            </ul>
-            <p>Exemplo: Uma empresa de vendas que perde os registros de clientes não consegue processar pedidos corretamente, prejudicando toda a operação.</p>
+                <li> 
+                    <strong>map() — transforma itens</strong>
+                    <p>Exemplo: gerar uma nova lista dobrando valores.</p>
+                    <div class="area-tags">
+                        <p class="pequeno">js</p>
+                        <p class="codigo">
 
+                            <span class="variavel">const</span> numeros = [<span class="valor">1</span>,
+                            <span class="valor">2</span>,
+                            <span class="valor">3</span>];
+                            <br>
+
+                            <span class="variavel">const</span> dobro = numeros.<span class="funcao">map</span>(n => n * 2);
+
+                        </p>
+                    </div>
+                </li>
+
+                <li> 
+                    <strong>filter() — filtra itens</strong>
+                    <p>Exemplo: pegar somente maiores que 10.</p>
+                    <div class="area-tags">
+                        <p class="pequeno">js</p>
+                        <p class="codigo">
+                            <span class="variavel">const</span> valores = [<span class="valor">4</span>,
+                            <span class="valor">12</span>,
+                            <span class="valor">8</span>,
+                            <span class="valor">20</span>];
+                            <br>
+                            <span class="variavel">const</span> maiores = valores.<span class="funcao">filter</span>(v => v > <span class="valor">10</span>);
+
+                        </p>
+                    </div>
+                </li>
+
+                <li> 
+                    <strong>reduce() — reduz a um único valor</strong>
+                    <p>Exemplo: somar todos os itens.</p>
+                    <div class="area-tags">
+                        <p class="pequeno">js</p>
+                        <p class="codigo">
+                            <span class="variavel">const</span> total = valores.<span class="funcao">resduce</span>((acc, val) => acc + val, <span class="valor">0</span>);
+                        </p>
+                    </div>
+                </li>
+            </ul>
+            <p>Esses métodos são essenciais para trabalhar com dados dinâmicos em sites modernos.</p>
+            
         </section>
 
         <section class="module-section">
-            <h2>2. Tipos de backup</h2>
+            <h2>2. Objetos e Manipulação de Estruturas</h2>
 
-            <p>O backup é a cópia de segurança dos seus dados. Ele serve para restaurar arquivos caso algo aconteça, como falhas no computador ou ataques de ransomware.</p>
+            <p>Objetos e Manipulação de Estruturas</p>
 
-            <p>Existem diferentes tipos de backup:</p>
-            <ul>
-                <li><strong>Backup completo</strong>: Copia todos os arquivos e pastas. É mais seguro, mas ocupa mais espaço.</li>
-                <li><strong>Backup incremental</strong>: Copia apenas os arquivos alterados desde o último backup. É rápido e economiza espaço.</li>
-                <li><strong>Backup diferencial</strong>: Copia todos os arquivos modificados desde o último backup completo. É um equilíbrio entre completo e incremental.</li>
-            </ul>
+            <h3>Criando um objeto:</h3>
+            <div class="area-tags">
 
-            <p>Além disso, backups podem ser armazenados:</p>
-            <ul>
-                <li><strong>Localmente</strong>: em HDs externos ou servidores da empresa.</li>
-                <li><strong>Na nuvem</strong>: em serviços online seguros, que permitem acesso remoto e proteção contra falhas físicas.</li>
-            </ul>
-        </section>
+                <p class="pequeno">js</p>
 
-        <section class="module-section">
-            <h2>3. Como fazer backups seguros</h2>
-            <p>Para que o backup realmente proteja seus dados, é preciso seguir algumas boas práticas:</p>
+                <p class="codigo">
+                    <span class="variavel">const</span> usuario = { <br>
+                        <span style="margin-left: 40px;" class="valor">nome:</span> "Ana", <br>
+                        <span style="margin-left: 40px;" class="valor">idade: </span> 17, <br>
+                        <span style="margin-left: 40px;" class="valor">logado: </span>false; <br>
+                    };
+                </p>
 
-            <ul>
-                <li>Realizar backups <strong>regularmente</strong> (diários, semanais ou mensais, dependendo da necessidade).</li>
-                <li>Testar a <strong>restauração</strong> de arquivos para garantir que as cópias funcionam.</li>
-                <li>Armazenar os backups em locais <strong>separados do computador principal</strong>, de preferência em nuvem ou HD externo seguro.</li>
-                <li>Utilizar <strong>criptografia</strong> para proteger os arquivos de acessos não autorizados.</li>
-                <li>Manter um <strong>histórico de versões</strong>, salvando diferentes versões de um arquivo para poder recuperar alterações anteriores.</li>
-            </ul>
-        </section>
-
-        <section class="module-section">
-            <h2>4. Proteção contra ameaças</h2>
-            <p>Mesmo com backup, os dados podem ser ameaçados por:</p>
-            <ul>
-                <li><strong>Ransomware</strong>: vírus que criptografa arquivos e exige pagamento para liberar acesso.</li>
-                <li><strong>Malware</strong>: programas que podem corromper arquivos ou roubar informações.</li>
-                <li><strong>Falhas de hardware</strong>: HDs e servidores podem quebrar, perdendo dados se não houver backup.</li>
-            </ul>
-
-            <p>Para se proteger:</p>
-            <ul>
-                <li>Use antivírus atualizado.</li>
-                <li>Não abra arquivos suspeitos.</li>
-                <li>Habilite autenticação e senhas fortes para acessar backups.</li>
-            </ul>
-        </section>
-
-        <section class="module-section">
-            <h2>5. Conclusão</h2>
-            <p>
-                Segurança de dados e backups são fundamentais para qualquer pessoa ou empresa que dependa de informações digitais. Um backup confiável e políticas de proteção bem aplicadas evitam perdas, ataques e problemas graves.
-            </p>
-            <p>Aprender essas técnicas garante que, mesmo diante de falhas ou ataques, os dados estarão sempre disponíveis, preservando operações, conhecimento e informações importantes.</p>
-        </section>
-
-        <!-- QUIZ -->
-         <section class="module-section quiz-section">
-
-            <h2>Quiz — Módulo 4</h2>
-
-            <div id="quiz"></div>
-
-            <div class="quiz-controls" style="margin-top:20px;">
-                <button id="submitBtn" class="btn-default">Enviar respostas</button>
-                <button id="resetBtn" class="btn-default secondary">Refazer</button>
             </div>
 
-            <div id="scoreDisplay" style="margin-top:12px; font-size:18px;"></div>
+            <h3>Acessando propriedades:</h3>
+            <div class="area-tags">
+
+                <p class="pequeno">js</p>
+
+                <p class="codigo">
+
+                    <span class="valor">console.</span>log(usuario.nome);
+
+                </p>
+
+            </div>
+
+            <h3>Alterando dados:</h3>
+            <div class="area-tags">
+
+                <p class="pequeno">js</p>
+
+                <p class="codigo">
+
+                    usuario.logado = true;
+
+                </p>
+
+            </div>
+
+            <h3>Objetos dentro de arrays (muito usado!):</h3>
+            <div class="area-tags">
+
+                <p class="pequeno">js</p>
+
+                <p class="codigo">
+
+                    <span class="variavel">const</span> produtos = [ <br>
+
+                        <span style="margin-left: 40px;">{ <span class="valor">id</span>: 1,<span class="valor">nome</span>: "Mouse", <span class="valor">preco</span>: 40 }</span>, <br>
+                        <span style="margin-left: 40px;">{<span class="valor">id</span>: 2, <span class="valor">nome</span>: "Teclado", <span class="valor">preco</span>: 80}</span> <br>
+
+                    ];
+
+                </p>
+
+            </div>
+            
+        </section>
+
+        <section class="module-section">
+            <h2>3. Funções Avançadas</h2>
+            pAs funções são o coração da programação.
+
+            <h3>Arrow Functions</h3>
+            <p>Forma curta e moderna:</p>
+            <div class="area-tags">
+
+                <p class="pequeno">js</p>
+
+                <p class="codigo">
+
+                    <span class="variavel">const</span> <span class="funcao">soma</span> = (a, b) => a + b;
+
+                </p>
+
+            </div>
+
+            <h3>Callbacks</h3>
+            <p>Uma função usada dentro de outra:</p>
+
+            <div class="area-tags">
+
+                <p class="pequeno">js</p>
+                <p class="codigo">
+
+                    <span class="variavel">function</span> <span class="funcao">executar</span>(callbak) { <br>
+                        <span style="margin-left: 40px;" class="funcao">callback</span>(); <br>
+                    }
+                    <br>
+                    <br>
+                    <span class="funcao">executar</span>() => <span class="valor">console.</span>log("Rodou!");
+
+                </p>
+            </div>
+
+            <h3>Parâmetros padrão</h3>
+            <div class="area-tags">
+
+                <p class="pequeno">js</p>
+                <p class="codigo">
+
+                    <span class="variavel">function</span> <span class="funcao">saudacao</span>(nome = "Visitante") { <br>
+                        <span style="margin-left: 40px;" class="valor">console.</span>log("Olá " + nome); <br>
+                    }
+
+                </p>
+
+            </div>
+            
+        </section>
+
+        <section class="module-section">
+            <h2>4. Manipulação Avançada do DOM</h2>
+            
+            <p>Você já sabe acessar elementos. Agora vamos <strong>criá-los, removê-los e modificá-los dinamicamente</strong>.</p>
+
+            <h3>Criar elementos</h3>
+            <div class="area-tags">
+
+                <p class="pequeno">js</p>
+                <p class="codigo">
+
+                    <span class="variavel">const</span> div = <span class="valor">document.</span><span class="funcao">createElement</span>("div"); <br>
+                    div.textContent = "Olá, mundo!"; <br>
+                    <span class="valor">document.</span>body.<span class="funcao">appendChild</span>(div);
+
+                </p>
+
+            </div>
+
+            <h3>Modificar classes</h3>
+            <div class="area-tags">
+
+                <p class="pequeno">js</p>
+                <p class="codigo">
+
+                    div.classList.<span class="funcao">add</span>("card"); <br>
+                    div.classList.<span class="funcao">remove</span>("ativo");
+
+                </p>
+
+            </div>
+
+            <h3>Alterar estilos</h3>
+            <div class="area-tags">
+
+                <p class="pequeno">js</p>
+                <p class="codigo">
+                    div.style.backgroundColor = "lightblue";
+                </p>
+
+            </div>
 
         </section>
+
+        <section class="module-section">
+            <h2>5. Eventos e Delegação de Eventos</h2>
+
+            <h3>Eventos diretos</h3>
+            <div class="area-tags">
+
+                <p class="pequeno">js</p>
+                <p class="codigo">
+                    button.<span class="funcao">addEventListener</span>("click", () => { <br>
+                        <span style="margin-left: 40px;" class="valor">console.</span>log("Clicou!"); <br>
+                    });
+                </p>
+
+            </div>
+
+            <h3>Delegação de eventos</h3>
+            <p>Técnica profissional para evitar vários listeners.</p>
+            <div class="area-tags">
+
+                <p class="pequeno">js</p>
+                <p class="codigo">
+                    <span class="valor">document.</span><span class="funcao">addEventListener</span>("click", (e) => { <br>
+                        <span style="margin-left: 40px;" class="variavel">if</span> (e.target.classList.<span class="funcao">contains</span>("btn")){ <br>
+                            <span style="margin-left: 60px;" class="valor">console.</span>log("Botão clicado:", e.target); <br>
+                        } <br>
+                    });
+                </p>
+
+            </div>
+        </section>
+
+        <section class="module-section">
+            <h2>6. Assíncrono no JavaScript</h2>
+
+            <p>Fundamental para animações, carregamento de dados, APIs e timers.</p>
+
+            <h3>setTimeout</h3>
+            <div class="area-tags">
+                <p class="pequeno">js</p>
+                <p class="codigo">
+
+                    <span class="valor">setTimeout</span>(() => { <br>
+                        <span style="margin-left: 40px;" class="valor">console.</span>log("Executou depois de 2s"); <br>
+                    }, 2000);
+
+                </p>
+            </div>
+
+            <h3>setInterval</h3>
+            <div class="area-tags">
+                <p class="pequeno">js</p>
+                <p class="codigo">
+
+                    <span class="valor">setInterval</span>(() => { <br>
+                        <span style="margin-left: 40px;" class="valor">console.</span>log("a cada 1s..."); <br>
+                    }, 1000);
+
+
+                </p>
+            </div>
+
+            <h3>Promises</h3>
+            <div class="area-tags">
+                <p class="pequeno">js</p>
+                <p class="codigo">
+
+                    <span class="variavel">const</span> promessa = <span class="variavel">new</span> <span class="funcao">Promise</span>(resolve => { <br>
+                        <spam style="margin-left: 40px;" class="valor">setTimeout</spam>(() => <span class="funcao">resolver</span>("Pronto!", 2000)); <br>
+                    });
+
+                </p>
+            </div>
+
+            <h3>async / await</h3>
+            <p>Forma moderna de trabalhar com Promises:</p>
+            <div class="area-tags">
+                <p class="pequeno">js</p>
+                <p class="codigo">
+
+                    <span class="variavel">async function</span> <span class="funcao">carregar</span>() { <br>
+                        <span style="margin-left: 40px;" class="variavel">const</span> resultado = <span class="variavel">await</span> promessa; <br>
+                        <span style="margin-left: 40px;" class="valor">console.</span>log(resultado); <br>
+                    } <br>
+
+                    <span class="funcao">carregar</span>();
+
+                </p>
+            </div>
+
+        </section>
+
+        <!--QUESTÕES-->
+
+        <section id="coding-questions"></section>
 
         <section class="module-arrows">
 
@@ -293,7 +518,6 @@
             </a>
 
         </section>
-
 
     </main>
 
@@ -309,140 +533,174 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!--Scripts-->
+
     <script src="../../../landing/js/usuario.js"></script>
 
     <script src="../../../landing/js/script.js"></script>
 
-
-    <!--QUIZ-->
-
     <script>
-    // QUESTÕES DO QUIZ
-        const questions = [
+        const codingExercises = [
+           
             {
-                question: "Qual é a principal função do backup?",
-                options: [
-                    "Liberar espaço no computador",
-                    "Proteger os dados e permitir recuperação em caso de perda",
-                    "Enviar arquivos para outros usuários"
-                ],
-                answer: 1
+                id: 1,
+                title: "Use o método map()",
+                description: "Crie um array chamado numeros com os valores [1, 2, 3] e use map para gerar um novo array dobrando cada número.",
+                expected: `const numeros = [1, 2, 3];
+        const dobrados = numeros.map(n => n * 2);`
             },
+
+          
             {
-                question: "Qual tipo de backup copia apenas os arquivos alterados desde o último backup?",
-                options: [
-                    "Backup completo",
-                    "Backup incremental",
-                    "Backup diferencial"
-                ],
-                answer: 1
+                id: 2,
+                title: "Filtre valores com filter()",
+                description: "Crie um array idades com [12, 18, 25, 14] e use filter para manter somente maiores de 17.",
+                expected: `const idades = [12, 18, 25, 14];
+        const maiores = idades.filter(i => i > 17);`
             },
+
+          
             {
-                question: "Qual prática garante que o backup realmente funciona?",
-                options: [
-                    "Testar a restauração dos arquivos",
-                    "Fazer backup apenas uma vez",
-                    "Armazenar todos os backups no mesmo HD do computador principal"
-                ],
-                answer: 0
+                id: 3,
+                title: "Some valores com reduce()",
+                description: "Crie um array valores com [10, 5, 5] e use reduce para obter a soma total.",
+                expected: `const valores = [10, 5, 5];
+        const soma = valores.reduce((acc, v) => acc + v, 0);`
             },
+
+         
             {
-                question: "Qual ameaça pode criptografar arquivos e exigir pagamento para liberar acesso?",
-                options: [
-                    "Malware comum",
-                    "Ransomware",
-                    "Phishing"
-                ],
-                answer: 1
+                id: 4,
+                title: "Acesse dados de um objeto",
+                description: "Crie um objeto aluno com nome 'Ana' e idade 16. Em seguida, acesse a propriedade nome.",
+                expected: `const aluno = { nome: "Ana", idade: 16 };
+        aluno.nome;`
             },
+
+          
             {
-                question: "Qual medida aumenta a segurança dos backups em caso de acesso não autorizado?",
-                options: [
-                    "Criptografia dos arquivos",
-                    "Salvar apenas arquivos de texto",
-                    "Usar HD antigo"
-                ],
-                answer: 0
+                id: 5,
+                title: "Use desestruturação",
+                description: "Com o objeto produto = { nome: 'Mouse', preco: 50 }, use desestruturação para extrair nome e preco.",
+                expected: `const produto = { nome: "Mouse", preco: 50 };
+        const { nome, preco } = produto;`
             },
+
+          
             {
-                question: "Por que é importante manter um histórico de versões dos arquivos?",
-                options: [
-                    "Para economizar espaço em disco",
-                    "Para poder recuperar versões anteriores de um arquivo",
-                    "Para compartilhar com colegas de trabalho"
-                ],
-                answer: 1
+                id: 6,
+                title: "Crie uma arrow function simples",
+                description: "Crie uma arrow function chamada saudacao que retorna 'Olá!'",
+                expected: `const saudacao = () => "Olá!";`
             },
+
+          
             {
-                question: "Onde é mais seguro armazenar backups de arquivos críticos?",
-                options: [
-                    "No mesmo computador que os arquivos originais",
-                    "Em locais separados, como nuvem ou HD externo",
-                    "Em pen drives antigos sem criptografia"
-                ],
-                answer: 1
+                id: 7,
+                title: "Use uma função callback",
+                description: "Crie uma função executar que recebe uma função e a chama. Depois, chame executar passando uma função que mostra 'Rodando!'.",
+                expected: `function executar(func) {
+            func();
+        }
+        executar(() => console.log("Rodando!"));`
             },
+
+          
             {
-                question: "Qual é uma boa prática para proteger dados mesmo com backup?",
-                options: [
-                    "Usar senhas fracas e simples",
-                    "Manter antivírus atualizado e evitar arquivos suspeitos",
-                    "Deixar computadores ligados 24h sem proteção"
-                ],
-                answer: 1
+                id: 8,
+                title: "Modifique o texto de um elemento",
+                description: "Use document.getElementById para mudar o texto de um elemento com id 'titulo' para 'Novo título'.",
+                expected: `document.getElementById("titulo").textContent = "Novo título";`
+            },
+
+          
+            {
+                id: 9,
+                title: "Adicione um evento de clique",
+                description: "Adicione um evento de clique em um botão com id 'btn' que mostra 'Clicou!' no console.",
+                expected: `document.getElementById("btn").addEventListener("click", () => {
+            console.log("Clicou!");
+        });`
+            },
+
+           
+            {
+                id: 10,
+                title: "Crie uma função assíncrona",
+                description: "Crie uma função assíncrona chamada carregarDados que retorna a string 'Dados carregados'.",
+                expected: `async function carregarDados() {
+            return "Dados carregados";
+        }`
             }
         ];
 
 
+        // Função que renderiza as questões
+        const renderExercises = () => {
+            const container = document.getElementById("coding-questions");
 
-        // GERAR QUIZ NA TELA
-        const quizDiv = document.getElementById("quiz");
+            codingExercises.forEach(ex => {
+                container.innerHTML += `
+                    <div class="exercise-box">
+                        <h3>${ex.id}. ${ex.title}</h3>
+                        <p>${ex.description}</p>
 
-        questions.forEach((q, index) => {
-            const card = document.createElement("div");
-            card.style.padding = "16px";
-            card.style.marginBottom = "16px";
-            card.style.border = "1px solid #ddd";
-            card.style.borderRadius = "10px";
-            card.style.background = "#ddd";
+                        <textarea id="answer-${ex.id}" placeholder="Escreva seu código aqui..."></textarea>
 
-            let html = `<p><strong>${index + 1}. ${q.question}</strong></p>`;
+                        <button class="btn-default" onclick="checkAnswer(${ex.id})">Verificar Resposta</button>
 
-            q.options.forEach((opt, i) => {
-                html += `
-                    <label style="display:block; margin-top:6px; cursor:pointer;">
-                        <input type="radio" name="q${index}" value="${i}">
-                        ${opt}
-                    </label>
+                        <div id="result-${ex.id}" class="result"></div>
+                    </div>
                 `;
             });
+        }
 
-            card.innerHTML = html;
-            quizDiv.appendChild(card);
-        });
+        const normalizeCode = (code) => {
+            if (!code) return "";
+            
+            code = code.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "");
+        
+            code = code.replace(/\r\n/g, "\n").replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+           
+            code = code.replace(/\s*([\=\+\-\*\/%<>!,\:\(\)\{\}\[\]\|&])\s*/g, "$1");
+            
+            code = code.replace(/;+/g, "");
+            return code;
+        }
 
-        // BOTÃO ENVIAR
-        document.getElementById("submitBtn").addEventListener("click", () => {
-            let score = 0;
+        // Função que compara a resposta do aluno
+        const checkAnswer = (id) => {
 
-            questions.forEach((q, index) => {
-                const selected = document.querySelector(`input[name="q${index}"]:checked`);
-                if (selected && parseInt(selected.value) === q.answer) {
-                    score++;
-                }
-            });
+            const question = codingExercises.find(q => q.id === id);
 
-            document.getElementById("scoreDisplay").innerHTML =
-                `Você acertou <strong>${score}</strong> de <strong>${questions.length}</strong>.`;
-        });
+            const studentRaw = document.getElementById(`answer-${id}`).value || "";
 
-        // BOTÃO REFAZER
-        document.getElementById("resetBtn").addEventListener("click", () => {
-            document.querySelectorAll("input[type=radio]").forEach(r => r.checked = false);
-            document.getElementById("scoreDisplay").innerHTML = "";
-        });
+            const studentNormalized = normalizeCode(studentRaw);
+
+            const expectedNormalized = normalizeCode(question.expected);
+
+            const resultBox = document.getElementById(`result-${id}`);
+
+            if (studentNormalized === expectedNormalized) {
+
+                resultBox.innerHTML = "<span class='correct'>✔ Correto!</span>";
+
+            } else {
+                
+                resultBox.innerHTML = `
+                    <span class='wrong'>✘ Resposta incorreta</span>
+                    <br><strong>Exemplo esperado (formatado):</strong>
+                    <pre style="white-space:pre-wrap; background:#f7f7f7; padding:8px; border-radius:4px;">${question.expected.replace(/</g, "&lt;")}</pre>
+                    <details><summary>O que foi enviado (normalizado)</summary><pre style="white-space:pre-wrap;">${studentNormalized.replace(/</g,"&lt;")}</pre></details>
+                `;
+            }
+        }
+
+        renderExercises();
+
     </script>
 
+
 </body>
+
 </html>

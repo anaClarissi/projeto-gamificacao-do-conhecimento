@@ -532,25 +532,43 @@
             });
         }
 
+        const normalizeCode = (code) => {
+            if (!code) return "";
+            
+            code = code.replace(/\/\*[\s\S]*?\*\//g, "").replace(/\/\/.*$/gm, "");
+        
+            code = code.replace(/\r\n/g, "\n").replace(/\n+/g, " ").replace(/\s+/g, " ").trim();
+           
+            code = code.replace(/\s*([\=\+\-\*\/%<>!,\:\(\)\{\}\[\]\|&])\s*/g, "$1");
+            
+            code = code.replace(/;+/g, "");
+            return code;
+        }
+
         // Função que compara a resposta do aluno
         const checkAnswer = (id) => {
+
             const question = codingExercises.find(q => q.id === id);
 
-            const studentAnswer = document.getElementById(`answer-${id}`).value
-                .trim()
-                .replace(/\s+/g, " "); // remove múltiplos espaços
+            const studentRaw = document.getElementById(`answer-${id}`).value || "";
 
-            const expectedAnswer = question.expected.trim().replace(/\s+/g, " ");
+            const studentNormalized = normalizeCode(studentRaw);
+
+            const expectedNormalized = normalizeCode(question.expected);
 
             const resultBox = document.getElementById(`result-${id}`);
 
-            if (studentAnswer === expectedAnswer) {
+            if (studentNormalized === expectedNormalized) {
+
                 resultBox.innerHTML = "<span class='correct'>✔ Correto!</span>";
+
             } else {
+                
                 resultBox.innerHTML = `
                     <span class='wrong'>✘ Resposta incorreta</span>
-                    <br><strong>Resposta esperada:</strong><br>
-                    <code>${question.expected.replace(/</g, "&lt;")}</code>
+                    <br><strong>Exemplo esperado (formatado):</strong>
+                    <pre style="white-space:pre-wrap; background:#f7f7f7; padding:8px; border-radius:4px;">${question.expected.replace(/</g, "&lt;")}</pre>
+                    <details><summary>O que foi enviado (normalizado)</summary><pre style="white-space:pre-wrap;">${studentNormalized.replace(/</g,"&lt;")}</pre></details>
                 `;
             }
         }
