@@ -21,7 +21,7 @@ main {
 }
 
 .app {
-    background-color: var(--color-primary-5);
+    background-color: var(--color-primary-1);
     width: 50vw;
     height: 80%;
     padding: 30px;
