@@ -152,7 +152,7 @@ const starTimer = () => {
 
 window.onload = () => {
 
-    const playerName = localStorage.getItem('player');
+    const playerName = localStorage.getItem('user');
 
     spanPlayer.innerHTML = playerName;
 

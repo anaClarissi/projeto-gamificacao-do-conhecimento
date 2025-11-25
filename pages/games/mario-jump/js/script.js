@@ -2,6 +2,14 @@ const mario = document.querySelector(".mario");
 
 const pipe = document.querySelector(".pipe");
 
+const textScore = document.querySelector(".score");
+
+let score = 0;
+
+let scored = false;
+
+textScore.innerHTML = `${score}`;
+
 const jump = () => {
 
     mario.classList.add("jump");
@@ -28,11 +36,27 @@ const loop = setInterval(() => {
         mario.style.animation = "none";
         mario.style.bottom = `${marioPosition}`;
 
-        mario.src = "images/game-over.png";
+        mario.src = "../images/game-over.png";
         mario.style.width = "75px";
         mario.style.marginLeft = "50px";
 
         clearInterval(loop);
+
+    }
+
+    if (pipePosition > 120) {
+
+        scored = false;
+
+    }
+    
+    if (pipePosition < 120 && !scored && marioPosition >= 80) {
+
+        score++;
+
+        scored = true;
+
+        textScore.innerHTML = `${score}`;
 
     }
 

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P& display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Press Start 2P';
 }
 
 .game-board {
@@ -35,6 +38,27 @@
     position: absolute;
     width: 550px;
     animation: clouds-animation 10s infinite linear;
+}
+
+.menu {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    color: #36a820;
+    position: absolute;
+    top: 0;
+    font-size: 1.5em;
+}
+
+.menu a {
+    color: #36a820;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    color: #fff;
+    transition: color .2s ease;
 }
 
 @keyframes pipe-animation {

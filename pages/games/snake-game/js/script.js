@@ -12,8 +12,8 @@ const scoreAbsolut = 10;
 const audio = new Audio('../assets/audio.mp3');
 
 const size = 30;
-const widthCanvas = size * 35;
-const heightCanvas = size * 27;
+const widthCanvas = size * 29;
+const heightCanvas = size * 23;
 
 canvas.width = widthCanvas;
 canvas.height = heightCanvas;
@@ -245,7 +245,7 @@ const gameLoop = () => {
     drawSnake();
     chackEat();
     checkCollision();
-    spanName.innerHTML = localStorage.getItem('player');
+    spanName.innerHTML = localStorage.getItem('user');
 
     loopId = setTimeout(() => {
 
