@@ -2,7 +2,7 @@ const nomeAluno = document.querySelector(".user-name");
 
 nomeAluno.innerHTML = localStorage.getItem("user");
 
-$(document).ready(() => {
+/*$(document).ready(() => {
 
     $(".user").on("click", () => {
 
@@ -10,4 +10,4 @@ $(document).ready(() => {
 
     })
 
-});
+});*/
